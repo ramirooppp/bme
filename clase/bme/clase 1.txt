@@ -1,0 +1,3029 @@
+﻿entonces retomando nuestro receso
+la idea de hacer este simulador para
+entender
+qué hace cómo lo hacen y cuáles son sus
+limitaciones
+es
+trabajarlo en forma
+matricial justamente apelando a nuestros
+profundos conocimientos de alguien y
+geometría analítica aprovechar esta idea
+de tener una colección ordenada de
+números una matriz para independizarnos
+del tamaño del problema encontrar
+soluciones genéricas y adaptar en cada
+caso particular
+solamente el tamaño de nuestra matriz es
+por eso que dicta el concepto al teórico
+nosotros nos vamos a basar en las
+operaciones matriciales
+retomando si se entendiese bien pizarrón
+y retomando lo que se planteaba en
+integración 2
+e
+balance de masa
+y sigo con mi letra horrible
+nosotros teníamos una corriente
+tenemos que ser una mezcla tura para
+corriente la nomenclatura que nosotros
+usábamos desde integración 2 y ahora
+llamarlo efe
+la corriente
+y la vamos a llamar genéricamente j
+y vamos a dejar j
+desde 1
+hasta en s
+como indicador de corrientes
+y sabíamos qué
+desde integración 2 que cada corriente
+estaba caracterizada por una composición
+del componente y
+en la corriente j y con esta simbología
+x es fracción molar
+y vamos a llamar y
+al componente
+sabemos
+que esta corriente tiene una restricción
+y es que la sumatoria de las fracciones
+molares del componente y en la corriente
+j para ir igual a 1 hasta en s la suma
+de las fracciones molares tiene una
+propiedad
+esta suma vale 1
+esto significa
+que nosotros podemos caracterizar a la
+corriente
+con
+en ese más una variable
+porque hay en ese variable del tipo
+fracción molar más una variable que es
+el caudal molar total
+que lo voy a simbolizar con la letra
+mayúscula efe
+y caudal
+molar
+total
+en moldes
+por un y del tiempo
+por eso le llamo caudal molar es flujo
+molar total moles por unidad tiempo
+entonces dado que estás en ese más una
+variables están vinculadas por una
+ecuación
+hay en s
+variables independientes
+y las cuales estas en s variables no
+pueden ser todas de composición
+o sea que aunque matemáticamente el
+número de variables independientes sea
+nc no puedo especificar en ese variable
+tipo composición por lo menos una
+variable debe ser el caudal molar total
+y debo especificar en s menos 1
+variables de composición la restante
+composición sale de esta ecuación o sea
+de las cuales en ese menos 1 son del
+tipo x
+fíjense que estoy poniendo como toda
+relación matricial
+e
+[Música]
+efe es un vector porque es f sub j tiene
+un solo índice mientras que x es una
+matriz porque tiene dos índices tiene
+filas y columnas y por filas voy a
+nombrar a los componentes y por columnas
+voy a nombrar las corrientes eso quiere
+decir el orden y j
+tengo que esto es así para todas para
+todo sistema esto es lo que nosotros
+veníamos trabajando desde integración 2
+pero hay una forma más compacta de verla
+que es con la definición de una nueva
+variable llamada f su hijo está
+que la voy a llamar como efe minúscula y
+que va a significar el flujo molar
+efe es flujo
+molar
+del componente
+y
+en corriente j
+y
+efe su bigote e igual a picota por x su
+hijo
+y el producto del flujo molar total
+de la corriente j por la fracción molar
+del componente irla en la corriente j va
+a ser una nueva variable llamada f psuv
+y j
+ahora esto tiene la ventaja de que esta
+definición no tiene la restricción de
+que la suma de las fracciones molares es
+igual a 1
+esto significa que sigo conservando el
+criterio porque no puede alterar esta
+nueva definición de que hay n 6
+variables independientes que son los en
+ese flujo molares del componente y en la
+corriente j o sea que esto me sigue
+diciendo que hay n c variables
+independientes
+esto es que de todo este conjunto
+yo puedo reemplazarlo por este conjunto
+porque es equivalente
+esto significa que yo sé o tengo que ser
+capaz de transformar estos dos conjuntos
+de un conjunto en otro porque hay una
+relación de equivalencia entre los dos
+la transformación directa que decimos
+nosotros dado uno encontrar el otro que
+es esta transformación está dada por
+esta expresión porque justamente el
+flujo molar del componente y en la
+corriente corta es el producto del flujo
+molar de la corriente corta el flujo
+molar total por la fracción molar x su
+hijo como son las transformaciones
+inversas esto es cómo es posible que
+dado los flujos molares del componente
+en cada corriente obtenga obtenga los el
+flujo monet total y la fracción molar
+las transformaciones inversas son las
+siguientes
+el flujo o sea si yo tuviera como dato
+el flujo molar
+efe sub y j efe j
+es la sumatoria de los efe su hijo está
+para aquí igual a uno hasta mc o sea el
+flujo un molar total es simplemente la
+suma de los flujos molar de cada uno de
+los componentes
+y la fracción molar x sub y j
+y se desprende de la misma definición
+despejando lo de esta definición de f es
+efe su hijo está
+/ efe j
+o sea que es efe y j
+/ la sumatoria de las jesús dijo otra a
+la cual como ya me cansé de escribir los
+subíndices voy a escribir el subíndice
+de la suma todavía diciendo que es y
+entendiendo que ustedes ya saben que si
+yo pongo sumatoria sobre y estará igual
+a 1 hasta en ese y no desde que ser así
+porque ya no tengo tanto pizarrón
+entonces
+hasta que yo escriba todo el nss
+etcétera es más fácil escribir el
+subíndice
+estas dos es su hijo está este conjunto
+se denomina la transformación inversa
+esto es cómo es posible que dado los
+flujos molares de cada componente puede
+encontrar el flujo molar total y la
+fracción molar de cada componente
+teniendo como dato solamente las efe -
+cura los flujos molares
+esto es no sólo podemos desarrollar
+cualquier corriente podemos describir
+cualquier corriente mágica o cualquier
+corriente molar describiendo los flujos
+molares de cada uno de los componentes
+en esa corriente y si yo lo trabajo con
+los flujos molares de cada uno
+componente en ese corriente las dos
+transformaciones inversas para poder
+encontrar el flujo molar total y la
+fracción molar están dado por estas
+ecuaciones
+yo entiendo que esta altura usted está
+en tercer año entienden la diferencia
+que hay entre
+flujo molar y flujo mágico
+la diferencia
+la relación para ser más exacto está
+dado por el peso molecular
+entonces puedo obtener a partir de aquí
+con el flujo molar puedo obtener los
+flujos mágicos si voy a borrar todo
+y voy a plantearlo al revés o sea dado
+efe sur y j
+yo voy a tener uno necesito
+un vector llamados sustancias
+y este es mi primer de formación de mi
+escritura
+puse dos puntos iguales porque recuerdo
+dos puntos iguales
+si no estoy escribiendo como si fuera
+marca aceite necesitamos más y describir
+notar porque ni siquiera con día dos
+punto igual hubiera puesto dos puntos y
+pone marcan dos puntos igual o sea que
+no se ven que marcan tiene
+cinco tipos de igual también en igual de
+definición en igual de asignación en
+igual bull ya no el igual para todos
+lados
+tenían cuatro iguales éste el de
+asignación estos puntos
+entonces yo tendría un vector
+donde tendría las distintas sustancias
+que conforman mi corriente y una vez
+identificada la sustancia yo podría
+armar un vector
+llamado peso molecular
+con los pisos moleculares de cada una de
+las sustancias que están presentes en mi
+corriente
+si yo tengo esto
+entonces la fórmula de transformación la
+voy a simbolizar con doble de minúscula
+su hijo que es el flujo básico por
+componente
+que es igual al flujo molar
+del componente y en la corriente j
+por el peso molecular del componente y
+este producto me da el flujo mágico por
+componentes
+el flujo mágico total de la corriente
+que voy a ser muy original pero voy a
+llamar un doble de mayúscula y ahora ya
+no es del componente y sino de la
+corriente j
+es igual a la sumatoria
+de los dobles sub y j
+o sea que es la sumatoria de f sur y j
+por peso molecular del componente y
+sobre el índice y ósea para igual a 1
+hasta en s
+y el porcentaje en peso o el porcentaje
+más a usted lo quieren ver
+si somos dos turistas y hemos entendido
+física uno debe ser el porcentaje en
+masa pero normalmente en ingenia química
+a ese porcentaje de masa los llamamos
+porcentaje en peso
+porcentaje peso en peso del componente
+en la corriente j
+que hace lo mismo que si fuera la
+fracción molar
+sería entonces igual a wb minúscula sub
+y j / w j ósea
+su hijo está
+sobre la sumatoria de los dobles de su
+disfraz
+y decir que estoy demostrando que dar
+las n c variables de una corriente los
+en ese flujos molares del componente y
+en la corriente j es suficiente y son en
+ese especificaciones de la corriente que
+me permiten encontrar todas las demás
+variables relacionadas que son el flujo
+molar total de la corriente la fracción
+molar de cada componente en la corriente
+el flujo mágico de cada componente en
+esa corriente el flujo básico total de
+la corriente y su composición en peso la
+composición en peso de cada componente
+en esa correcta
+e
+insisto cada corriente entonces del
+punto de vista mágico del punto de vista
+molar está perfectamente descripto el
+momento de que yo le defina en ese
+variables del tipo flujo molar sea esta
+conclusión es crítica poseer estas son
+en ese variables
+porque insisto en que son en ese
+variables por
+haga lo que haga con la especificación
+en especificaciones son independientes
+qué quiere decir
+supongamos que yo no lo sé yo tengo un
+sistema de 10 componentes una corriente
+que tiene 10 componentes lo que me dicen
+es que yo necesito los 10 flujos molares
+de cada uno de los 10 componentes en esa
+corriente con eso me basta
+pero si por algún motivo no me dan los
+10 me da 90 como las de componentes esa
+corriente no está especificada porque
+para estar especificadas yo necesito en
+ese variables en ese varia 10 y yo estoy
+dando 9
+quiere sí que debo buscar en algún otro
+lado una especificación adicional que me
+sustituya o me complete las n c
+variables que definen esta corriente
+entonces si yo en vez de 10 flujos
+molares para un sistema que tenía 10
+componentes en vez de darles 10 le doy 9
+debo hacer alguna otra especificación
+para que la corriente quede totalmente
+definida el ejemplo es que dos
+componentes de esta corriente guarden
+una determinada proporción lo que
+nosotros llamamos una relación molar
+esto es que entre el componente 2 y el
+componente 3 la relación molar entre
+ambos sea 0.25
+esa es la n se ama
+especificación que me está faltando para
+tener totalmente caracterizada la
+corriente no debo perder está para
+caracterizar una corriente para
+definirla y tenerla definida yo necesito
+especificar en ese variables
+bien
+e
+como aplico este elemento constitutivo
+el más simple de todos llamada corriente
+aplicada a mis sistemas
+mi sistema está constituido por
+corrientes y operaciones unitarios
+esto es entre dos operaciones unitarias
+la relación o el vínculo que hay se
+denomina corriente
+este corriente
+es se asume de que de un fluído
+por qué
+algo tiene se tiene que transmitir más
+desde la operación
+y que dieron fluidos
+los sistemas materiales los estados de
+agregación de la materia se podían
+clasificar en dos grandes grupos
+dependiendo de cómo lo vea
+era
+e
+fluidos y clase coordenadas
+fluidos y sólidos o gases y fase
+condensada
+esto es si no es fluido es porque eso
+válido los fluidos eran líquido o gas
+sin embargo ustedes vieron en
+integración 2 que aunque el sólido no es
+un fluído si puede fluir por la
+corriente o sea puede haber una
+corriente de sólidos mi gran problema es
+cómo transportarnos en ese todo un tema
+denominado transportes sólidos
+no me inválida mi criterio general que
+significa que entre dos operaciones
+unitarias hay una corriente que los
+vincula
+entonces todo simulador parte de ese
+hecho que tiene corrientes por un lado
+y operaciones unitarias que están
+vinculados por una correcta
+entonces
+todo el balance se basa en calcular qué
+es lo que le pasa a cada una de las
+corrientes que están involucradas en el
+proceso químico el problema es que para
+resolver qué pasa con cada una de las
+corrientes yo tengo que interpretar que
+es mi operación unitaria
+a la cual le entran corrientes y le
+salen corrientes
+entonces todo nuestro análisis del punto
+de vista molar
+se basa en modelar matemáticamente las
+operaciones unitarias para ver qué le
+pasan a las corrientes que entren y
+salen a esa operación unitaria
+tomemos la más
+simple de todas las operaciones
+unitarias y arrancamos con estos
+problemas vamos a mezclarlos
+el mezclador se simboliza como una caja
+negra
+a la cual le entran
+nj corrientes pero les sale una
+la esencia de todo mezclador es que hay
+una sola corriente de salida
+no me importa cuántas corrientes entre
+le tienen que salir una sola
+yo voy a hacer un ejemplo con dos
+corrientes que entran pero el concepto
+del mezclador como operación unitaria es
+que tiene una sola salida
+le voy a llamar f1
+efe 2
+y f3 a la corriente de salida
+el sistema de ecuaciones que describe el
+mezclador es muy simple es una
+consecuencia de
+la primera ley de la termodinámica que
+es y la primera ley de la termodinámica
+javier me estoy volviendo loco tenía que
+haberlo visto si tenían que haberla
+visto
+pero la energía la primera termodinámica
+decía que la energía se conserva
+efectivamente sin creencia de que sólo
+se conserva y gracias a una maravillosa
+relación que encontró einstein a
+comienzos del siglo pasado sabemos que
+hay una proporcionalidad entre masa y
+energía
+o sea que si la energía se conserva la
+masa también se conserva la ley de
+conservación de la masa es en realidad
+una consecuencia de la primera ley de la
+termodinámica de la conservación de la
+energía lo que pasa es que como nosotros
+no vemos reacciones nucleares en donde
+queda evidente la relación entre que la
+que se conserva es la energía y la masa
+dependiendo de cómo pueda plantearlo es
+una variante de energía como nosotros
+uno de procesos químicos que no
+involucran reacciones nucleares entonces
+desprender de la primera ley de la
+termodinámica y hablar tranquilamente
+que para sistemas materiales ingente
+ingeniería química que no involucran
+reacciones nucleares haya una ley de
+conservación de la masa
+e
+pero teóricamente en realidad es primera
+ley de la termodinámica de ahí arranca
+todo
+vamos a aplicar ese concepto
+e
+y dado que existe una proporcionalidad
+directa entre la masa y los números de
+moles y esa proporción de directa está
+dado por peso molecular es una constante
+de proporcionalidad que vale
+multiplicada o dividida es algo que
+tiene que decir ustedes en el momento en
+que quieran hacer la conversión de masa
+moles porque una mayoría dividida de
+ellas son expertos de la química general
+que se despierten saber si multiplican o
+divide por peso molecular entonces si
+hay una ley de conservación de la masa
+y la masa es proporcional al número de
+moles
+yo voy a escribir este balance que voy a
+aprender ahora en en forma molar
+para plantearlo en forma molar
+yo tengo que decir que todo lo que entra
+es igual a todo lo que sale osea que f1
+a f2
+es igual a efe 3 todas las moles que
+entran son igual a todos los moles que
+salen en moles por vía tiempo
+y también se debe aplicar a cada uno de
+los componentes que están involucrados
+en esta expresión así que este es el
+balance
+y mular total
+el balance el balance molar
+por componente diría efe sub 1 por x
+uno más efe dos por equis psuv y dos en
+igualdad
+efe tres por equis sube 3
+esta expresión es la que ustedes
+trabajaron
+en integración 2
+pero no es que vamos a trabajar en
+integración 3 porque por lo que acabo de
+demostrar este producto recibió un
+nombre era el flujo molar del componente
+y en la corriente 1 más el flujo molar
+del componente y en la corriente 2 que
+es igual al flujo molar del componente y
+en la corriente precio porque el
+producto flujo molar total por fracción
+molar del componente es flujo molar del
+componente
+esto parece un trabalenguas
+y lo es
+y es importante
+y es importante que además me resalten
+cuando yo me equivoque porque es un
+trabalenguas que una cosa es el flujo
+molar de la corriente y otro es el flujo
+molar del componente en la corriente
+3
+y esta expresión del balance masa total
+hay una ecuación y balance de masa por
+componentes hay en ese actuaciones
+pero aplicando lo que vimos hace
+instantes podemos reducir en ese más una
+ecuación es a una sola a un solo sistema
+que es el del flujo molar del componente
+o sea esta expresión que representa en
+ese ecuaciones de flujo molar es
+suficiente desde el punto de vista
+matemático para describir el balance
+molar del mezclador
+vamos a introducir una anotación al
+respecto
+esta anotación es producto de cómo
+trabajar marcar a las matrices yo a matt
+capps para trabajar con matrices tengo
+que poner subíndices
+y su índice se enmarca botellas son
+expertos en esto había dos formas de
+ponérselo o ponérselo en el nombre esto
+es hacer que una parte del nombre se
+vaya abajo y parezca subíndice
+pero que en realidad forma parte del
+nombre y es organizado con un punto o se
+opone a corriente puntos corriente punto
+4 y yo escribía corriente
+agregado un punto y escribía 4
+y mca no me hacía eso me mostraba
+corriente
+4
+no debo perder de vista de que para
+marcar el nombre es corriente punto 4 el
+punto forma parte del nombre pero lo
+muestra como si fuera su índice
+pero para trabajar con matrices mad catz
+requiere subíndice matricial
+el subíndice matricial tenía que irme al
+menú pedir a matrices
+el menú matriz es subíndice y me abría
+una
+un place holder
+me habría un place holder abajo o para
+que yo pueda escribir los subíndices la
+forma rápida de escribir matrices en mad
+catz para que me ponga el subíndice si
+el teclado está bien configurado es con
+corchete de apertura o sea que esto se
+simbolizaba corriente
+corchete de apertura y yo escribo sub y
+j porque corrí corchete de apertura si
+te lo encuentran en el pecador si se
+encuentra el de cloud porque está bien
+configurado con solamente carácter y con
+7 perdona y le manda subíndice matricial
+por el page holder y usted puede poner
+todos los índices que ustedes quieran a
+partir de allí
+y yo voy a hacer este nomenclatura
+algunas veces para reafirmar que el
+subíndice es matricial y en general en
+todo mi desarrollo teórico no voy a usar
+el punto como subíndice
+aunque marca cuando empiecen a trabajar
+lo usé en ocasiones al punto para
+denotar el nombre de una variable
+también pero deben recordar de que el
+punto forma parte del nombre de la
+variable y solamente lo muestra los
+engaña mostrándole que subíndice cuando
+el corchete de apertura o la función
+subíndice matricial es una función
+específica que tienen que invocar con
+máscara
+una nueva botella lo han sufrido en
+fundamento informática en termodinámica
+así que está hablando ingeniero o
+obviedades bueno
+yo no digo nada después no se quejen en
+los ejercicios sino decir pone todo rojo
+porque se olvidaron de que tienen su
+índice matricial
+con subíndice matricial marca puede
+determinar un elemento de una matriz
+pero marca tiene una simbología
+particular cuando yo quiero hacer
+referencia a una columna de la matriz
+osea que si yo tuviera
+una matriz de 3 x 3
+y quisiera señalar esta columna la
+columna 1 también marcan puede operar
+con toda una columna extrayendo toda la
+columna como un objeto
+su operación es la operación columna y
+también debe invocarse específicamente
+los simboliza marca para distinguirlo en
+subíndice matricial con una
+una un número un place holder que pone
+entre el símbolo entre los dos brackets
+el de mayor y menor
+o sea que estrictamente cuando matt
+capps le piden operación columna abre
+así y pone un cuadradito donde solamente
+deja poner al un sola variable porque es
+una columna
+yo voy a simbolizar de esta forma como
+super índice entre el mayor y el menor
+para decir que es la columna
+j de esta matriz o sea que el balance de
+masa por componente que describe el
+mezclador lo puedo escribir directamente
+como f 2 igual a efe 3
+y debo entender que escrito de esta
+forma yo estoy diciendo que la columna 1
+del vector f
+bueno por tanto
+o sea que si yo tengo el mezclador
+y tenía una matriz
+efe
+en dónde
+y
+y j
+y el primer subíndice representa
+sustancias y va desde 1 hasta nc y j por
+columnas es corrientes
+la matriz f de flujos molares por
+componentes es una matriz que tiene
+tantas filas como componentes tenga
+y tantas columnas como corrientes tenga
+entonces el peso pero uno
+representa a esta columna
+y esta columna está simbolizada por efe
+3
+quiere decir que esta simbología
+es engañosa
+por qué
+no me está representando la suma de tres
+elementos
+representando la suma de tres vectores
+esto significa que en esta simbología el
+número de ecuaciones que está
+representado por la suma de estos tres
+vectores es en ese ecuaciones
+uno por cada componente o sea el punto
+de la ecuación
+esta es una esta es la otra esta es la
+otra y así hasta llegar al final
+o sea que parece una ecuación pero no es
+en la forma compacta de escribir en ese
+ecuaciones sumando los vectores flujos
+molares por componente de cada una de
+estas tres corrientes del mezclador
+entonces
+cuál es el sistema de ecuaciones que
+describe el mezclador etcétera
+y todo lo que entra es igual a todo lo
+que sale
+o sea la suma de los vectores flujos
+molares por componente de cada una de
+las corrientes que entran e igualdad el
+x3
+son en ese ecuaciones
+una vez descrito él
+[Música]
+el sistema de ecuaciones que describe la
+operación tenemos que hacer un análisis
+de grado de libertad
+que diría él ha necesitado en libertad
+primero especificar el número de
+variables que hay
+en tema
+yo tengo
+que por cada corriente estar de
+descriptas por en ese variables de
+retornar mi primer análisis de cada
+corriente yo dije que cada corriente
+estaba descripto por nc variables los
+flujos molares de cada uno de los
+componentes en cada una en en esta
+corriente
+entonces yo tengo
+e
+[Música]
+en n sin variables
+por cada corriente por el número de
+corrientes
+que yo tenga en esta operación que yo
+tenga en esta operación unitaria esta
+operación y tarea en este momento el
+mezclador tiene tres corrientes entonces
+va a ser en ese orden e s
+cuántas ecuaciones describen
+mi operación unitaria mezclador
+y
+lo que acabo de mostrar es que el número
+de ecuaciones que describe el mezclador
+es en s
+porque hay en ese ecuaciones
+representadas en esa simple suma de que
+todos los flujos morales que entran es
+igual al flujo moral de lo que sale
+los grados de libertad
+tienen igual
+igual
+no me digan nada lo vieron desde la
+primaria - el número de variables
+- el número de ecuaciones
+el número de variables
+- el número de ecuaciones
+o sea que es igual a nc ourense - en s
+igual a nc
+en ese menor
+o sea
+que yo debo especificar
+en s
+por n s - 1 variables para que puedas
+resolver este sistema de ecuaciones
+perdón me perdí ingeniera xy teme pues
+está hablando
+de este sistema ecuaciones
+un sistema de ecuaciones nosotros
+simbolizado con una llave
+pero un sistema de cocción es con una
+ecuación
+de un sistema de ecuaciones con nc
+ecuaciones
+e insisto que lo escrito en forma
+compacta de notación matricial vectorial
+es esa llave escrita sobre ese sistema
+f1 a f2 igual f 3 ósea f1 f2 igual f 3
+me representa un sistema de nc
+ecuaciones
+y ese sistema de ecuaciones
+en su demarcación es lineal y unos
+lineales
+qué pregunta
+en un sistema de ecuaciones algebraicas
+o no algebraicas
+hai que me gustaría ver la cara en la
+vida existe otra cosa que no es un
+sistema de ecuaciones algebraico y es un
+sistema ecuaciones diferenciales
+con el género sí sí y adán y citó un
+análisis donde había un sistema de
+ecuaciones diferenciales
+matemática super aplicada también sergio
+puedo hablar un sistema de ecuaciones
+diferenciales en donde los que están
+involucrados son ecuaciones
+diferenciales y diferencia con la
+ecuación que vincula la variable
+independiente x con la manera
+dependiente y esos sucesivas derivadas
+acá no esté colocado ninguna derivada
+estoy haciendo un análisis en estado
+estacionario no lo dije no lo dije el
+número preguntaron está en estado
+estacionario
+y que en estado estacionario
+bueno esa pregunta no porque ustedes son
+expertos en termodinámica la vida y la
+resolvimos cuando vimos el balance de
+energía de un sistema de flujo y
+expresamos la ecuación fundamental del
+balance de una propiedad que se conserva
+y nos van a ver así que no nos quiera
+adelantar en otra parte que en esta
+misma semana aclaró simplemente que como
+está en estado estacionario lo que tenga
+saben que sus propiedades no cambian en
+función del tiempo sus valores no
+cambian en función del tiempo
+entonces este en ese sistema de
+ecuaciones algebraicos ahora que no hay
+ninguna derivada no tiene solución si yo
+específico en ese por n s -1 variables
+observen que desde este punto de vista
+la interpretación del análisis de gran
+libertad dice que de estas tres
+corrientes que yo tengo por qué n s es
+igual a 3 en este caso particular o sea
+en este caso particular en ese igual a 3
+pero mi expresión es totalmente general
+o sea que si hubiera tenido 5 corrientes
+de entrada
+y 2 de salida
+con tu mirada nuestro costado no sé por
+qué nominación mezclador para que se
+mezclador yo solamente toque tienen una
+corriente de salida si tengo más de una
+corriente salida nomenclador
+o sea que si yo tengo nueve corrientes
+que entran y una que sale
+este sistema es un mezclador ns en este
+caso hubiera sido 10 corrientes 9 que
+entran ine que salen y la especificación
+de la nariz es grado libertad me dice
+que lo que yo tengo que especificar es
+del número total de corrientes una menos
+siempre una menos porque está descripto
+por nc ecuaciones algebraicas el manager
+oliver te dice que el número de
+especificaciones el grado de libertad
+debe ser en ese que significa corrientes
+por el número total de corrientes menos
+una
+que es justamente el sistema de
+ecuaciones del balance molar de mi
+mezclador
+uno es nuevo objeto ya la vista en
+integración dos así que vete más rápido
+le hago una diferencia
+ahora a diferencia de integración 2 yo
+voy a hacer un simulador
+entonces voy a
+plantear el siguiente mecanismo de
+solución
+qué es
+y dada toda la entrada encontrar la
+salida
+o sea aunque matemáticamente esto me
+indica de que yo tendría que especificar
+esta variable y podría haber elegido una
+de ésta una de ésta una de la otra y
+arma el sistema como estábamos haciendo
+en integración 2
+vamos a hacer uso de una hipótesis de
+resolución que se denominan aproximación
+modular
+la hipótesis en la cual se basa la
+aproximación modular es que todos estos
+módulos estas operaciones unitarias en
+las cuales yo voy a basar mi proceso se
+van a calcular de izquierda a derecha o
+sea dada toda la entrada
+encuentro la salida
+no porque no habíamos clases especiales
+que vamos a ver algunos escenarios
+especiales pero en general la hipótesis
+que nosotros vamos a usar para resolver
+este simulador es la de la aproximación
+modular dada la entrada encuentra la
+salida es un modo matemático de encarar
+la solución
+dar la entrada para obtener la salida no
+es el único modelo matemático el de la
+aproximación modular hay otro
+el modelo de aproximación modular es el
+concepto esencial y básico en el cual
+está basado hasta el plus
+y es el primero de todos los los métodos
+de solución de simuladores de balance de
+balance de masa de energía pero
+particularmente el que quedó con este
+principio esencial de aproximación
+madura aleja en plus
+e
+los modelos orientados a ecuaciones que
+es el otro modelo posible de solución de
+este simulador representa un algoritmo
+bastante complejo en donde armó todos
+mis sistemas de ecuaciones
+y un algoritmo interno especial me
+permite calcularlo como un todo a lo que
+me falta o sea
+esa aproximación orienta adecuación que
+así se llama es el desarrollo conceptual
+complejo y de tan gran éxito del otro
+simulador comercial
+más importante que hay que es el de
+aspen hai cis
+o sí
+esos son
+faces en los desarrollos de original e
+hicieron una enorme inversión en
+programación para orientarlo a
+ecuaciones es extremadamente potente y
+eso se parece más a integración 2 esto
+es poner un dato al capone un dato acá y
+calcula automáticamente el resto
+nosotros no vamos eso porque a la altura
+de la programación de marca no tiene
+sentido hacer esa aplicación vamos a
+volver a las raíces de la simulación de
+procesos que ya están escritos de la
+época de los años 70 más o menos este
+concepto de aproximación modular de dar
+toda la entrada para obtener la salida
+en cualquier modelo conceptual de
+simulación cualquiera de estos dos
+modelos el de aproximación modular
+orientado a ecuaciones también algo es
+indefectible se llama análisis de grado
+de libertad
+en la noche de libertad no lo puede
+sufrir ningún simulador esto es así
+o sea para resolver este sistema de ns
+ecuaciones yo necesito estos grados de
+libertad
+haga lo que haga el simulador lo tiene
+que hacer así o sea después como lo
+resuelven otro problema pero no puede
+soslayar el hecho esencial de que el
+grado de libertad ha estado por esta
+expresión el número de variables menos
+número de ecuaciones no hay otra forma
+de solucionarlo
+por lo menos estacionarios
+en esta ocasión es en estos no
+estacionales tengo otras variantes
+también pero en estado estacionario en
+donde la ecuaciones son algebraicas no
+diferenciales
+el teorema fundamental del ángel tampoco
+se aplica porque este sistema de
+ecuaciones algebraicas en un sistema
+ecuaciones lineales entonces ese sistema
+de ecuaciones lineales en general
+tampoco me anda la teoría del sistema
+con acciones lineales pero si el
+concepto de grado de libertad es
+e indefectible no depende del simulador
+nosotros nos hacen entonces en esta
+realidad libertad la aproximación
+modular
+este criterio lo vamos a seguir a lo
+largo de todas las operaciones que vamos
+a ver hoy vamos a ir todos así que
+vendidos
+e
+aplicado este principio de aproximación
+modular
+a este caso concreto indica que como mi
+grado de libertad
+indica que es el número de componentes
+ponen de ese menos 1 el mezclador queda
+totalmente definido si yo defino ns
+menos una variables de corrientes
+si yo defino en ese menos 1 corrientes y
+las ms menos 1 corrientes que voy a
+especificar son las de entradas
+o sea que dada toda la entrada este
+sistema de ecuaciones me permite
+encontrar la salida
+siempre
+en un mezclador que siempre tiene una
+salida para resolverlo yo debo
+especificar todas las corrientes de
+entrada
+si por alguna de esas casualidades en el
+parcial no me especifica toda la
+corriente de entrada sino en ese pues no
+es menos menos una variable bueno
+tengo que suplirla por alguna
+restricción
+no sé si yo no doy todas las componentes
+en las composiciones de entrada de todos
+los componentes entonces debemos suplir
+ese criterio por alguna otra
+especificación adicional
+e
+[Música]
+de jade
+bien
+entonces
+en ese es el número de componentes el
+número de sustancias que tiene mi
+proceso
+cada corriente no lo dije tiene en los
+índices componentes observen que esa
+frase así dicha tan suelto del cuerpo
+es fuerte
+yo adelanto o anticipo que todas las
+corrientes tienen todos los componentes
+sobre género si yo vi en integración 2
+ingeniero pepino y el ingeniero lópez me
+convencieron de que ese que es la
+corriente sea la corriente de asela 44
+el corriente 5 no tiene todos los
+componentes porque uno de 30 no el que
+sea cero es una consecuencia de la
+simulación
+conceptualmente una vez definidos los
+componentes que forman parte de mi
+proceso yo no tengo que estar me fijando
+si esta corriente tiene de componente ao
+tiene el componente de me planteo es
+todas las corrientes tienen todos los
+componentes
+eso significa que
+cuando calculé si alguno de los flujos
+molares por componente es 0 indicará que
+esa corriente no tiene ese componente
+pero estructuralmente hablando todas las
+corrientes tienen todos los componentes
+y yo llamo ns al número total de
+corrientes que había dicho porque era
+ese enlace por componentes y ese porque
+será la s
+por qué lo llamará índice porque no es
+la hermana en ese no porque necesite no
+sé
+porque como ya explicó el tema
+complicado esto de vibra de que ustedes
+son bilingües
+corriente en inglés se llama extremo
+pues imagínese
+bien
+o sea
+el componente es el número de
+componentes
+el número de corriente nada porque estoy
+de mandarle corriente n s
+e
+bien
+la operación más simple operación y
+tarea más simple más elemental es el
+mezclador construir
+configuración al mente esa es la
+construcción de tres una p o sea es una
+a mí no me interesa mucho cómo es dentro
+en otras materias vamos a ver los
+equipos que representan estas
+operaciones unitarias vamos a diseñarlo
+también para que me interesa su análisis
+en bloque o sea está en realidad
+conspiración
+no se la ve en una planta química es una
+según en dos corrientes pero observen
+que mi vasta presencia un mezclador para
+saber cuántas sale bien servirá una si
+no sale una sola de mezclador
+bien
+vamos a
+la siguiente operación interesante qué
+es
+e
+el rey el alma de nuestro proceso
+me imagino que son reactores químicos no
+son reactores nucleares niñera o sea no
+estamos haciendo acá una central nuclear
+la tercera no no es una en proceso
+químico una porque nos estamos procesos
+no quiere porque conozco mucho ingeniero
+químico regreso de acá que trabaja en
+los centros nuclear de embalse también y
+lo hace y lo hace muy bien muy bien
+y que además en una de las mejores bases
+para conseguir el nuclear
+esa especialidad no le llegan ni a los
+tobillos de quienes pero nuestro sector
+es un rector es crítico
+siempre químicos
+porque si me tiro en ingeniería química
+qué pregunta difícil para responder acá
+no somos algo así como 100 chicos para
+responder porque nos metimos en esto que
+hemos hecho de nuestra vida no hay nada
+más emocionante el ingenio químico
+porque nosotros sabemos algo que los
+demás no saben qué es una reacción
+química que lo simboliza vamos
+cómo
+ah
+más bebé
+dónde
+las minúsculas son coeficientes de
+geométricos
+simbolizadas genéricamente
+cómo
+la letra griega no
+en donde el coeficiente tequio métrico
+no del componente i
+en la reacción
+tiene
+una convención de signos es positivo
+para productos
+y negativo para reactivos
+en donde estos son reactivos
+y estos son productos
+si usted tiene que dar a probar química
+general sino también acá simplemente que
+hubiera simbolizado y también estoy
+simbolizando como acá a las caras
+reacciones
+reacciones
+alaska reacciones simultáneas que se
+producen en este reactor
+como sé yo cuántas reacciones se van a
+producir
+debo decir
+que para saber cuántas reacciones
+simultáneas
+vas a ver en mi reactor debo chequear
+constantemente cada vez que haya llegado
+ese problema de cuántas reacciones
+simultáneas
+debo chequear las por el método de brink
+light
+porque mediante mente material así que
+una vez dicho esto está centrado este
+escrito lo dije
+así que después no me digan que no lo
+dije
+obviamente no vamos a hacerlo ahora
+porque no tenemos la más remota idea de
+lo que quiere decir metro de 20 pero una
+vez que ustedes sepan lo que es y
+llegará el momento en la vida en que los
+abraham deberán aplicarlo en integración
+3
+debo dejar asentado este hecho deben
+confirmar dije deben deben confirmar que
+el número de reacciones simultáneas es
+independiente y la forma más práctica de
+resolverlo es aplicando el método de
+pringles
+pero les dejo en inquietud no lo busquen
+en wikipedia ya les vamos a subir el
+artículo original del inglés que
+extremadamente claro hace que como hay
+que resolver esto pero la gente
+matemática así que me quedo por acá
+diciendo que hay que dar reacciones
+simultáneas que están produciendo un
+fenómeno nuevos pero bien la química
+general no es obligatorio y se produzca
+una única reacción química entre las
+especies pueden plantearse
+y reacciones químicas que están
+produciendo todos dentro del mismo
+reactor
+eso es interesante o sea porque puede
+significar que haya otra reacción que
+tome esto sería a su 1 b sub 16 sub uno
+de sub 13 poniente es a la reacción uno
+que hace una reacción 2 que tome
+o sea y sería
+2
+2
+click
+me pongo en igual
+porque en esta pizarra me es más fácil
+pero lo que quiere decir con igual y que
+en realidad hay una reacción directa y
+una reacción inversa
+o sea que el principio
+con principio
+tú
+una en principio como le digo
+ustedes ya deben saber también por parte
+química general que todas todas todas
+las reacciones son reversibles
+y todas todas son reversibles
+que haya por ahí alguna reacción que
+debido a su naturaleza esté totalmente
+emplazada si la izquierda va hacia la
+derecha y la llamemos irreversible es un
+caso particular de las reversibles o sea
+porque por definición todas las
+reacciones químicas son reversibles las
+que son irreversibles son un caso
+particular de las reversibles o sea que
+si yo solucionó este problema tengo
+resuelto todo tipo de problemas de
+equilibrio ser el reversible en
+irreversible él no recibe el que sea
+tanto resulta acá por ello que yo
+escribo este igual porque soy muy vago y
+no quiero escribir las dos flechas de
+dispuesta
+ingeniero ingeniero para hacerla sin
+tratar de que falta muy poquito el
+efecto 25 operación unitaria tiene que
+ir más rápido
+que de una f 12 f también quiere decir
+que esta es una reacción tipo serie
+también porque la reacción 1 da el
+producto sec y la sustancia c es tomada
+como reactivo en la segunda ecuación
+para este tipo de escenarios también en
+donde yo puedo escribir en forma
+genérica este esquema de reacción
+entendiendo el sistema de reacciones de
+cada reacciones simultáneas que se están
+produciendo en el reactor lo puede
+escribir genéricamente como la sumatoria
+de los no súbita
+por la a
+su fin
+igual a cero
+esta es una descripción genérica de mi
+sistema de sustancias en donde el
+cuestiones tequio métrico es del
+componente y en la reacción k
+y a subir en la especie a subir genérica
+esto no es exactamente molar sino una
+forma de escribir
+las tres leyes fundamentales de la
+química que se pueden concentrar en este
+simple principio la ley de la
+conservación de los átomos o sea están
+fuertes ya saben que este coeficiente el
+tequio métrico debe ser tal que
+verifique la ley de conservación de los
+átomos que los átomos no se crean y se
+destruyan las especies sí o sea a es una
+especie
+a subir es una especie química
+alias sustancia
+compuesta por átomos
+y los átomos no se creen se destruyen en
+nuestras reacciones químicas razón por
+la cual se deben conservar
+encontrar esos coeficientes este
+geométricos que justifican esto se llama
+balancear la ecuación estéticamente en
+la cual este des son expertos y vamos a
+hacer más expertos a los rasgos de 4
+metros
+voy a definir
+para el rey
+el reactor
+es para integración 3 una caja negra
+que tiene una entrada y una salida
+la propuesta de integración 3 que no
+necesariamente es la de los simuladores
+es que si hay más corrientes
+involucradas esto se pongan fuera del
+reactor 2 es un avance que alimenta la
+corriente 1 y la corriente 2 al reactor
+se alimentan dos corrientes al reactor
+la propuesta es un mezclador primero que
+mezcla la corriente unir la corriente 2
+mesa que una sola corriente la salida
+que es la que entra al reactor y del
+reactor sale una única corriente mágica
+está bien si salen dos tres una líquida
+y una graciosa voy a poner un separador
+líquido gas después del reactor o sea mi
+reactor conceptualmente de punto de
+vista integración 3 tengo que adaptar mi
+proceso para que cumpla con esto
+si después de haber cursado 18 veces
+integración 3 usted se da en cuenta que
+tenía un mecanismo alternativo bueno
+no vaya a ser el mecanismo alternativo
+pero mi propuesta por lo menos ahora
+para simplificar el problema que ya
+tenemos enorme el problema es
+mantengamos la simplicidad a costa de
+aumentar el número de operaciones
+unitarias esto es el reactor tiene una
+entrada y una salida
+sobre este reactor voy a definir
+una variable que lo caracteriza se llama
+grado de avance de reacción de la
+reacción k
+o sea es cada reacción cada reacción
+está caracterizada por una variable
+llamado
+grado de avance de reacción de la
+reacción
+y esta es igual
+él
+[Música]
+lo que entras - lo que sale
+lo voy a plantear para una reacción como
+radical para que lo entendamos mejor
+entenderlo para una reacción
+efe
+subir de la corriente 1 - efecto de la
+corriente 2
+estas variables llamada grado de avance
+de reacción
+qué
+despejada
+me queda efe subidos
+es igual a efe
+más nos urge por
+epsilon
+el nudo multiplicando paso
+esto
+esto es
+el 2
+del revés
+lo que se ha eliminado que entra
+sobre el coeficiente tequio métrico
+o sea que lo que sale del componente es
+igual a lo que entra más lo que
+reacciona o sea esto es lo que sale
+igual a lo que entra más lo que es
+reacciona
+el grado de avance de reacción es único
+por
+cada reacción
+o sea el grado de avance de reacción no
+tiene subíndice no tiene su índice
+cada reacción tiene un grado de avance
+y es el mismo para todos los componentes
+esto es esta expresión que es la
+definición de grado de avance de la
+reacción
+demuestra las leyes de la química que es
+el mismo número para todas las
+sustancias porque básicamente no es otra
+cosa que decir que reacciona equivalente
+a equivalente esto es los números de
+moles reacción a 2 dividido el
+coeficiente este geométrico es el número
+de moles equivalentes de esa sustancia y
+reacciona equivalente a equivalente o
+sea que para esta reacción el grado de
+avance de reacción es único
+si hubiera más de una reacción la
+conclusión general es que efe subidos
+es igual a lo que entra de ese
+componente más la sumatoria del nos
+ubica por epsilon está
+esto es
+para cada componente en cada reacción
+química multiplicado por el grado de
+avance de la red de esa reacción suma 2
+sumado a lo que entra me da lo que sale
+o sea que este
+este sistema de ecuaciones
+que representan en ese ecuaciones
+porque es uno por cada componente
+representa el balance molar de mi
+reactor
+escrito en forma compacta es igual a efe
+dos es igual a f1
+más
+no por epsilon
+dónde
+e
+lo voy a escribir todo de vuelta
+reactores
+el sistema de ecuaciones es lo que sale
+efe 2
+es igual a lo que entra
+dónde no
+es una matriz es una matriz de
+coeficiente de tekio métricos
+en donde por filas
+en ese componentes
+y por columnas es reacciones
+o sea que esta es la reacción cae encima
+esta será la primera columna será la
+reacción 1 la segunda columna será la
+fracción 2 la tercera columna será la
+reacción 3 o sea que por columnas están
+las reacciones por fila están los las
+sustancias o componentes y épsilon
+es un vector de grado de avance de
+reacción
+el vector de grado de avance reacción
+tiene acá elementos uno por cada una de
+las reacciones que tengan
+escrito en forma compacta también
+e
+[Música]
+este es un producto escalar entonces si
+yo lo hiciera el producto escalar tengo
+que observar de que acá yo tenía no
+acá yo tengo épsilon
+el producto escalar también de estos dos
+vectores
+me lo va a interpretar como
+la sumatoria ósea
+cada uno de estos elementos por cada uno
+de estos elementos y me da un vector
+fila o sea este primer elemento es este
+por este más este por este maestro por
+este y su resultado es ese número
+lo que me da es un vector del mismo
+tamaño
+del mismo tamaño que la f1 a f2 que
+también es un vector que tiene tantas
+filas como sustancias tenga
+como es producto escalar desde una
+matriz por un vector su resultado va a
+ser un vector
+y ese vector es suma hablé con el vector
+f1
+por eso esta anotación es compacta
+pero sigue representando un sistema de
+nc ecuaciones
+igual que en el mezclador
+hagamos la navegabilidad
+delays grado de libertad
+en número de variables
+es igual a 2 en s
+porque tengo solamente dos corrientes
+una entrada y una salida si ese 2 es de
+las dos corrientes
+en número de ecuaciones
+en s
+inspirado de libertad
+el número de variables 2 en s más
+ns
+qué son las eps y no
+grados de libertad 2 n c
+- nc o sea es número variable
+- el número de ecuaciones o sea es en
+ese más en éste
+o sea que para resolver
+e
+suponiendo lo tendría que haber dicho
+que el coeficiente esté geométrico no es
+variable si no viene definido por el
+sistema reactivo o sea el sistema
+atractivo define los coeficientes
+geométricos no voy a usar un balance
+molar para encontrar los coeficientes de
+geométricos o sea profesiones pegamentos
+que han definido cuando yo sepa cuáles
+son las reacciones químicas simultáneas
+que se producen por ello que las
+variables que yo tengo son una
+por cada una
+no es porque la corriente es el número
+de caja
+qué es tantas reacciones como yo tenga
+tantas reacciones como yo tenga
+tantas reacciones como yo tenga que
+representan los grados de avance de
+reacción
+o sea que para poder tener definido para
+poder resolver este reactor yo necesito
+especificar en ese variables
+lo cual me representa toda una corriente
+que me representa la alimentación
+porque voy a ser el principio de
+aproximación modular necesito conocer
+toda la entrada
+y necesito conocer tantos grados de
+avance de reacción como reacciones
+tengan
+o sea que yo debo especificar el grado
+de avance de reacción yo no puedo
+resolver este reactor si yo no
+específico por cada reacción química que
+tengo una variable el grado de avance de
+reacción
+ahora bien
+cuánto puede valer el grado de avance
+el problema de definir cuántas
+reacciones tengo
+quiero llamar número de reacciones para
+que quede más claro
+me tengo que fijar cuánto puede valer el
+silo
+épsilon dimensionalmente es
+equivalente un flujo molar por un flujo
+molar esto es noción en que acá está
+sumando un número que un coeficiente
+specchio métrico en este caso la matriz
+de coeficientes de chrome ticos que son
+números que normalmente van entre 0 tras
+45 no es mucho mayor el número de mol de
+la molecular y that de cada de esta
+reacción los cocientes de geométricos
+pero si yo tengo un flujo molar de
+10.500 moles ahora del componente a el
+grado de avance reacción tiene que estar
+en ese orden entonces será 4300 moles
+ahora
+explicó o sea es grande
+no esté limitado si fuera cero no habría
+reacción
+si puede ser positivo puede ser negativo
+porque la reacción es reversible puede
+que la reacción avances en la derecha o
+puede quedarse ser izquierda no lo sé
+entonces
+la verdad es que yo no sé cuánto puede
+valer ese grado de avance de reacción
+para tener una idea de poder especificar
+lo y plantearlo a partir de allí y para
+poder sobre este sistema de ecuaciones
+entonces voy a este que es mi ecuación
+fundamental pero que el análisis grado
+de libertad me pide que especifique
+tantas variables como reacciones tenga
+aunque el grado de avance reacción es la
+variable que específica voy a tener que
+encontrar caminos alternativos para
+poder clasificarla aumentando
+mi número de ecuaciones con ecuaciones
+que vinculen al grado de avance
+por ejemplo
+definir conversión fraccional
+la conversión es de un reactivo
+limitante
+y la conversión es para una reacción
+una reacción obtengo que especificar la
+o sea o deje de ser el criterio de un
+reactivo limitante la conversión
+que era simbolizó con esta x cruzada
+pero con marcada es más fácil simbolizar
+la con x mayúscula lo que pasa es que en
+este tipo no este no distinguen la
+fracción molar de esta x que es
+mayúscula y por eso le hago el doble
+trazo
+es igual a lo que entra de reactivo
+sobre lo que entra
+o sea
+la conversión de un reactivo es lo que
+entre ese reactivo menor que sale sobre
+lo que entra
+si es de un reactivo limitante esto se
+encuentra entre
+0 y 1
+si no es de un reactivo y no es el
+limitante entonces no se va a cumplir
+que se encuentra dentro de este
+intervalo
+por eso es que es una variable compleja
+de definir si las reacciones son
+múltiples por qué y si la reacción es
+reversible o sea esto es una variable
+muy fácil de especificar sí
+ah
+[Música]
+si es una reacción única irreversible
+como alternativa voy a definir
+selectividad
+como el flujo molar del componente y
+deseado
+sobre el flujo molar del componente y no
+deseado
+esto es yo debo en mi esquema reactivo
+decir que deseo producir tal cosa y se
+reproduce con su producto no deseado de
+esta otra sustancia la selectividad es
+el deseado sobre el no deseado
+y el rendimiento
+es el flujo molar de el componente
+donde lo tengo
+y el rendimiento es el flujo molar del
+componente deseado / lo reaccionado
+efe subí 1 - efe subidos
+o sea
+lo que yo obtengo de deseados / lo que
+el reactivo reaccionado o sea esto es
+deseado
+sobre reacción reactivo reaccionado
+quiere decir sintetizar la
+qué
+en un reactor
+yo necesito el sistema de ecuaciones que
+lo describe es este
+y son en es ecuaciones porque te escribe
+en forma compacta
+para poder resolver esto yo necesito
+especificar tantos grados de avance de
+reacción como reacciones tenga
+si no puede especificar los grados de
+avance reacción debo sustituir esa
+especificación por tantas
+especificaciones adicionales que me
+soplan los grados de avance que no estoy
+especificando esto es yo tengo tres
+grados tengo tres reacciones tengo que
+especificar tres grados de avance de
+reacción entonces no puedo especificar
+tres conversiones
+una conversión y dos selectividad es o
+una conversión una selectividad y un
+rendimiento
+porque por cada grado de avance reacción
+que yo deba especificar de acuerdo a mi
+análisis de grado de libertad debo
+sustituirlo por una especificación
+adicional que la reemplace
+la tercera
+y la tercera posibilidad parece
+especificación es la siguiente
+no sé por qué
+porque eso viene de otras materias
+yo pudo reemplazar esas nr
+especificaciones una por cada reacción
+con la constante de equilibrio
+de cada una de esas reacciones no sé si
+la reacción es reversible puedo hacer
+tantas constantes de equilibrio como
+reacciones tenga
+entonces reemplazar o agregar a mi
+ecuación fundamental que requiere
+especificar
+tantos grados de avance reacción
+como reacciones tenga agregarle tantas
+ecuaciones de equilibrio químico
+ecuaciones de reacción venga
+el resultado con esto es que siempre por
+cada reacción yo debo agregar una
+especificación por cada reacción química
+que yo tenga ya sea como grado de avance
+ya sea como conversión o ya sea como
+constante de equilibrio
+en una primera etapa vamos a trabajar
+con un grado de avance o conversión
+y cuando veamos cómo formular la
+constante de equilibrio agregaremos la
+constante de quillota
+y si no alcanzamos vamos a agregarle los
+ejercicios que no entenderán porque
+ustedes ya son expertos en constante
+equilibrio es el producto de las
+concentraciones de los productos
+elevados suficientes tequio métrico
+dividido
+pero la productora o el producto de las
+concentraciones reactivos en el
+denominador elevado su coeficiente
+doméstico
+la constante equilibrio
+10
+en este momento de hecho nada más que
+dos operaciones unitarias
+el mezclador
+cuyo análisis dado libertad dice que
+debo conocer todas las corrientes que
+entran
+para armar el sistema de ecuaciones y
+encontrar nuestra vida y el reactor que
+me indica qué
+tengo en ese ecuaciones que describen el
+reactor por el grado de conservación y
+debo especificar como parámetro de
+equipo una especificación por cada
+reacción química biblioteca ya sea su
+valor de grado de avance ya sea
+conversión selectiva rendimiento o ya
+sea constante exquisita
+vamos a la siguiente operación italia
+vamos al divisor o splitter
+it is
+la primera y más simple de todas las
+operaciones unitarias
+en donde no sale una corriente si no
+sale más de una corte sale más de una
+corriente o sea
+el caso genérico es entra uno
+y salen 2
+tenemos
+e
+es todo todo sistema tarde o temprano de
+este tipo que sale más de uno lo puedo
+reducir aquí salen dos
+o sea siempre a más de uno como un
+mezclador antes y si salen más de dos
+algo que salgan dos y después otro
+sprinter que saliendo algo otro splitter
+que salen dos y así sucesivamente o sea
+que por eso bien se en el caso genérico
+de que entra una corriente splitter izar
+en dos porque cualquier la configuración
+se puede armar a partir de esta
+configuración de divisor
+él splitter como tal empieza con
+que estos sistemas de ecuaciones ahora
+son un poco distintos empiezo con la
+conservación de los moles me olvidé
+decir el reactor
+es una expresión de que la masa se
+conserva pero los moles no no hay
+ninguna ley de conservación de moles los
+moles se pueden crear y destruir si la
+suma de los coeficientes pecchio
+métricos de la reacción no da 0 los
+moles se crean o se destruyen no hay esa
+ecuación del balance era balance molar
+del reactor en donde los moles no se
+conservan porque el 94 no hay de ley de
+conservación de moles la ley que es
+conservación de la masa
+y el reactor se hace particularmente
+porque se conservan los átomos y no los
+moles entonces de allí viene la enorme
+ventaja que plantea sistema ecuaciones
+que yo planteo
+fuera de eso en que no hay una reacción
+química balance molar o mágico es
+idéntico
+porque acá en el split debe al 98 en
+química no se generan moles ni se
+destruyen moles entonces el balance de
+masa del del divisor o splitter como ya
+lo han visto no lo hace más por
+componente el balance masa por
+componentes se resuelve simplemente
+diciendo f1
+es igual a f2
+y esta anotación compacta quiere decir
+que este es un sistema de nc ecuaciones
+uno por cada componente
+debo especificar además y armar como
+sistema de ecuaciones
+una relación de las corrientes de salida
+esto es
+e
+[Música]
+puede especificar las
+o con la corriente f2 y f3 entre sí o
+una cualquiera dos f2 y f3 con respecto
+a efe uno que es lo que entra esto es yo
+tengo que especificar y en el caso del
+splitter
+es
+efe
+subidos
+es igual a beta por efe sube 1 de meta
+por efe sube 1
+efe
+e
+[Música]
+esto es cada uno de los componentes o
+sea esto equivale a decir
+efe a 2 es igual a beta por efe a 1 efe
+- el igual hábitat por fb1 y así
+sucesivamente
+o sea todos los componentes por igual
+tienen un factor beta
+que indica cuánto de la corriente que
+entra qué porcentaje va a salir en la
+corriente 2
+sb está normalmente en un splitter
+hay que ver cómo está armado el proceso
+se le llama factor de purga o factor de
+reciclo 3
+ya vamos a ver cuando armemos todo el
+proceso a qué llamamos factor de purga y
+factor de reciclo lo que a mí me importa
+es decir que todas las sustancias tienen
+un valor de beta único para todos los
+componentes en donde lo que sale de la
+corriente 2 es esta constante
+proporcional y beta de lo que entra de
+la de 1 en donde beta
+es mayor que 0 y menor que 1
+esto se puede escribir para un
+componente pero entreabierto describir
+para los en ese componente que tiene o
+sea esto tiene que ser el mismo beta
+para los en ese entonces yo lo escribo
+en forma compacta como f 2 igual a beta
+por f 1
+que me representa un sistema de nc
+ecuaciones
+entonces mi análisis y libertad
+me diría número
+y variables
+es igual a 3 en ese porque yo tengo tres
+corrientes
++ 1
+que es beta
+número de ecuaciones
+2 nc esto es las n s ecuaciones de este
+tipo más la nc ecuaciones de este tipo
+los grados de libertad es en ese más uno
+en donde de vuelta los en s grados de
+libertad que me está planteando acá
+tiene que ser la entrada
+y debo especificar beta
+o sea para poder resolver este sistema
+de ecuaciones
+forma este sistema de dos nc ecuaciones
+algebraicas yo de la específica f 1 y
+beta
+este factor con este factor de purga o
+de reciclo dependiendo de cómo ser
+proceso tiene que es una constante
+proporcionalidad que existe entre la
+salida una salida y una entrada
+vamos a ver vamos a ver
+y otro para entender este vamos a ver
+otro
+que esta inspiración flash
+para destilación flash
+la operación es entrar una
+es un separador líquido vapor
+esto es entre una corriente 1 y de
+alguna forma que te lo vamos a ver más
+adelante en la próxima clase en las
+condiciones que se dan dentro de esta de
+este equipo de respiración flash hacen
+que se generen dos fases un líquido y
+una gaseosa
+como son dos fases distintas la
+composición de las dos fases van a ser
+distintos o sea la gaseosa es más rica
+en el componente más volátil y la
+líquida es más rica en el componente
+menos volátil el más pesado
+el sistema de ecuaciones que lo describe
+es nuevamente un balance de masa total
+más una relación que debe existir entre
+la corriente 2 y la corriente 3
+esta relación que existe entre la
+corriente 2 y la corriente 3 que la voy
+a simbolizar efe
+3
+igual a alfa por efe 2
+donde alfa es vector
+volatilidad relativa
+bolatti link
+la relativa
+es un vector
+uno por cada componente
+o sea que ahora alfa es un vector o sea
+que hay en ese ecuaciones de este tipo y
+hay en ese ecuaciones de este tipo en
+donde cada uno de los componentes que
+tiene mi sistema
+tiene un valor de volatilidad relativa
+ese valor de volatilidad relativa es o
+está relacionado con una variable que
+vamos a llamar constante de equilibrio
+líquido vapor
+o sea
+voy a hacer la 9° libertad y
+probablemente la próxima clase aclare
+qué es lo que es la volatilidad relativa
+en la nariz y grado libertad
+me indica que el número de variables
+es igual a 3 en el c +
+de uatre versión
+está formado por
+en ese de la f1 f2 y f3
+más en ese de alfa
+la volatidad relativa porque tiene que
+haber una volatilidad relativa por cada
+componente
+el número de ecuaciones
+en igual
+2 de nc
+porque son en ese por la primera en ese
+por la segunda grado de libertad
+es igual a 2 en s
+esto significa que yo debo especificar
+en este concepto de aproximación modular
+estas dos nc están compuestas por las n
+c por f 1
+y las n s
+por las volatilidades relativas
+o sea que para poder resolver la
+destilación flash yo necesito conocer
+cuánto vale el vector volatilidad
+relativas alfa esta constante de
+proporcionalidad que existe entre los
+componentes de la corriente 3 y la
+corriente 2 observen que la 3 y la
+gaseosa
+y las dos eran líquida no
+o sea está escrita de esa forma por
+motivos que vamos a ver más adelante que
+la canción es igual a volátil ya
+relativa
+los flujos molares de la líquida
+y si no es destilación flash
+por ejemplo
+una columna de destilación
+usted vieron en integración 2
+que en la columna de destilación tiene
+una corriente de alimentación
+y salen dos corrientes un destilado y un
+residuo en donde básicamente hay una
+corriente gaseosa de vapor que circula
+en forma ascendente se condensa en el
+condensador una parte refluye se
+transforma en una fase líquida que
+desciende por la columna
+en su parte inferior hay un evaporador
+que genera esta corriente de vapor que
+asciende por la corriente y yo saco una
+parte líquida del evaporador de abajo
+del calderín y saco una corriente del
+condensador que para sacarla a la parte
+líquida del condensador o la puedo sacar
+de la parte graciosa del condensador
+para resolver esta columna de
+destilación
+voy a hacer el balance de masa total
+voy a
+[Música]
+resolver en forma rápida esta columna
+expiración
+con un método rápido llamado hipótesis
+del componente clave
+hay otro método que no sea rápido si hay
+un método riguroso para resolver esta
+columna destilación pero el método
+riguroso para calcular esta combinación
+no lo vamos a ver en integración 3 lo
+vamos a ver cuando se vea diseño de
+torre de expiración entonces de series
+de respiración veremos el método
+riguroso para calcularlo en integración
+3
+vamos a usar el método rápido
+el método rápido
+consiste en la aplicación de la
+hipótesis del componente clave
+qué dice la hipótesis del componente
+clave
+vivo bien
+tiene que ejemplificar lo y ahora pierdo
+generalidad con el componente en s
+voy a tener que concretarlo pongamos que
+entran en mi corriente de alimentación
+las sustancias a b c d ye
+la concreta en 5 háganlo ustedes
+extensibles extensivos a cualquier
+número de componentes dice la hipótesis
+del componente clave seleccione dos
+sustancias de estas que estará
+alimentando la torre
+pongamos las sustancias sí y la
+sustancia de
+ordenadas en el sentido de las
+volatilidades decrecientes osea que acá
+tengo un problema que no me había
+surgido hasta el momento
+todo mi análisis de toda esta clase
+arrancó diciendo que bien ese componente
+es que cada corriente estaba formada por
+nc sustancias cuales pero lo mismo como
+la sustancia de abc de
+pero si en un proceso
+hay una columna de destilación entonces
+voy a tener que aplicar la hipótesis el
+componente clave
+para poder aplicar la hipótesis de
+componente clave yo tengo que tener
+ordenadas las sustancias en el sentido
+de las volatilidades decrecientes o sea
+la sustancia en la que tiene la
+volatilidad más chica y la sustancia es
+la que tiene la volatilidad más grande
+eso significa que desde el comienzo de
+mi análisis de a viernes fijado que si
+había una columna expiración multi
+componentes como es esta
+debo ordenar mis sustancias por
+volatilidad es en principio las
+volatilidades siguen la inversa de los
+puntos de ebullición que vamos a ver más
+adelante alguna definición más
+específica de lo que es la volatilidad
+relativa y ahí tendremos un panorama más
+claro pero por ahora yo voy a decir que
+la volatilidad es a la inversa
+de tv o sea la volatilidad más chica es
+la del punto de ebullición más grande
+o sea
+están ordenados entonces las sustancias
+por punto de posición en aumento el
+punto de la temperatura ebullición de la
+sustancia
+es la más alta de todas y la temperatura
+de ebullición de la sustancia es la más
+baja de todas eso significa ordenar por
+volatilidades decrecientes
+ordenado así
+[Música]
+voy a separar dos sustancias también
+a las cuales voy a llamar a las cuales
+voy a llamar componentes clave
+supongamos que separó las sustancias 6
+a la cee por ser la más alta la vieja
+mar componente clave liviano light y el
+heca
+y a la sustancia de la chica la chica
+por qué
+sí
+y
+componente clave pesado
+la hipótesis dice que las sustancias a
+b6 de a veces de y que están presentes
+en la alimentación van a estar
+en las dos corrientes de salida
+con una particularidad
+los componentes claves van a estar en
+los dos
+o sea en el destilado y en el residuo en
+f2 y f3
+pero componentes más pesados que el
+clave pesado
+no están en el destilado
+o sea clave pesado es la sustancia de
+más pesado que de eje
+y no va a estar
+en el destilado no va a haber
+componentes más pesados que clave pesado
+en todo
+y no va a haber más livianos que el
+clave liviano en votos o sea que más
+livianos que el clave liviano que se son
+ahí ve entonces a
+y b son 0
+e
+en el destilado o sea no haber
+componente más liviano que el clave
+liviano en botox ni más pesado que el
+clave pesado el top
+los dos componentes que son los
+componentes clave tienen que estar
+especificados con
+a algún factor de recuperación esto es
+el sistema de ecuaciones se arma
+diciendo que
+efe
+13 es igual a 0 efe sub 23 es igual a 0
+que son los componentes clave livianos
+más liviano que el clave liviano que son
+0 abajo
+que los componentes que son clave
+van a estar distribuidos al revés
+el componente f 3
+es el clave y liviano
+en bottoms o sea clave liviano en motos
+que está en 3
+es igual a un factor de recuperación de
+clave lidia no light y un factor de
+recuperación del componente 3 que entra
+en la corriente 1
+que el componente 4 que es el clave
+pesado
+en la corriente de destilado es una
+constante es un valor proporcional
+la hipótesis del componente clave que se
+plantea como método rápido de la columna
+expiración indica que más livianos que
+el clavel liviano no están en votos que
+más pesados que el clave pesado no están
+en top y que los componentes clave son
+un determinado porcentaje de
+recuperación del clave liviano en votos
+y del clave pesado en todo ello debo
+especificar cuánto valen esa esas dos
+variables de proporcionalidad de factor
+de recuperación life y heavy key
+esto es
+para la columna de destilación
+e
+el sistema de ecuaciones está
+constituido por
+nc ecuaciones de balance molar + nc
+ecuaciones de distribución por la
+hipótesis del componente clave
+o sea que mi análisis de grado de
+libertad diría número de variables
+3 en s
++ 2
+que son en light king y el g beats
+número de ecuaciones número
+no debe ser
+porque son estas en essen y ésta se dice
+grados de libertad e igualdad en s 12
+que es light king
+l
+debo especificar toda la alimentación f1
+y cuánto valen los factores de
+recuperación light key y jericó
+bien
+él
+[Música]
+entonces
+pero con esta suelta
+ella
+yo tengo a dos de las siete
+en el siguiente
+en clase creo
+si la clase entonces
+y confirmando que la siente
+tienen economía
+para 1955
+bien
+e
+efe
+verde que escuchar esto varias veces o
+sea que voy a recordar un poco para que
+no probablemente por operaciones y
+tareas porque me iba a grabar con
+operación unitaria pero escapó en
+conjunto
+resumiendo esta parte
+que he hecho
+y armado
+primero
+e
+pero el primero
+entonces
+hasta el momento
+definitivo una corriente queda
+especificada por nc variables que son
+los flujos molares de cada uno de los
+componentes de la corriente
+segundo
+el mezclador está definido por
+varias corrientes que entran una que
+sale el balance molar de ese mezclador
+estaba formado por un sistema de nc
+ecuaciones quiere decir que para poder
+resolver ese sistema ecuaciones yo tenía
+que especifique especificar todas las
+corrientes de entrada para poder obtener
+como resultado un sistema de ecuaciones
+las en ese flujos en ese flujos molares
+de que abren los componentes de la
+salida
+luego el reactor
+el reactor tiene un esquema de reacción
+que indica que hay un conjunto de
+reacciones químicas un sistema de
+reacciones químicas que se producen
+dentro del reactor
+el número de la libertad me indica que
+el sistema de ecuaciones que se arma es
+el de el flujo molar de la salida e
+igual a la que a lo que entra más el
+producto de la matriz de cuestión de
+ética métrico por el vector grado de
+avance en reacción
+o sea que debo para poder resolver
+especificar toda la entrada y los grados
+de avance de la fracción como hay un
+grado de avance reacción por cada
+reacción si no lo tengo aislado de
+avance de reacción por cada reacción
+debo agregar una especificación más por
+cada reacción química y este específico
+tradicional pues a las constantes de
+equilibrio de cada unas reacciones o
+conversión de reactivos limitantes o
+conversión selectividad rendimiento
+tantos parámetros como grados de avance
+como reacciones pescas
+luego vimos las operaciones en las
+cuales entre el 1 y el 2
+el primero es el splitter
+todas las composiciones de salida de
+este divisor las composiciones son
+iguales e iguales a las de la entrada
+entonces porque solamente tomó la
+entrada y / sin cambiar sus
+composiciones dividido en dos corrientes
+para poder especificar lo mi sistema de
+ecuaciones eran en ese ecuaciones por el
+balance molar más un parámetro de
+división que es un factor de escurra un
+factor de principio
+la siguiente operación que vimos de
+división fue
+una torre de destilación flash un equipo
+de destilación clase un separador
+líquido vapor en donde el líquido y el
+vapor las dos corrientes de salida no
+tienen la misma composición porque una
+gaseosa una es líquida una más rico del
+componente volátil una es más rico en el
+componente pesado
+está descripto por un sistema de dos en
+ese ecuación es el balance moral todo lo
+que entrenador que sale más
+factor de volatilidad relativa uno por
+cada componente que se escribe igual que
+el de meta de splitter tan solo que el
+beta es un número porque el mismo para
+toda sustancia y para destinación flash
+es un vector alfa porque ese número es
+distinto por cada componente
+y luego vimos que a lo mejor lo grabamos
+mejor separación si hacíamos una torre
+de destilación
+para toda la destinación tenemos que
+aplicar la hipótesis del componente
+clave la hipótesis del componente clave
+estaba basado en
+ordenar las sustancias por volatilidades
+decrecientes por punto de ebullición
+crecientes
+seleccionar dos componentes a los cuales
+llamamos componentes clave
+aplicar la hipótesis del componente
+clave más liviano que el clave liviano
+no hay botones más pesados que clave
+pesado no hay en todo
+y para los dos componentes claves un
+factor de recuperación
+qué determina de lo que entra qué
+porcentaje de libia no hay abajo qué
+porcentaje del pesado hay arriba
+para las varias preguntas que te me
+hacen con respecto destinación ya vamos
+a ver qué pasa si los componentes claves
+no son contiguos ahí los dos componentes
+6 estaban pegados qué pasa si yo hubiera
+elegido verde en cuyo caso se no o sea
+los dos componentes claves no son
+contiguos
+la hipótesis sigue siendo más liviano
+que el clave línea no no hay abajo más
+pesados es clave pesado no hay arriba
+los dos componentes clave están
+distribuidos con el factor de
+recuperación y los que están en el medio
+necesita un determinado factor que me
+diga cómo se distribuye los del medio
+porque el sistema de ecuaciones
+nuevamente en todos los de división
+están formados por el componen lo que
+entra entonces son dos en ese sistema de
+ecuaciones 1 el balance molar y otro el
+balance del hipo es decir componente
+clave o el de beta o el de la alfa
+llegó el momento de ver si puedo poner
+todo esto me faltan dos operación
+ministerios que si no la doy ahora de
+bienes con una grabación que es una
+extracción líquida líquido de absorción
+porque sigue el mismo criterio pero
+[Música]
+voy a plantear de unir todos
+hacer un proceso
+qué es lo que tenemos que hacer nosotros
+hacer un proceso para hacer un proceso
+vamos a plantear
+el caso genérico
+no hay dos procesos iguales esta es una
+simplificación general y una forma de
+analizar procesos también yo tengo un
+mezclador
+salió una corriente
+va al reactor los productos de reacción
+son separados
+bien en una torre
+lo que
+sale de este equipo de separación una
+parte se obtiene como producto
+y una parte se recita
+razón de la cual lo que tenemos que ver
+es la operación reciclo
+la operación que existe entre la
+operación está simbolizada está por la
+corriente fcyt
+tenemos que hacer el análisis de grado
+de libertad ahora del proceso también
+este análisis de grado de libertad es
+crítico hacerlo en todo un escenario
+porque es que nos va a ahorrar todos los
+problemas se entiende la idea
+porque usé un mezclador porque puse el
+mezclador m1
+pues porque mezcla la alimentación f1
+con una corriente de reciclo efe 7 sale
+del mezclador la corriente 2 al reactor
+reacciona y se producción a nuestra
+química obtengo a la corriente 3 la
+corriente 3 la separó
+parte de mis productos de separación
+salen por la corriente f 4 y por la
+corriente f 5
+y de la corriente f 5 una parte se
+recicla fp7 y una parte se purga que es
+f 6 y de ahí donde venía lo nombre de
+reciclo y pura
+de acuerdo todo el análisis que hemos
+hecho
+voy a hacer una matriz de operaciones en
+donde yo voy a poner aquí la operación
+unitaria
+aquí voy a poner los datos
+en los parámetros
+y lo que obtengo
+de la operación mezclador
+yo dije que necesitaba conocer toda la
+entrada pero para encontrar la salida
+esto es yo necesito encontrar f1 obtener
+como datos f 1 y f 7
+no hay parámetros para obtener f 2
+se entiende que con esta simbología lo
+que yo quiero decir este 2 es el vector
+flujo molar por componente de todos los
+componentes de la corriente 2
+no es o sea con si yo tengo eso uno
+sacar a partir de ahí todos los más
+valores el flujo molar total de la
+corriente los flujos las fracciones
+monedas de cada componente en esa
+corriente los flujos mágicos la
+composición básica de corriente lo cosas
+que solamente con esos datos
+yo vi el reactor
+el reactor requería que yo conozca toda
+la entrada
+tiene como parámetro los grados de
+avance de reacción o lo que es
+equivalente la constante de equilibrio o
+la conversión tanto como reacciones
+tenga y obtengo como resultado
+es de 3
+voy a mi torre de destilación a la cual
+voy a suponer que una destilación flash
+flash
+requería conocer toda la entrada
+tenía como parámetro en la volatilidad
+relativa que tenía que darle la
+volatilidad relativa de cada uno de los
+componentes para obtener las salidas f 4
+y f5 o sea estaba formado por dos en ese
+una en sistema ecuación en forma por dos
+ecuaciones necesitaba la entrada y la
+volátil creativa para encontrar las dos
+salidas
+me iba de splitter
+en donde yo necesitaba la entrada
+un parámetro beta para obtener las
+salidas
+efe 6
+y eficiente
+esto es para poder resolver esto yo
+tengo que arrancar de algún punto de
+este círculo y si ya hablando del
+mezclador mi primer problema es que para
+resolverlo este eficiente
+bien
+segundo que no puedo resolver nada si no
+tengo cliente no sé qué no sale de
+alcance 7
+los necesito sí o sí en este concepto de
+aproximación modular yo tengo que darle
+f 7 como dato para que yo pueda calcular
+de 2
+voy al reactor con efe 2
+voy a
+con efe 2 yo calculo f 3 siempre y
+cuando tenga lo grado de avance tensión
+o tantos parámetros como reacciones
+tenga
+pero con este f 3
+yo si puedo calcular tigación class la
+destinación flash me va a calcular f 4 y
+f 5
+pero f5
+lo necesito para calcular el split
+y recién una vez que calculó el splitter
+voy a saber cuánto vale 7
+entonces esta f 7
+lo necesite como valor de entrada y lo
+obtuve como salida o sea que yo tendría
+que haber puesto un valor de 7
+calcular en el orden en que esté
+haciendo allí
+encontré describir cuánto vale f 7 y
+preguntarme es este valor que calculé
+efe 7
+igual al que yo puse inicialmente si mi
+respuesta es y problemas resueltos el
+resultado sea el proceso ha sido
+simulado en su balance de masa si la
+respuesta es no tengo que poner este
+nuevo valor 17 volver a ponerlo como
+inicial y recalcular todo
+y después de preguntarme cálculo con
+este valor deficiente que acabo de poner
+cálculo efe 2 cálculo f3 cancún efe 4
+cálculos de 5 cálculos 17
+stp 7 igual al valor que yo puse
+comienzo
+y si la respuesta es no
+pero que volverá séptimos de cumplirlo
+como ingeniero es un proceso iterativo
+pero es interactivo pero ustedes son
+expertos en procesos interactivos no es
+la primera vez y no me venga que la
+primera vez que ven un proceso
+interactivo que saben ustedes proceso
+iterativo un montón sobre todo lo que
+les dijo el doctor no me consta
+que los procesos interactivos necesitan
+un valor de convergencia y algún valor
+para poder decir que cuando esta
+diferencia es menor que un cierto menos
+practicados salga porque los procesos
+interactivos nos dan un resultado único
+va en un valor con un cierto grado de
+error es ese error que es la diferencia
+entre dos cálculos sucesivos es menor
+que un valor prefijado saldré de mi lazo
+iterativo
+observen entonces que para calcular mi
+proceso
+los actos que yo necesito son f1
+y los parámetros
+ese resultado es crítico o sea que
+ustedes deben verificar que tienen
+información suficiente para poder
+resolver y la información suficiente
+para resolver esto es conocer toda la
+alimentación f1 y tener todos los
+parámetros del equipo
+observen que la integración 3 yo no voy
+a usar estos balances para encontrar los
+parámetros
+sin atacar
+o sea
+puedo en cómo puedes que me especifique
+un parámetro en forma o sea o por cada
+parámetro que me diga mi cálculo analice
+grado libertad que me está faltando
+esto es diciendo libertades y necesito
+beta
+pero no me da me está bien pero me tiene
+que dar un dato más que me reemplace
+meta
+más que reemplazarlo es una ecuación más
+porque venta no está
+se entiende la idea como un mínimo
+necesito para resolver este balance de
+acuerdo al análisis de la libertad que
+acabo de hacer que es resultado producto
+de todo lo anterior
+mi resultado es que yo debo especificar
+para este proceso
+efe uno de los grados de avance o sus
+alternativas
+la volatilidad relativa de cada unas
+sustancias para el flash y el factor de
+purga o factor de reciclo
+el pibe está va a ser factor de purga si
+es de 6 sobre 5
+o sea beta como efe 6
+sobre f 5
+se lo llama purga
+y beta como efe 7
+sobre f 5
+se lo llama factor del reciclón
+es uno de los dos no simplemente si es
+purga es seis sobre cinco si es resistió
+es 7 sobre 5 por supuesto que yo podría
+especificado cuánto hay de f 617 no
+porque me analice grado de libertad dice
+que yo necesito un parámetro beta
+mis resultados o sea lo que yo debo
+esperar encontrar es efe 6 y f 4 osea f
+6 y f 4 y porque todos los resultados
+intermedios
+se entiende todos los resultados
+intermedios o sea el procedimiento
+calculator de adentro pero además saca
+efe 6 f 4
+observé que una cosa muy curiosa no
+efe sf 4
+si yo no hubiera tenido f1 podría
+haberme dado efe seis reemplazos de uno
+porque yo necesito ese variables
+similares de uno calculado todo
+ese resultado también general qué quiere
+decir con esto muchos enunciados y
+muchos problemas reales en realidad que
+nos ha dado muchos problemas reales
+enviar es dicen yo quiero obtener 10.000
+toneladas año de este producto 10.000
+toneladas años es especificar por
+ejemplo cuánto el f 4
+esto significa que si yo específico f 4
+f 1 tiene que ser calculado porque me ha
+necesitado libertad dice que esto se
+resuelve con f 1 y los parámetros opción
+analfabetas
+si yo tengo la especificación de f 4 f 1
+no puede ser especificado el sistema
+asegura incompatible
+o sea que está en el diseño de libertad
+es fuerte me dice el conjunto de datos
+que yo tengo que dar para que esto pueda
+tener solución si tengo más el sistema
+ser incompatible sí tengo menos no tiene
+solución y si tengo esto
+depende de las ganas de resolver porque
+tengo un par de problemas adicionales
+que adquiere si lo resuelve sobre todo
+en el parcial
+bien
+este análisis grado libertad hay que
+hacerlo para cada proceso para ver si
+tengo todas las especificaciones porque
+es que me orienta para ver
+a lo mejor
+energía castaño porque no va a ser
+seguro que no presentan malo que el dato
+lo da
+pero está metido dentro de la
+comprensión de texto
+para saber si este el dato no estás
+dando primero y en esto saber que me
+falta para poderme buscar eso es crítico
+o sea no no tengo que agachar la cabeza
+tonta y el local del equipo que pensaré
+primero que necesito y lo que necesito
+menos dice que este me dice grado
+libertad
+para ver qué tengo que especificar para
+buscar esta especie que hacer o por qué
+el profesor no me la dio porque no me lo
+dio al medio parcial pero quiere una
+respuesta porque es inadmisible y un
+ingeniero químico no dé una respuesta
+debe dar una respuesta en ese caso lo
+que debe hacer el tve me falta beta
+entonces ingenieros y beta valiese entre
+0 y 0 5 mi resultado es este o sea
+porque ustedes saben que depende de meta
+porque tienen específicamente ignorada
+mente el ejercicio y que no me da el
+ejercicio beta entonces planteó mario
+escenario si vende establecieron 1
+2002 2003 entonces resultó ser este
+porque ustedes solamente y yo sé que
+ustedes saben que necesitan beta
+eso es el resultado del análisis grado
+libertad
+e
+a esto le voy a agregar
+un concepto crítico
+e
+[Música]
+todo proceso
+químico
+es un proceso económico
+esto es
+e
+el proceso tiene que tener son muy pocos
+los escenarios tiene que justificarse
+muy bien
+la cara que tiene se cuantifica muy
+fácil pero el resto el mundo civilizado
+no de hacer un proceso improductivo esto
+es el objetivo de la empresa en nuestro
+sistema occidental que se ha demostrado
+que es el único viable porque créame que
+no hay existe un par de relictos en el
+mundo pero ni la exunión soviética ni la
+china actual
+ambos han demostrado que
+indefectiblemente el móvil del
+emprendimiento privado en la ganancia no
+hay otro sistema se ha intentado se ha
+intentado con sangre otros sistemas y no
+te vieron no digo que el sistema de
+vendería funciones demos quedó
+evidentemente demostrado que los otros
+no funcionan y no digo que éste funcione
+no pero nosotros estoy seguro de que no
+en móvil es la ganancia es indefectible
+en nuestro sistema actual
+de la forma que no quieren ver ya sea
+público y hacer privado o sea en todo
+lugar es si no tengo la ganancia esto
+entonces el objetivo del proceso es un
+emprendimiento económico que quiero
+hacer con esto si yo tomo la materia
+prima
+y la quiero en forma en el producto de
+pero el producto me sale más barato que
+a vender pues me cuesta más caro comprar
+materia esquina que venderla como
+producto o sea eso es un emprendimiento
+que no es viable económicamente forma
+que sea maravilloso para simularlo
+el inviable o sea experto por lo menos
+él probó todos tienen que tener un valor
+más alto que la mantiene primero para
+que pueda tener ganancias que tenga un
+valor más altos no necesitas que no
+impliquen que bert en ganancias porque
+van a ver el almería económico en
+economía este año y en integración 4 un
+estudio económico más riguroso del
+proceso también en donde van a ver que
+depende de varias variables el que sea
+realmente rentable que en realidad sería
+mini la expresión correcta quedaría ser
+rentable o sea la tasa interna de
+retorno debería ser más alta que el
+plazo fijo o la tasa de descuento del
+banco
+pero estoy absolutamente seguro que
+sin una variable llamada potencial
+económico es cero o negativa el proceso
+es inviable
+y aquí llamo potencial económico llamo
+potencial económico
+a los que yo tengo por la menta de mis
+productos menos lo que yo canto por mis
+materias primas
+se entiende esto es si yo tuviera el
+valor económico de lo que obtengo como
+producto que normalmente está expresado
+por unidad de masa esto es un valor
+monetario
+unidad de masa y yo fijada una unidad de
+medida temporal
+pongamos un año un segundo un mes el que
+ustedes quieran multiplicó ese valor
+económico por una masa por la masa ponía
+tiempo lo que obtengo es el valor
+económico por ni de tiempo
+hablando en chino darla con ecuaciones
+pero es muy pago
+es cuántos dólares por toneladas se
+vende este producto y yo tengo aquí mi
+producto estoy produciendo tantas
+toneladas años entonces es producto de
+el costo del producto por el valor de
+venta el producto por el caudal básico
+generalmente mágico de mi producto me da
+cuántos dólares por un tiempo voy a
+tener por la venta de ese producto
+ahora el resto
+e
+cuánto gasto en materia prima esto es
+hay un costo de materia prima por unidad
+masa multiplicada por el caudal básico
+de lo que yo necesito comprar lo que
+vendo menos lo que compro
+tiene ese positivo
+no venía cenicero pero estoy haciendo
+algo al vicio o sea compro por 100
+dólares y vendo por 100 dólares ya tengo
+no tengo nada o sea tiene que ser
+positiva
+obviamente a esto le tengo que agregar
+algunos y le vamos a agregar algunos
+hechos adicionales los costos de
+tratamientos de frentes o sea este
+proceso tiene tanto en frente
+qatar la del frente cuesta como distingo
+dos procesos cuál es mejor o peor que el
+otro pues aquel que tenga menos costo de
+tratamiento enfrente poner también un
+costo tengo que respetarlo o sea de todo
+lo que yo gano como producto tengo que
+restar los costes materia prima los
+costos de tratamiento de mis de mis
+subproductos ni en frentes
+el procesamiento sus productos entonces
+todo lo que ingresa por venta
+- todos los gastos por costo
+y en algún escenario como introducir
+cuánto es el costo del equipo aunque ese
+tema en particular lo vamos a ver en
+internación 4 cuando analicemos el costo
+de inversión
+nosotros no vamos a trabajar tanto con
+costo de inversión sino solamente con el
+potencial económico que es la diferencia
+entre lo que yo ingreso por ventas menos
+lo que yo gasto por todo concepto
+mientras dejando seco
+bien
+quiere por ver
+e
+[Música]
+el potencial económico es una indicación
+o medida inicial o básica no garantiza
+la rentabilidad del proceso para
+garantizarla rentería procesos baratas
+que hacerle análisis económico de
+integración 4
+nosotros vamos a hacer una introducción
+al tema para poder decidir algunas
+variables gruesas
+por ejemplo el reciclo por ejemplo los
+factores de recuperación tienen una
+torre de expiración para poder decir qué
+valores me son significativos de tocar
+para ver si mi potencial económico
+me da positivo o no puede tener una idea
+porque es un escenario si varió el
+factor de pulga pero cuál es mejor el
+factor de público mejor tarde o temprano
+los criterios de decisión de mejor de
+los escenarios posterior del escenarios
+son criterios de decisión económica no
+son de otro tipo ser los criterios de
+decisión son los de seguridad forma
+económico hay también que tienen
+seguridad que los van a tener son cuatro
+que no lo van a ver en cuarto año en
+general que para algunos parámetros de
+decisión la seguridad tanto antes que
+nada y si después bidones de seguridad
+además rentable se hacen de seguridad
+rentable el proceso
+e
+que me falta mi falta de decir
+entonces teórico
+este esto el teórico me faltan dos
+tienes cómo es la materia no sea firme
+teórico este divertidísimo leerlo de
+dónde están todos los libros del libro
+light es el de simulación la verdad es
+que está en el libro que estamos usando
+de integración 2 también está ahí tanto
+un libro la cuestión es que yo he hecho
+súper resumen que basta y sobra porque
+lo que vale la pena es implementar y
+éste una cam y hacer escenarios y ver
+los límites y cargar las propiedades y
+hacer un montón de cosas y hacer esto
+porque tendría que introducir la marca y
+con eso voy a cerrar
+resumiendo
+vamos a hacer un simulador
+para ser el simulador yo necesito
+transformar mi proceso químico en un
+sistema de ecuaciones
+necesito transformar mi sistema de
+proceso químico en un sistema de
+ecuaciones algebraicas
+planteando cada operación unitaria como
+un sistema de ecuaciones que el que
+acabo de señalar para cada uno de ellos
+que este sistema de ecuaciones
+algebraicos no es un sistema ecuaciones
+lineales ya vamos a ver que es altamente
+no lineal o sea cuando metí la alfa a la
+meta la hipótesis componente clave el
+sistema dijo de servicial así que pierdo
+la enorme potencia que tenía el álgebra
+y el teorema fundamental del álgebra con
+respecto
+las soluciones sistema de cosas lineales
+porque es un sistema ecuaciones lineales
+tiene un teorema que me permite predecir
+la existencia y la unicidad de la
+solución sistemas fuera lineal
+la solución existe y es única o hay
+infinitas soluciones en este sistema de
+ecuaciones no es lineal entonces no
+tengo se tendría entonces que caer en la
+teoría de la solución de sistema de
+ecuaciones algebraicos no lineales
+si tienen como sistemas como cómo se
+resuelven
+icon me gustaría verles las caras claro
+que saben cómo se resuelve se resuelve
+con cualquier variante del metro de
+newton rap son como son
+el de fundamenta informática que creen
+que vieron solución del sistema de
+ecuaciones no lineales o sea y que
+recordamos del metro newton robson o
+alguna de sus variantes que es la que
+usa a matt capps
+en teoría de la variante gradiente
+conjugado que la presión de la psu
+si no usa otro algoritmo de optimización
+que el de denver marquardt es una
+variante del método hevroy de el método
+d
+picante
+está optimizado por marcada así que no
+tenemos que programar nuestro rap son
+pero heredamos los mismos problemas que
+es todo esos métodos interactivos
+requieren un valor inicial
+como si esto no es arrancar si yo no doy
+todas las variables en el valor inicial
+porque tomado el valor inicial yo
+calculaba
+finalizaba el sistema se dividía mi
+sistema en pequeños valores de la
+batería independiente y calculaba la
+derivada en cada punto estimaba cuánto
+valía en el intervalo y podía calcular
+la pendiente en método de newton rap son
+para multi variable con la materia
+coreana en realidad para poder hacer la
+iteración
+es calcular el gradiente de la función
+en ese punto irme por la dirección del
+gradiente avanzar un paso resolver e
+resistirme haber sido que se olvidó si
+convert que si no convergen tomar otro
+paso
+pero todo requiere una posición
+o sea que todo problema de simulación
+que nosotros vamos a ver consta de las
+siguientes etapas
+en un ser problema bueno si enunciado
+interpretaciones me dieron libertad
+un bloque de poner la información que es
+tanto
+un bloque de las propiedades termo
+físicas que por suerte para esta mezcla
+se nos va a necesitar de la partida de
+segunda clase comportar que boeing
+calcula toda la propiedad termo físicas
+eso problema de ustedes pero ustedes son
+expertos en de propiedad tco física de
+sustancias pura
+para mezcla vamos a estar un par de
+semana más pero serán expertos en
+calcular propiedades tenemos físicas de
+mezclas dentro de dos semanas
+si es un bloque de datos un bloque de
+propiedades un bloque de inicialización
+de las variables
+esto es voy a tener que pensar y eso lo
+vamos a ver un ejercicio práctico cómo
+dar inicio a las variables también
+varios escenarios para dar inicio es
+variables
+poner la llave arma del sistema
+ecuaciones como si ponéis a abascal
+si pones a ver si se me concede claro
+ingenieros se ponen de ecuaciones como
+que no si se llama
+sol the block in the time
+en fin es desde aquí ven abre la llave
+en la sierra marcan de la pobre marca
+prime la siguiente versión de marcar un
+poco más claro de que el sol de blog en
+fine
+y
+todos los reportes que había que marcar
+15
+seguimos en un 15
+es con gauguin en el sistema de
+cuestiones pongo fin me da rojo me corto
+las líneas con un gap y no lo hace con
+de la mina colgado que esto no lo
+utiliza en absoluto al contrario tienen
+el sueño sí y eso es fácil portones
+internet por lo menos convergen hadas y
+empezamos a verlo para mover los
+problemas que están solucionando de
+respuestas de por qué le derrotó y no
+convertiría de lo que no convence porque
+tiene no nos hacen caso porque se
+inicien en casos de distancia paso
+calcular de a poco ver que esto les
+resuelve que esté bien escrito
+está usted de septiembre pileta en
+simulación de procesos se van a ahogar o
+sea marca es muy sensible al humor del
+que te crea un pequeño error de índice y
+mad catz se empaca y me ponen errores
+sólo dios sabe dónde que estoy seguro
+que no es donde está el error
+hay que hacerlo de a paso marcar para
+tomar el pulso es también una pavada
+ósea pero después de eso tiene un fin
+que es la potencia de la estructuración
+matricial que estamos poniendo nosotros
+esto es decir find
+efe
+donde esté en la matriz flujo molar de
+todos los componentes se debe seguir los
+cálculos de cada una del componente o
+ser no muy aprendiéndose ni esfuerzo es
+escribir los sistemas de ecuaciones pero
+cuando voy a pedirle solución find no le
+voy a decir encuentre este suv y 12 mil
+324 es decir encuentre efe gf la matriz
+f de flujos molares por componentes
+donde por fin las tantas sustancias por
+columnas están todas las corrientes y
+que resuelve sólo el bloque entero o sea
+cuantas ecuaciones al final elige cuenta
+de ecuaciones tenía pero ese sistema por
+ejemplo recién tenía
+e
+siete corrientes siete corrientes
+[Música]
+en ese variables
+así que mi sistema de ecuaciones está
+formado por
+mi primero es mi número de ecuaciones
+estas del mezclador eran en s
+el riesgo son en ese del flash son dos
+índices del split 32 en ese o sea que es
+uno dos tres o sea 2 467
+6
+6 en esa ecuación ese sistema tiene 10
+componentes un sistema de chicos un
+sistema típico de parcial son 60
+actuaciones con 60 incógnitas que tengo
+que resolver
+cómo
+si 60 ecuaciones con 60 incógnitas
+aumenten esto a una
+10 corriente más y mi sistema lleva 200
+ecuaciones con dos incógnitas como
+pero escribir 200 escribir
+pero en forma matriz es muy fácil
+informatizar manuel que esté bueno sobre
+un sistema así chiquito de acción de
+ecuaciones con dos incógnitas
+escribiendo la poco o sea es poco lo que
+demanda la idea es entender qué es lo
+que están escribiendo de qué depende en
+cada uno y por qué la importancia de
+beta de alfa de grado de avance que
+tenga valores coherente y consistentes
+porque si no entornos resuelven
+o sea más adelante veremos
+creo que en esta materia el sistema de
+miles de ecuaciones con miles de cometas
+o sea algo que ha marcado
+le represente una tres horas de cálculos
+cuatro locales de cuatro horas y calculé
+o sea esos son varios miles de
+ecuaciones
+esto no esto si le demora más de 10
+minutos
+deberían cortarlo porque hay algo que no
+han hecho bien empezando por hacer un
+escenario con variables muy chiquitas o
+beta que valientes el hoyo 1 al factor
+de purga y no me pidan mil betas y dame
+10 betas 600 102 de si con eso calcula y
+la gráfica me queda muy cortada bueno
+calcula en cada 05 que son 20 beta pero
+se larguen de entrada a calcular me
+10.000 beta porque entonces un pequeño
+error y está claro que son a mandar y no
+lo hace nunca o sea tienen que ser
+criterio son en el momento de pedir
+algunos escenarios de no pasarse de raya
+e
+los valores posibles de las variables
+10
+e
+de las otras conspiraciones les voy a
+subir un vídeo con las otras dos ven
+acción y tareas que me estarían faltando
+que son absorción y extracción de
+líquido líquido así son muy sencillas
+los voy a agregar a esto
+y ya estaríamos en condiciones de
+resolver todo el ejercicio
+bueno
+una pregunta que me hace en los gastos
+fijos entendiendo que vienen
+[Música]
+no exactamente qué tengo que hacer
+correctamente un análisis del valor neto
+actual otros interna de retorno en los
+cuales tengo que poner los gastos
+operación los gastos de inversión y los
+gasto en materia prima son tres grandes
+componentes o sea los gastos de mano de
+obra los gastos de operación
+los gastos de inversión y los ingresos
+por ventas aceleración cash flow' el
+cuadro de fuente y uso o sea para poder
+hacer esto
+o sea el análisis un poco más complejo
+nuestro objetivo hacer el análisis
+económico de los procesos me basta con
+el potencial económico lo que yo ingreso
+por ventas
+menos lo que gasto
+son costos operativos no te hablan de
+los costos de inversión en general se
+demuestra cualquier análisis económico
+de nuestro proceso químico que la verdad
+es que no me vale la pena tanto en
+cierto rango hablan costo de inversión
+porque esta inversión millón mar millón
+menos dólares no me mueven al perímetro
+pero los centavos que yo gano por él es
+por no tratar un efluente durante todos
+los días durante diez años la represión
+de mantenemos plata
+o sea los costos operativos del correcto
+diseño del proceso son mucho más
+importantes que los costos de inversión
+o sea en mi objetivo no es el equipo más
+chico de mi objetivo que es el proceso
+más rentable
+o sea es más rentable no necesariamente
+el de menor inversión el que tenga los
+costos operativos más bajos
+o sea
+cuanto menos empleados ingeniero químico
+tenga mejor
+bueno no te va a pasar lo mismo que con
+el intendente de buenos aires que me
+toman me sacan de contexto la frase no
+nosotros tenemos el móvil social
+cuando la empresa de plata pero tenemos
+el modo empresarial es importante además
+de ganar pero si no ganamos no tenemos
+responsables área no o sea la empresa
+siempre como está pasando ahora dicta
+montón el oro no sea vamos a poder hacer
+tiene su serie si cambiamos algo de
+plata
+no mucho
+bill gates que ya está fuera de regreso
+no son felices probablemente o sea
+tenemos un poco vitales
+la sociedad
+tienen economía y
+y de esto que subí de esta afirmación se
+grabe todo y me falta el 12 dos temas
+más que absorción y esto tiene clínicas
+de soldados sistemas por siempre se los
+voy a subir y ya empezamos con el
+ejercicio de la presentación

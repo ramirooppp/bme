@@ -1,0 +1,64 @@
+# Análisis del Video de Fisicoquímica
+
+- **Título exacto del video:** 07- Fisicoquímica Teórico - Fugacidad de Mezclas 2022
+- **Duración total:** 2:03:19 (2 horas, 3 minutos y 19 segundos)
+- **URL directa del video:** https://www.youtube.com/watch?v=gT8wNl9S_W8
+
+---
+
+### Resumen detallado en orden cronológico de los temas cubiertos
+
+1. **Introducción y contextualización (00:00 - 00:15):**
+   - Presentación de la clase teórica sobre termodinámica de soluciones y mezclas fluidas.
+   - Repaso breve del concepto de fugacidad en componentes puros como medida del potencial químico / "presión corregida" para gases reales.
+
+2. **Extensión del concepto de fugacidad a mezclas multicomponente (00:15 - 00:35):**
+   - Introducción a la fugacidad de un componente $i$ en una mezcla ($\hat{f}_i$).
+   - Discusión sobre cómo las fuerzas intermoleculares (atractivas y repulsivas) entre moléculas distintas ($i-j$) modifican la tendencia del componente a escapar del sistema.
+
+3. **Potencial químico y estado de referencia en mezclas (00:35 - 00:55):**
+   - Definición formal del potencial químico de un componente en solución en términos de su fugacidad parcial.
+   - Selección de estados estándar y comportamiento límite cuando la presión tiende a cero ($P \to 0$), donde la mezcla se comporta como gas ideal.
+
+4. **Regla de Lewis-Randall y Soluciones Ideales (00:55 - 01:15):**
+   - Explicación de la Regla de Lewis-Randall para evaluar fugacidades en mezclas ideales: $\hat{f}_i^{id} = y_i f_i$.
+   - Limitaciones de la regla de Lewis-Randall a presiones elevadas o cuando los componentes difieren significativamente en tamaño y naturaleza química.
+
+5. **Coeficiente de fugacidad en mezclas ($\hat{\phi}_i$) y ecuaciones de estado (01:15 - 01:40):**
+   - Definición del coeficiente de fugacidad de componente en mezcla ($\hat{\phi}_i = \hat{f}_i / (y_i P)$).
+   - Derivación rigurosa a partir de la energía libre de Gibbs parcial molar residual ($G_i^R$).
+   - Aplicación de Ecuaciones de Estado Cúbicas (Van der Waals, Redlich-Kwong, Peng-Robinson) y Ecuación Virial truncada.
+
+6. **Reglas de Mezcla (01:40 - 01:55):**
+   - Introducción a las reglas de mezcla de van der Waals para expresar los parámetros $a$ y $b$ de la mezcla en función de la composición ($y_i$) y parámetros cruzados ($a_{ij}$).
+
+7. **Aplicación al Equilibrio Líquido-Vapor (ELV) y conclusión (01:55 - 02:03:19):**
+   - Formulación de la condición de igualdad de fugacidades entre la fase líquida y gaseosa ($\hat{f}_i^V = \hat{f}_i^L$).
+   - Introducción a la formulación Gamma/Phi ($\gamma_i / \phi_i$) y cierre de la lección teórica.
+
+---
+
+### Conceptos clave y fórmulas mencionadas
+
+- **Fugacidad de un componente en mezcla ($\hat{f}_i$):**
+  Medida del potencial químico de una especie $i$ en una mezcla fluida real.
+
+- **Coeficiente de fugacidad en mezcla ($\hat{\phi}_i$):**
+  $$\hat{\phi}_i = \frac{\hat{f}_i}{y_i P}$$
+
+- **Relación con el Potencial Químico ($\mu_i$):**
+  $$\mu_i(T, P, y) = \mu_i^\circ(T) + RT \ln\left(\frac{\hat{f}_i}{P^\circ}\right)$$
+
+- **Regla de Lewis-Randall:**
+  $$\hat{f}_i^{id} = y_i f_i(T, P)$$
+  donde $f_i(T, P)$ es la fugacidad de la sustancia $i$ pura a la misma temperatura y presión.
+
+- **Cálculo de $\hat{\phi}_i$ mediante Propiedades Residuales Molares Parciales:**
+  $$RT \ln \hat{\phi}_i = \int_0^P \left( \bar{V}_i - \frac{RT}{P} \right) dP$$
+
+- **Reglas de Mezcla Cúbicas (van der Waals):**
+  $$a_m = \sum_i \sum_j y_i y_j a_{ij}, \quad \text{donde } a_{ij} = \sqrt{a_i a_j}(1 - k_{ij})$$
+  $$b_m = \sum_i y_i b_i$$
+
+- **Condición de Equilibrio Líquido-Vapor (ELV):**
+  $$\hat{f}_i^V = \hat{f}_i^L \implies y_i \hat{\phi}_i P = x_i \gamma_i P_i^{sat} \hat{\phi}_i^{sat} \exp\left(\frac{V_i^L (P - P_i^{sat})}{RT}\right)$$

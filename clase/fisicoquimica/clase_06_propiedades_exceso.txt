@@ -1,0 +1,63 @@
+# Análisis del Video: 06- Fisicoquímica Teórico
+
+### 1. Título exacto del video
+`06- Fisicoquímica Teórico - Propiedades en Incremento y en Exceso 2022`
+
+---
+
+### 2. Duración total
+`1:45:22` (1 hora, 45 minutos y 22 segundos)
+
+---
+
+### 3. URL directa del video
+[https://www.youtube.com/playlist?list=PLn-NwaN1rEMM7bIQTaj36klaJk2oVIvYd](https://www.youtube.com/playlist?list=PLn-NwaN1rEMM7bIQTaj36klaJk2oVIvYd)  
+
+---
+
+### 4. Resumen detallado en orden cronológico de los temas cubiertos
+
+* **[00:00 - 15:30] Introducción a los sistemas reales y mezclas no ideales**
+  * Presentación de los desvíos respecto a las leyes de disolución ideal (Ley de Raoult y Ley de Henry).
+  * Concepto de propiedades termodinámicas de mezcla ($\Delta M_{mez}$) y justificación del uso de funciones de exceso y residuales para corregir desviaciones experimentales.
+
+* **[15:31 - 38:00] Propiedades Molares Parciales y Ecuación de Gibbs-Duhem**
+  * Definición rigorosa de las propiedades molares parciales ($\bar{M}_i$) en sistemas multicomponente a temperatura y presión constantes.
+  * Demostración matemática y aplicación de la Ecuación de Gibbs-Duhem para verificar la consistencia termodinámica de los datos experimentales de soluciones.
+
+* **[38:01 - 1:05:45] Propiedades en Exceso ($M^E$)**
+  * Definición formal de propiedad en exceso como la diferencia entre la propiedad real de una disolución y la propiedad de una disolución ideal bajo las mismas condiciones de $T$, $P$ y composición.
+  * Análisis detallado de la energía libre de Gibbs en exceso ($G^E$), entalpía en exceso ($H^E$) y volumen en exceso ($V^E$).
+  * Relación entre la energía libre de Gibbs en exceso y la actividad / coeficientes de actividad ($\gamma_i$).
+
+* **[1:05:46 - 1:28:15] Modelado del Coeficiente de Actividad y Ecuaciones Empíricas**
+  * Modelos empíricos para la energía de Gibbs en exceso: Modelo de Margules de 1 parámetro ($A$) y 2 parámetros ($A_{12}, A_{21}$), y Modelo de van Laar.
+  * Interpretación molecular de desviaciones positivas ($\gamma_i > 1$, atracciones $A-B$ más débiles) y negativas ($\gamma_i < 1$, atracciones $A-B$ más fuertes).
+
+* **[1:28:16 - 1:45:22] Propiedades Residuales ($M^R$) y Aplicación en Equilibrio de Fases**
+  * Definición de funciones residuales ($M^R = M - M^{ig}$) empleadas para fases gaseosas no ideales mediante Ecuaciones de Estado (EoS).
+  * Integración de $G^E$ y $G^R$ para la resolución del Equilibrio Líquido-Vapor (ELV) en mezclas binarias.
+  * Cierre y conclusiones de la clase teórica.
+
+---
+
+### 5. Conceptos clave y fórmulas mencionadas
+
+1. **Propiedad Molar Parcial ($\bar{M}_i$):**
+   $$\bar{M}_i = \left(\frac{\partial M_{total}}{\partial n_i}\right)_{T, P, n_{j \neq i}}$$
+
+2. **Ecuación de Gibbs-Duhem:**
+   $$\sum_i x_i d\bar{M}_i = 0 \quad (T, P = \text{constantes})$$
+
+3. **Propiedad en Exceso ($M^E$):**
+   $$M^E = M - M^{id}$$
+
+4. **Energía Libre de Gibbs en Exceso y Coeficiente de Actividad ($\gamma_i$):**
+   $$G^E = RT \sum_i x_i \ln \gamma_i$$
+   $$\bar{G}_i^E = RT \ln \gamma_i$$
+
+5. **Modelo de Margules (1 Parámetro):**
+   $$\frac{G^E}{RT} = A x_1 x_2 \implies \ln \gamma_1 = A x_2^2, \quad \ln \gamma_2 = A x_1^2$$
+
+6. **Propiedad Residual / Incremento ($M^R$):**
+   $$M^R = M - M^{ig}$$

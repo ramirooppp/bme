@@ -1,0 +1,48 @@
+Temario para evaluaciones orales (promocionados o examen final).
+
+A partir de una selección de 3 temas al azar de una duración aproximada de 15 min, el estudiante deberá exponer en pizarrón:
+
+-       Definiciones
+
+-       Desarrollos matemáticos
+
+-       Utilidad y consecuencias de lo desarrollado
+
+Tema	Unidad
+Deducción de propiedades termodinamicas de soluciones ideales	1
+Potencial químico: definiciones y relaciones fundamentales	1
+Análisis de las relaciones entre las propiedades molares y las molares parciales	1
+Deducción de la regla de las fases de Gibbs. 	1
+Ecuación de Gibbs – Duhem. Deducción e importancia	1
+Análisis de consistencia termodinámica.	1
+Definición de actividad y de coeficiente de actividad. Estados de referencia. Graficos	1
+Fugacidad de mezclas gaseosas y liquidas a partir de ecuaciones de estado con reglas de mezcla	1
+Fugacidad de mezclas gaseosas. Definicion y calculo.	1
+Métodos de determinación de actividades - Propiedades coligativas	1
+Modelos de coeficiente de actividad. Recomendaciones de uso	1
+Análisis de la relacion entre propiedades molares parciales, en exceso y en incremento. Graficos	1
+Equilibrio líquido – líquido multicomponentes. Deducción y análisis de grados de libertad	2
+Equilibrio líquido – vapor multicomponentes. Deducción y análisis de grados de libertad	2
+Equilibrio sólido – líquido multicomponentes. Deducción y análisis de grados de libertad	2
+Análisis de diagramas de fase binarios. Regla de la palanca	3
+Análisis de diagramas de equilibrios de fases en sistemas ternarios, L-V y L-L. Regla de la palanca	4
+Análisis de diagramas de equilibrios de fases en sistemas ternarios, S-L. Teoremas	4
+Equilibrio químico.	5
+Equilibrios quimicos de reacciones múltiples.	5
+Cinética química.	6
+Análisis de soluciones iónicas. Modelos de coeficientes de actividad	7
+Conceptos de conducción en electrolitos.	7
+Análisis de baterias de plomo	7
+Electroquímica.	7
+Análisis de baterias de Ni-Cd	7
+Descripción de fenómenos cinéticos de electrodos. Sobrepotencial	7
+Análisis de baterias de litio	7
+Análisis de baterias de Ni-hidruro de metal	7
+Análisis de efectos de curvatura en superficies.	8
+Definición y estimación de tensión superficial.
+
+8
+TP Experimental Nº1
+
+ 
+TP Experimental Nº2

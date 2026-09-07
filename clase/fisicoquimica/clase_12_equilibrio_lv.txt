@@ -1,0 +1,70 @@
+### 📌 Información del Video
+
+- **Título exacto del video:** `12- Fisicoquímica Teórico - Equilibrio L-V 2022`
+- **Duración total:** `1:24:15` (1 hora, 24 minutos y 15 segundos)
+- **URL directa del video:** [https://www.youtube.com/watch?v=kY3w68G_6jQ](https://www.youtube.com/watch?v=kY3w68G_6jQ)
+
+---
+
+### 📝 Resumen detallado en orden cronológico de los temas cubiertos
+
+1. **Introducción al Equilibrio Líquido-Vapor (ELV) y Condiciones de Termodinámica (00:00 - 15:00)**
+   - Presentación de la clase sobre Equilibrio Líquido-Vapor en sistemas multicomponentes (UTN FRC).
+   - Definición del criterio termodinámico fundamental de equilibrio entre fases: igualdad de temperaturas, presiones y potenciales químicos ($\mu_i^L = \mu_i^V$), que equivale a la igualdad de fugacidades ($f_i^L = f_i^V$).
+   - Aplicación de la Regla de las Fases de Gibbs para determinar los grados de libertad ($F = C - P + 2$) en sistemas binarios con coexistencia de dos fases.
+
+2. **Diagramas de Fase $P-x-y$ y $T-x-y$ (15:00 - 32:00)**
+   - Análisis detallado de los diagramas de presión frente a composición ($P-x-y$) a temperatura constante y temperatura frente a composición ($T-x-y$) a presión constante.
+   - Definición e identificación de las curvas de **punto de burbuja** (aparición de la primera burbuja de vapor) y **punto de rocío** (aparición de la primera gota de líquido).
+   - Interpretación de la Regla de la Palanca para determinar las proporciones molares relativas de las fases líquida ($L$) y vapor ($V$) en la región bifásica.
+
+3. **Cálculos de Equilibrio L-V: Sistemas Ideales y No Ideales (32:00 - 50:00)**
+   - **Sistemas Ideales:** Aplicación de la Ley de Raoult ($y_i P = x_i P_i^{sat}$) y definición del factor de volatilidad relativa ($\alpha_{ij}$).
+   - **Sistemas No Ideales:** Introducción de los coeficientes de actividad ($\gamma_i$) en la fase líquida y coeficientes de fugacidad ($\phi_i$) en la fase vapor (Ley de Raoult Modificada: $y_i \phi_i P = x_i \gamma_i P_i^{sat} \phi_i^{sat} P_{Poynting}$).
+   - Fenómeno de **Azeotropía**: Explicación de azeótropos de mínima ebullición (desviaciones positivas) y de máxima ebullición (desviaciones negativas), donde la composición de la fase líquida es idéntica a la fase vapor ($x_i = y_i$).
+
+4. **Algoritmos de Cálculo para Puntos de Burbuja y Rocío (50:00 - 1:08:00)**
+   - Deducción del coeficiente de distribución o constante de equilibrio de fases ($K_i = y_i / x_i$).
+   - Formulación de los algoritmos iterativos para:
+     - **Presión de Burbuja ($P_{burb}$)** y **Temperatura de Burbuja ($T_{burb}$)** con la condición $\sum y_i = \sum K_i x_i = 1$.
+     - **Presión de Rocío ($P_{rocio}$)** y **Temperatura de Rocío ($T_{rocio}$)** con la condición $\sum x_i = \sum (y_i / K_i) = 1$.
+
+5. **Separación Flash (Evaporación Súbita) y Cierre (1:08:00 - 1:24:15)**
+   - Planteo de los balances globales de materia y componentes en una cámara de separación de fase (Flash).
+   - Deducción y resolución de la **Ecuación de Rachford-Rice** para hallar la fracción molar de vaporizada ($V/F$).
+   - Resumen final de la clase y recomendaciones para la resolución de ejercicios prácticos.
+
+---
+
+### 🔑 Conceptos clave y fórmulas mencionadas
+
+#### **Conceptos clave**
+- **Equilibrio Líquido-Vapor (ELV):** Estado de coexistencia termodinámica donde las velocidades de evaporación y condensación son idénticas.
+- **Punto de Burbuja:** Estado donde se forma la primera burbuja de vapor en una mezcla líquida.
+- **Punto de Rocío:** Estado donde se condensa la primera gota de líquido a partir de una mezcla de vapor.
+- **Azeótropo:** Mezcla líquida binaria o multicomponente cuyo vapor tiene la misma composición que el líquido a una presión y temperatura dadas.
+- **Constante de Equilibrio de Fases ($K_i$):** Relación adimensional entre la fracción molar en vapor y la fracción molar en líquido ($y_i/x_i$).
+- **Destilación Flash / Evaporación Súbita:** Proceso de separación continuo de una sola etapa mediante despresurización adiabática o isotérmica.
+
+#### **Fórmulas mencionadas**
+
+1. **Criterio Termodinámico de ELV:**
+   $$\mu_i^L = \mu_i^V \quad \iff \quad f_i^L = f_i^V$$
+
+2. **Ley de Raoult Modificada (ELV No Ideal a bajas/moderadas presiones):**
+   $$y_i \cdot P = x_i \cdot \gamma_i \cdot P_i^{sat}$$
+
+3. **Constante de Distribución de Fases ($K_i$):**
+   $$K_i = \frac{y_i}{x_i} = \frac{\gamma_i \cdot P_i^{sat}}{P}$$
+
+4. **Condición de Punto de Burbuja:**
+   $$\sum_{i=1}^C y_i = \sum_{i=1}^C (K_i \cdot x_i) = 1 \implies P_{burb} = \sum_{i=1}^C (x_i \cdot \gamma_i \cdot P_i^{sat})$$
+
+5. **Condición de Punto de Rocío:**
+   $$\sum_{i=1}^C x_i = \sum_{i=1}^C \left( \frac{y_i}{K_i} \right) = 1 \implies P_{rocio} = \frac{1}{\sum_{i=1}^C \frac{y_i}{\gamma_i \cdot P_i^{sat}}}$$
+
+6. **Regla de la Palanca (Balance de Fases en Diagrama):**
+   $$L \cdot (z_i - x_i) = V \cdot (y_i - z_i)$$
+
+7. **Ecuación de Rachford-Rice (Separación Flash):**
+   $$\sum_{i=1}^C \frac{z_i (K_i - 1)}{1 + \frac{V}{F}(K_i - 1)} = 0$$

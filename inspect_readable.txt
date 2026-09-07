@@ -1,0 +1,2213 @@
+--- R01 TEXT ---
+TRABAJO PRÁCTIO N°1-GRUPO J
+
+--- R02 TEXT ---
+a) gráfica de las propiedades de los líquidos puros
+
+--- R03 MATH (error: ) ---
+<ns0:math xmlns:ns0="http://schemas.mathsoft.com/worksheet30" xmlns:ns1="http://schemas.mathsoft.com/math30" optimize="false" disable-calc="false">
+				<ns1:define>
+					<ns1:id xml:space="preserve">Compuestos</ns1:id>
+					<ns1:matrix rows="3" cols="1">
+						<ns1:str xml:space="preserve">1,4 Dimetil Tridecano</ns1:str>
+						<ns1:str xml:space="preserve">2,4 Dimetil Tetradecano</ns1:str>
+						<ns1:str xml:space="preserve">Hexadecano</ns1:str>
+					</ns1:matrix>
+				</ns1:define>
+			</ns0:math>
+			
+
+--- R04 TEXT ---
+1. Viscosidad
+
+--- R05 MATH (error: ) ---
+<ns0:math xmlns:ns0="http://schemas.mathsoft.com/worksheet30" xmlns:ns1="http://schemas.mathsoft.com/math30" optimize="false" disable-calc="false">
+				<ns1:apply>
+					<ns1:equal />
+					<ns1:apply>
+						<ns1:id xml:space="preserve">log</ns1:id>
+						<ns1:id xml:space="preserve" subscript="liq">μ</ns1:id>
+					</ns1:apply>
+					<ns1:apply>
+						<ns1:plus />
+						<ns1:apply>
+							<ns1:plus />
+							<ns1:apply>
+								<ns1:plus />
+								<ns1:id xml:space="preserve">A</ns1:id>
+								<ns1:apply>
+									<ns1:div />
+									<ns1:id xml:space="preserve">B</ns1:id>
+									<ns1:apply>
+										<ns1:div />
+										<ns1:id xml:space="preserve">T</ns1:id>
+										<ns1:id xml:space="preserve">K</ns1:id>
+									</ns1:apply>
+								</ns1:apply>
+							</ns1:apply>
+							<ns1:apply>
+								<ns1:mult />
+								<ns1:id xml:space="preserve">C</ns1:id>
+								<ns1:apply>
+									<ns1:div />
+									<ns1:id xml:space="preserve">T</ns1:id>
+									<ns1:id xml:space="preserve">K</ns1:id>
+								</ns1:apply>
+							</ns1:apply>
+						</ns1:apply>
+						<ns1:apply>
+							<ns1:mult />
+							<ns1:id xml:space="preserve">D</ns1:id>
+							<ns1:apply>
+								<ns1:pow />
+								<ns1:parens>
+									<ns1:apply>
+										<ns1:div />
+										<ns1:id xml:space="preserve">T</ns1:id>
+										<ns1:id xml:space="preserve">K</ns1:id>
+									</ns1:apply>
+								</ns1:parens>
+								<ns1:real>2</ns1:real>
+							</ns1:apply>
+						</ns1:apply>
+					</ns1:apply>
+				</ns1:apply>
+			</ns0:math>
+			
+
+--- R06 MATH (error: ) ---
+<ns0:math xmlns:ns0="http://schemas.mathsoft.com/worksheet30" xmlns:ns1="http://schemas.mathsoft.com/math30" optimize="false" disable-calc="false">
+				<ns1:define>
+					<ns1:id xml:space="preserve" subscript="μ">Coef</ns1:id>
+					<ns1:matrix rows="3" cols="4">
+						<ns1:real font="0">-5.0263</ns1:real>
+						<ns1:real font="0">-4.9814</ns1:real>
+						<ns1:real font="0">-8.1894</ns1:real>
+						<ns1:real font="0">1034.3</ns1:real>
+						<ns1:real font="0">1056.5</ns1:real>
+						<ns1:real font="0">1557.1</ns1:real>
+						<ns1:real font="0">0.0087</ns1:real>
+						<ns1:real font="0">0.0084</ns1:real>
+						<ns1:real font="0">0.0153</ns1:real>
+						<ns1:real font="0">-0.000008276</ns1:real>
+						<ns1:real font="0">-0.0000079353</ns1:real>
+						<ns1:real font="0">-0.000012371</ns1:real>
+					</ns1:matrix>
+				</ns1:define>
+			</ns0:math>
+			
+
+--- R07 MATH (error: ) ---
+<ns0:math xmlns:ns0="http://schemas.mathsoft.com/worksheet30" xmlns:ns1="http://schemas.mathsoft.com/math30" xmlns:ns2="http://schemas.mathsoft.com/provenance10" optimize="false" disable-calc="false">
+				<ns1:provenance expr-id="1">
+					<ns2:originRef doc-id="183B794E-2D68-47EE-8006-CC60A6C32194" version-id="8FEC1A19-6027-4862-8546-6BA1D3E79543" branch-id="00000000-0000-0000-0000-000000000000" revision-num="294478124" is-modified="true" region-id="0" href="C:\Users\cabda\Downloads\GRUPO E- TRABAJO PRÁCTICO N 1 (2).xmcd">
+						<ns2:hash />
+					</ns2:originRef>
+					<ns2:parentRef doc-id="A6569AE7-8012-439A-803D-224EDF6B536F" version-id="A3B5AB39-4759-482F-95CB-B8C47EC7DD21" branch-id="00000000-0000-0000-0000-000000000000" revision-num="294477476" is-modified="true" region-id="0" href="C:\Users\lenovo\Downloads\Grupo-i-TPn°1[1] corregido (1).xmcd">
+						<ns2:hash />
+					</ns2:parentRef>
+					<ns2:comment />
+					<ns2:originComment />
+					<ns2:contentHash>22d4ed3e484ef1608082b129b29b4f1b</ns2:contentHash>
+					<ns1:define>
+						<ns1:function>
+							<ns1:id xml:space="preserve">μ</ns1:id>
+							<ns1:boundVars>
+								<ns1:id xml:space="preserve">T</ns1:id>
+							</ns1:boundVars>
+						</ns1:function>
+						<ns1:apply>
+							<ns1:mult style="auto-select" />
+							<ns1:apply>
+								<ns1:mult />
+								<ns1:apply>
+									<ns1:pow />
+									<ns1:real>10</ns1:real>
+									<ns1:parens>
+										<ns1:apply>
+											<ns1:plus />
+											<ns1:apply>
+												<ns1:plus />
+												<ns1:apply>
+													<ns1:plus />
+													<ns1:apply>
+														<ns1:matcol />
+														<ns1:id xml:space="preserve" subscript="μ">Coef</ns1:id>
+														<ns1:real>1</ns1:real>
+													</ns1:apply>
+													<ns1:apply>
+														<ns1:div />
+														<ns1:apply>
+															<ns1:matcol />
+															<ns1:id xml:space="preserve" subscript="μ">Coef</ns1:id>
+															<ns1:real>2</ns1:real>
+														</ns1:apply>
+														<ns1:apply>
+															<ns1:div />
+															<ns1:id xml:space="preserve">T</ns1:id>
+															<ns1:id xml:space="preserve">K</ns1:id>
+														</ns1:apply>
+													</ns1:apply>
+												</ns1:apply>
+												<ns1:apply>
+													<ns1:mult />
+													<ns1:apply>
+														<ns1:matcol />
+														<ns1:id xml:space="preserve" subscript="μ">Coef</ns1:id>
+														<ns1:real>3</ns1:real>
+													</ns1:apply>
+													<ns1:apply>
+														<ns1:div />
+														<ns1:id xml:space="preserve">T</ns1:id>
+														<ns1:id xml:space="preserve">K</ns1:id>
+													</ns1:apply>
+												</ns1:apply>
+											</ns1:apply>
+											<ns1:apply>
+												<ns1:mult />
+												<ns1:apply>
+													<ns1:matcol />
+													<ns1:id xml:space="preserve" subscript="μ">Coef</ns1:id>
+													<ns1:real>4</ns1:real>
+												</ns1:apply>
+												<ns1:apply>
+													<ns1:pow />
+													<ns1:parens>
+														<ns1:apply>
+															<ns1:div />
+															<ns1:id xml:space="preserve">T</ns1:id>
+															<ns1:id xml:space="preserve">K</ns1:id>
+														</ns1:apply>
+													</ns1:parens>
+													<ns1:real>2</ns1:real>
+												</ns1:apply>
+											</ns1:apply>
+										</ns1:apply>
+									</ns1:parens>
+								</ns1:apply>
+								<ns1:real font="0">0.01</ns1:real>
+							</ns1:apply>
+							<ns1:id xml:space="preserve">poise</ns1:id>
+						</ns1:apply>
+					</ns1:define>
+				</ns1:provenance>
+			</ns0:math>
+			
+
+--- R08 MATH (error: ) ---
+<ns0:math xmlns:ns0="http://schemas.mathsoft.com/worksheet30" xmlns:ns1="http://schemas.mathsoft.com/math30" optimize="false" disable-calc="false">
+				<ns1:define>
+					<ns1:id xml:space="preserve" subscript="ran">T</ns1:id>
+					<ns1:range>
+						<ns1:sequence>
+							<ns1:apply>
+								<ns1:mult style="auto-select" />
+								<ns1:real>270</ns1:real>
+								<ns1:id xml:space="preserve">K</ns1:id>
+							</ns1:apply>
+							<ns1:apply>
+								<ns1:mult style="auto-select" />
+								<ns1:real>271</ns1:real>
+								<ns1:id xml:space="preserve">K</ns1:id>
+							</ns1:apply>
+						</ns1:sequence>
+						<ns1:apply>
+							<ns1:mult style="auto-select" />
+							<ns1:real>500</ns1:real>
+							<ns1:id xml:space="preserve">K</ns1:id>
+						</ns1:apply>
+					</ns1:range>
+				</ns1:define>
+			</ns0:math>
+			
+
+--- R09 PLOT ---
+
+--- R10 TEXT ---
+2. Densidad
+
+--- R11 MATH (error: ) ---
+<ns0:math xmlns:ns0="http://schemas.mathsoft.com/worksheet30" xmlns:ns1="http://schemas.mathsoft.com/math30" optimize="false" disable-calc="false">
+				<ns1:define>
+					<ns1:id xml:space="preserve" subscript="ρ">Coef</ns1:id>
+					<ns1:matrix rows="3" cols="2">
+						<ns1:real>0.246</ns1:real>
+						<ns1:real>0.2463</ns1:real>
+						<ns1:real>0.2435</ns1:real>
+						<ns1:real>0.2617</ns1:real>
+						<ns1:real>0.2613</ns1:real>
+						<ns1:real>0.2544</ns1:real>
+					</ns1:matrix>
+				</ns1:define>
+			</ns0:math>
+			
+
+--- R12 MATH (error: ) ---
+<ns0:math xmlns:ns0="http://schemas.mathsoft.com/worksheet30" xmlns:ns1="http://schemas.mathsoft.com/math30" optimize="false" disable-calc="false">
+				<ns1:define>
+					<ns1:id xml:space="preserve">Tc</ns1:id>
+					<ns1:matrix rows="3" cols="1">
+						<ns1:apply>
+							<ns1:mult style="auto-select" />
+							<ns1:real>683.39</ns1:real>
+							<ns1:id xml:space="preserve">K</ns1:id>
+						</ns1:apply>
+						<ns1:apply>
+							<ns1:mult style="auto-select" />
+							<ns1:real>695.62</ns1:real>
+							<ns1:id xml:space="preserve">K</ns1:id>
+						</ns1:apply>
+						<ns1:apply>
+							<ns1:mult style="auto-select" />
+							<ns1:real>720.6</ns1:real>
+							<ns1:id xml:space="preserve">K</ns1:id>
+						</ns1:apply>
+					</ns1:matrix>
+				</ns1:define>
+			</ns0:math>
+			
+
+--- R13 MATH (error: ) ---
+<ns0:math xmlns:ns0="http://schemas.mathsoft.com/worksheet30" xmlns:ns1="http://schemas.mathsoft.com/math30" optimize="false" disable-calc="false">
+				<ns1:define>
+					<ns1:id xml:space="preserve">n</ns1:id>
+					<ns1:matrix rows="3" cols="1">
+						<ns1:real>0.2857</ns1:real>
+						<ns1:real>0.2857</ns1:real>
+						<ns1:real>0.3238</ns1:real>
+					</ns1:matrix>
+				</ns1:define>
+			</ns0:math>
+			
+
+--- R14 MATH (error: ) ---
+<ns0:math xmlns:ns0="http://schemas.mathsoft.com/worksheet30" xmlns:ns1="http://schemas.mathsoft.com/math30" optimize="false" disable-calc="false">
+				<ns1:define>
+					<ns1:id xml:space="preserve" subscript="1">Tc</ns1:id>
+					<ns1:apply>
+						<ns1:mult style="auto-select" />
+						<ns1:real font="0">683.39</ns1:real>
+						<ns1:id xml:space="preserve">K</ns1:id>
+					</ns1:apply>
+				</ns1:define>
+			</ns0:math>
+			
+
+--- R15 MATH (error: ) ---
+<ns0:math xmlns:ns0="http://schemas.mathsoft.com/worksheet30" xmlns:ns1="http://schemas.mathsoft.com/math30" optimize="false" disable-calc="false">
+				<ns1:define>
+					<ns1:id xml:space="preserve" subscript="2">Tc</ns1:id>
+					<ns1:apply>
+						<ns1:mult style="auto-select" />
+						<ns1:real font="0">695.62</ns1:real>
+						<ns1:id xml:space="preserve">K</ns1:id>
+					</ns1:apply>
+				</ns1:define>
+			</ns0:math>
+			
+
+--- R16 MATH (error: ) ---
+<ns0:math xmlns:ns0="http://schemas.mathsoft.com/worksheet30" xmlns:ns1="http://schemas.mathsoft.com/math30" optimize="false" disable-calc="false">
+				<ns1:define>
+					<ns1:id xml:space="preserve" subscript="3">Tc</ns1:id>
+					<ns1:apply>
+						<ns1:mult style="auto-select" />
+						<ns1:real font="0">720.6</ns1:real>
+						<ns1:id xml:space="preserve">K</ns1:id>
+					</ns1:apply>
+				</ns1:define>
+			</ns0:math>
+			
+
+--- R17 MATH (error: ) ---
+<ns0:math xmlns:ns0="http://schemas.mathsoft.com/worksheet30" xmlns:ns1="http://schemas.mathsoft.com/math30" optimize="false" disable-calc="false">
+				<ns1:apply>
+					<ns1:equal />
+					<ns1:id xml:space="preserve">ρ</ns1:id>
+					<ns1:apply>
+						<ns1:id xml:space="preserve">A</ns1:id>
+						<ns1:apply>
+							<ns1:pow />
+							<ns1:id xml:space="preserve">B</ns1:id>
+							<ns1:apply>
+								<ns1:neg />
+								<ns1:apply>
+									<ns1:pow />
+									<ns1:parens>
+										<ns1:apply>
+											<ns1:minus />
+											<ns1:real>1</ns1:real>
+											<ns1:apply>
+												<ns1:div />
+												<ns1:id xml:space="preserve">T</ns1:id>
+												<ns1:id xml:space="preserve" subscript="c">T</ns1:id>
+											</ns1:apply>
+										</ns1:apply>
+									</ns1:parens>
+									<ns1:id xml:space="preserve">n</ns1:id>
+								</ns1:apply>
+							</ns1:apply>
+						</ns1:apply>
+					</ns1:apply>
+				</ns1:apply>
+			</ns0:math>
+			
+
+--- R18 MATH (error: ) ---
+<ns0:math xmlns:ns0="http://schemas.mathsoft.com/worksheet30" xmlns:ns1="http://schemas.mathsoft.com/math30" optimize="false" disable-calc="false">
+				<ns1:define>
+					<ns1:function>
+						<ns1:id xml:space="preserve" subscript="1">ρ</ns1:id>
+						<ns1:boundVars>
+							<ns1:id xml:space="preserve">T</ns1:id>
+						</ns1:boundVars>
+					</ns1:function>
+					<ns1:apply>
+						<ns1:mult />
+						<ns1:apply>
+							<ns1:mult />
+							<ns1:apply>
+								<ns1:div />
+								<ns1:id xml:space="preserve">g</ns1:id>
+								<ns1:apply>
+									<ns1:pow />
+									<ns1:id xml:space="preserve">cm</ns1:id>
+									<ns1:real>3</ns1:real>
+								</ns1:apply>
+							</ns1:apply>
+							<ns1:real font="0">0.246</ns1:real>
+						</ns1:apply>
+						<ns1:apply>
+							<ns1:pow />
+							<ns1:real font="0">0.2617</ns1:real>
+							<ns1:apply>
+								<ns1:neg />
+								<ns1:apply>
+									<ns1:pow />
+									<ns1:parens>
+										<ns1:apply>
+											<ns1:minus />
+											<ns1:real>1</ns1:real>
+											<ns1:apply>
+												<ns1:div />
+												<ns1:id xml:space="preserve">T</ns1:id>
+												<ns1:id xml:space="preserve" subscript="1">Tc</ns1:id>
+											</ns1:apply>
+										</ns1:apply>
+									</ns1:parens>
+									<ns1:real font="0">0.2857</ns1:real>
+								</ns1:apply>
+							</ns1:apply>
+						</ns1:apply>
+					</ns1:apply>
+				</ns1:define>
+			</ns0:math>
+			
+
+--- R19 MATH (error: ) ---
+<ns0:math xmlns:ns0="http://schemas.mathsoft.com/worksheet30" xmlns:ns1="http://schemas.mathsoft.com/math30" optimize="false" disable-calc="false">
+				<ns1:define>
+					<ns1:function>
+						<ns1:id xml:space="preserve" subscript="2">ρ</ns1:id>
+						<ns1:boundVars>
+							<ns1:id xml:space="preserve">T</ns1:id>
+						</ns1:boundVars>
+					</ns1:function>
+					<ns1:apply>
+						<ns1:mult />
+						<ns1:apply>
+							<ns1:mult />
+							<ns1:apply>
+								<ns1:div />
+								<ns1:id xml:space="preserve">g</ns1:id>
+								<ns1:apply>
+									<ns1:pow />
+									<ns1:id xml:space="preserve">cm</ns1:id>
+									<ns1:real>3</ns1:real>
+								</ns1:apply>
+							</ns1:apply>
+							<ns1:real font="0">0.2463</ns1:real>
+						</ns1:apply>
+						<ns1:apply>
+							<ns1:pow />
+							<ns1:real font="0">0.2613</ns1:real>
+							<ns1:apply>
+								<ns1:neg />
+								<ns1:apply>
+									<ns1:pow />
+									<ns1:parens>
+										<ns1:apply>
+											<ns1:minus />
+											<ns1:real>1</ns1:real>
+											<ns1:apply>
+												<ns1:div />
+												<ns1:id xml:space="preserve">T</ns1:id>
+												<ns1:id xml:space="preserve" subscript="2">Tc</ns1:id>
+											</ns1:apply>
+										</ns1:apply>
+									</ns1:parens>
+									<ns1:real font="0">0.2857</ns1:real>
+								</ns1:apply>
+							</ns1:apply>
+						</ns1:apply>
+					</ns1:apply>
+				</ns1:define>
+			</ns0:math>
+			
+
+--- R20 MATH (error: ) ---
+<ns0:math xmlns:ns0="http://schemas.mathsoft.com/worksheet30" xmlns:ns1="http://schemas.mathsoft.com/math30" optimize="false" disable-calc="false">
+				<ns1:define>
+					<ns1:function>
+						<ns1:id xml:space="preserve">ρ</ns1:id>
+						<ns1:boundVars>
+							<ns1:id xml:space="preserve">T</ns1:id>
+						</ns1:boundVars>
+					</ns1:function>
+					<ns1:apply>
+						<ns1:mult />
+						<ns1:apply>
+							<ns1:vectorize />
+							<ns1:parens>
+								<ns1:apply>
+									<ns1:mult />
+									<ns1:apply>
+										<ns1:matcol />
+										<ns1:id xml:space="preserve" subscript="ρ">Coef</ns1:id>
+										<ns1:real>1</ns1:real>
+									</ns1:apply>
+									<ns1:parens>
+										<ns1:apply>
+											<ns1:pow />
+											<ns1:parens>
+												<ns1:apply>
+													<ns1:matcol />
+													<ns1:id xml:space="preserve" subscript="ρ">Coef</ns1:id>
+													<ns1:real>2</ns1:real>
+												</ns1:apply>
+											</ns1:parens>
+											<ns1:apply>
+												<ns1:neg />
+												<ns1:apply>
+													<ns1:pow />
+													<ns1:parens>
+														<ns1:apply>
+															<ns1:minus />
+															<ns1:real>1</ns1:real>
+															<ns1:apply>
+																<ns1:div />
+																<ns1:id xml:space="preserve">T</ns1:id>
+																<ns1:id xml:space="preserve">Tc</ns1:id>
+															</ns1:apply>
+														</ns1:apply>
+													</ns1:parens>
+													<ns1:id xml:space="preserve">n</ns1:id>
+												</ns1:apply>
+											</ns1:apply>
+										</ns1:apply>
+									</ns1:parens>
+								</ns1:apply>
+							</ns1:parens>
+						</ns1:apply>
+						<ns1:apply>
+							<ns1:div />
+							<ns1:id xml:space="preserve">gm</ns1:id>
+							<ns1:apply>
+								<ns1:pow />
+								<ns1:id xml:space="preserve">cm</ns1:id>
+								<ns1:real>3</ns1:real>
+							</ns1:apply>
+						</ns1:apply>
+					</ns1:apply>
+				</ns1:define>
+			</ns0:math>
+			
+
+--- R21 MATH (error: ) ---
+<ns0:math xmlns:ns0="http://schemas.mathsoft.com/worksheet30" xmlns:ns1="http://schemas.mathsoft.com/math30" optimize="false" disable-calc="false">
+				<ns1:define>
+					<ns1:function>
+						<ns1:id xml:space="preserve" subscript="3">ρ</ns1:id>
+						<ns1:boundVars>
+							<ns1:id xml:space="preserve">T</ns1:id>
+						</ns1:boundVars>
+					</ns1:function>
+					<ns1:apply>
+						<ns1:mult />
+						<ns1:apply>
+							<ns1:mult />
+							<ns1:apply>
+								<ns1:div />
+								<ns1:id xml:space="preserve">g</ns1:id>
+								<ns1:apply>
+									<ns1:pow />
+									<ns1:id xml:space="preserve">cm</ns1:id>
+									<ns1:real>3</ns1:real>
+								</ns1:apply>
+							</ns1:apply>
+							<ns1:real font="0">0.2435</ns1:real>
+						</ns1:apply>
+						<ns1:apply>
+							<ns1:pow />
+							<ns1:real font="0">0.2544</ns1:real>
+							<ns1:apply>
+								<ns1:neg />
+								<ns1:apply>
+									<ns1:pow />
+									<ns1:parens>
+										<ns1:apply>
+											<ns1:minus />
+											<ns1:real>1</ns1:real>
+											<ns1:apply>
+												<ns1:div />
+												<ns1:id xml:space="preserve">T</ns1:id>
+												<ns1:id xml:space="preserve" subscript="3">Tc</ns1:id>
+											</ns1:apply>
+										</ns1:apply>
+									</ns1:parens>
+									<ns1:real font="0">0.3238</ns1:real>
+								</ns1:apply>
+							</ns1:apply>
+						</ns1:apply>
+					</ns1:apply>
+				</ns1:define>
+			</ns0:math>
+			
+
+--- R22 PLOT ---
+
+--- R23 PLOT ---
+
+--- R24 TEXT ---
+3. Conductividad térmica
+
+--- R25 MATH (error: ) ---
+<ns0:math xmlns:ns0="http://schemas.mathsoft.com/worksheet30" xmlns:ns1="http://schemas.mathsoft.com/math30" optimize="false" disable-calc="false">
+				<ns1:apply>
+					<ns1:equal />
+					<ns1:id xml:space="preserve">k</ns1:id>
+					<ns1:parens>
+						<ns1:apply>
+							<ns1:plus />
+							<ns1:apply>
+								<ns1:plus />
+								<ns1:id xml:space="preserve">A</ns1:id>
+								<ns1:apply>
+									<ns1:mult />
+									<ns1:id xml:space="preserve">B</ns1:id>
+									<ns1:apply>
+										<ns1:div />
+										<ns1:id xml:space="preserve">T</ns1:id>
+										<ns1:id xml:space="preserve">K</ns1:id>
+									</ns1:apply>
+								</ns1:apply>
+							</ns1:apply>
+							<ns1:apply>
+								<ns1:mult />
+								<ns1:id xml:space="preserve">C</ns1:id>
+								<ns1:apply>
+									<ns1:pow />
+									<ns1:parens>
+										<ns1:apply>
+											<ns1:div />
+											<ns1:id xml:space="preserve">T</ns1:id>
+											<ns1:id xml:space="preserve">K</ns1:id>
+										</ns1:apply>
+									</ns1:parens>
+									<ns1:real>2</ns1:real>
+								</ns1:apply>
+							</ns1:apply>
+						</ns1:apply>
+					</ns1:parens>
+				</ns1:apply>
+			</ns0:math>
+			
+
+--- R26 MATH (error: ) ---
+<ns0:math xmlns:ns0="http://schemas.mathsoft.com/worksheet30" xmlns:ns1="http://schemas.mathsoft.com/math30" optimize="false" disable-calc="false">
+				<ns1:define>
+					<ns1:id xml:space="preserve" subscript="k">Coef</ns1:id>
+					<ns1:matrix rows="3" cols="3">
+						<ns1:real>0.1496</ns1:real>
+						<ns1:real font="0">0.1461</ns1:real>
+						<ns1:real font="0">0.189</ns1:real>
+						<ns1:real font="0">-0.00003938</ns1:real>
+						<ns1:real font="0">-0.000032788</ns1:real>
+						<ns1:real font="0">-0.00012226</ns1:real>
+						<ns1:real font="0">-0.00000019208</ns1:real>
+						<ns1:real font="0">-0.00000018813</ns1:real>
+						<ns1:real font="0">-0.00000013059</ns1:real>
+					</ns1:matrix>
+				</ns1:define>
+			</ns0:math>
+			
+
+--- R27 MATH (error: ) ---
+<ns0:math xmlns:ns0="http://schemas.mathsoft.com/worksheet30" xmlns:ns1="http://schemas.mathsoft.com/math30" optimize="false" disable-calc="false">
+				<ns1:define>
+					<ns1:function>
+						<ns1:id xml:space="preserve" subscript="1">k</ns1:id>
+						<ns1:boundVars>
+							<ns1:id xml:space="preserve">T</ns1:id>
+						</ns1:boundVars>
+					</ns1:function>
+					<ns1:apply>
+						<ns1:mult />
+						<ns1:apply>
+							<ns1:div />
+							<ns1:id xml:space="preserve">W</ns1:id>
+							<ns1:apply>
+								<ns1:mult />
+								<ns1:id xml:space="preserve">m</ns1:id>
+								<ns1:id xml:space="preserve">K</ns1:id>
+							</ns1:apply>
+						</ns1:apply>
+						<ns1:parens>
+							<ns1:apply>
+								<ns1:minus />
+								<ns1:apply>
+									<ns1:minus />
+									<ns1:real font="0">0.1496</ns1:real>
+									<ns1:apply>
+										<ns1:mult />
+										<ns1:real font="0">0.00003938</ns1:real>
+										<ns1:apply>
+											<ns1:div />
+											<ns1:id xml:space="preserve">T</ns1:id>
+											<ns1:id xml:space="preserve">K</ns1:id>
+										</ns1:apply>
+									</ns1:apply>
+								</ns1:apply>
+								<ns1:apply>
+									<ns1:mult />
+									<ns1:real font="0">0.00000019208</ns1:real>
+									<ns1:apply>
+										<ns1:pow />
+										<ns1:parens>
+											<ns1:apply>
+												<ns1:div />
+												<ns1:id xml:space="preserve">T</ns1:id>
+												<ns1:id xml:space="preserve">K</ns1:id>
+											</ns1:apply>
+										</ns1:parens>
+										<ns1:real>2</ns1:real>
+									</ns1:apply>
+								</ns1:apply>
+							</ns1:apply>
+						</ns1:parens>
+					</ns1:apply>
+				</ns1:define>
+			</ns0:math>
+			
+
+--- R28 MATH (error: ) ---
+<ns0:math xmlns:ns0="http://schemas.mathsoft.com/worksheet30" xmlns:ns1="http://schemas.mathsoft.com/math30" optimize="false" disable-calc="false">
+				<ns1:define>
+					<ns1:function>
+						<ns1:id xml:space="preserve" subscript="2">k</ns1:id>
+						<ns1:boundVars>
+							<ns1:id xml:space="preserve">T</ns1:id>
+						</ns1:boundVars>
+					</ns1:function>
+					<ns1:apply>
+						<ns1:mult />
+						<ns1:apply>
+							<ns1:div />
+							<ns1:id xml:space="preserve">W</ns1:id>
+							<ns1:apply>
+								<ns1:mult />
+								<ns1:id xml:space="preserve">m</ns1:id>
+								<ns1:id xml:space="preserve">K</ns1:id>
+							</ns1:apply>
+						</ns1:apply>
+						<ns1:parens>
+							<ns1:apply>
+								<ns1:minus />
+								<ns1:apply>
+									<ns1:minus />
+									<ns1:real font="0">0.1461</ns1:real>
+									<ns1:apply>
+										<ns1:mult />
+										<ns1:real font="0">0.000032788</ns1:real>
+										<ns1:apply>
+											<ns1:div />
+											<ns1:id xml:space="preserve">T</ns1:id>
+											<ns1:id xml:space="preserve">K</ns1:id>
+										</ns1:apply>
+									</ns1:apply>
+								</ns1:apply>
+								<ns1:apply>
+									<ns1:mult />
+									<ns1:real font="0">0.00000018813</ns1:real>
+									<ns1:apply>
+										<ns1:pow />
+										<ns1:parens>
+											<ns1:apply>
+												<ns1:div />
+												<ns1:id xml:space="preserve">T</ns1:id>
+												<ns1:id xml:space="preserve">K</ns1:id>
+											</ns1:apply>
+										</ns1:parens>
+										<ns1:real>2</ns1:real>
+									</ns1:apply>
+								</ns1:apply>
+							</ns1:apply>
+						</ns1:parens>
+					</ns1:apply>
+				</ns1:define>
+			</ns0:math>
+			
+
+--- R29 MATH (error: ) ---
+<ns0:math xmlns:ns0="http://schemas.mathsoft.com/worksheet30" xmlns:ns1="http://schemas.mathsoft.com/math30" optimize="false" disable-calc="false">
+				<ns1:define>
+					<ns1:function>
+						<ns1:id xml:space="preserve">k</ns1:id>
+						<ns1:boundVars>
+							<ns1:id xml:space="preserve">T</ns1:id>
+						</ns1:boundVars>
+					</ns1:function>
+					<ns1:apply>
+						<ns1:mult />
+						<ns1:parens>
+							<ns1:apply>
+								<ns1:plus />
+								<ns1:apply>
+									<ns1:plus />
+									<ns1:apply>
+										<ns1:matcol />
+										<ns1:id xml:space="preserve" subscript="k">Coef</ns1:id>
+										<ns1:real>1</ns1:real>
+									</ns1:apply>
+									<ns1:apply>
+										<ns1:mult />
+										<ns1:apply>
+											<ns1:matcol />
+											<ns1:id xml:space="preserve" subscript="k">Coef</ns1:id>
+											<ns1:real>2</ns1:real>
+										</ns1:apply>
+										<ns1:apply>
+											<ns1:div />
+											<ns1:id xml:space="preserve">T</ns1:id>
+											<ns1:id xml:space="preserve">K</ns1:id>
+										</ns1:apply>
+									</ns1:apply>
+								</ns1:apply>
+								<ns1:apply>
+									<ns1:mult />
+									<ns1:apply>
+										<ns1:matcol />
+										<ns1:id xml:space="preserve" subscript="k">Coef</ns1:id>
+										<ns1:real>3</ns1:real>
+									</ns1:apply>
+									<ns1:apply>
+										<ns1:pow />
+										<ns1:parens>
+											<ns1:apply>
+												<ns1:div />
+												<ns1:id xml:space="preserve">T</ns1:id>
+												<ns1:id xml:space="preserve">K</ns1:id>
+											</ns1:apply>
+										</ns1:parens>
+										<ns1:real>2</ns1:real>
+									</ns1:apply>
+								</ns1:apply>
+							</ns1:apply>
+						</ns1:parens>
+						<ns1:apply>
+							<ns1:div />
+							<ns1:id xml:space="preserve">W</ns1:id>
+							<ns1:apply>
+								<ns1:mult />
+								<ns1:id xml:space="preserve">m</ns1:id>
+								<ns1:id xml:space="preserve">K</ns1:id>
+							</ns1:apply>
+						</ns1:apply>
+					</ns1:apply>
+				</ns1:define>
+			</ns0:math>
+			
+
+--- R30 PLOT ---
+
+--- R31 MATH (error: ) ---
+<ns0:math xmlns:ns0="http://schemas.mathsoft.com/worksheet30" xmlns:ns1="http://schemas.mathsoft.com/math30" optimize="false" disable-calc="false">
+				<ns1:define>
+					<ns1:function>
+						<ns1:id xml:space="preserve" subscript="3">k</ns1:id>
+						<ns1:boundVars>
+							<ns1:id xml:space="preserve">T</ns1:id>
+						</ns1:boundVars>
+					</ns1:function>
+					<ns1:apply>
+						<ns1:mult />
+						<ns1:apply>
+							<ns1:div />
+							<ns1:id xml:space="preserve">W</ns1:id>
+							<ns1:apply>
+								<ns1:mult />
+								<ns1:id xml:space="preserve">m</ns1:id>
+								<ns1:id xml:space="preserve">K</ns1:id>
+							</ns1:apply>
+						</ns1:apply>
+						<ns1:parens>
+							<ns1:apply>
+								<ns1:minus />
+								<ns1:apply>
+									<ns1:minus />
+									<ns1:real font="0">0.189</ns1:real>
+									<ns1:apply>
+										<ns1:mult />
+										<ns1:real font="0">0.00012226</ns1:real>
+										<ns1:apply>
+											<ns1:div />
+											<ns1:id xml:space="preserve">T</ns1:id>
+											<ns1:id xml:space="preserve">K</ns1:id>
+										</ns1:apply>
+									</ns1:apply>
+								</ns1:apply>
+								<ns1:apply>
+									<ns1:mult />
+									<ns1:real font="0">0.00000013059</ns1:real>
+									<ns1:apply>
+										<ns1:pow />
+										<ns1:parens>
+											<ns1:apply>
+												<ns1:div />
+												<ns1:id xml:space="preserve">T</ns1:id>
+												<ns1:id xml:space="preserve">K</ns1:id>
+											</ns1:apply>
+										</ns1:parens>
+										<ns1:real>2</ns1:real>
+									</ns1:apply>
+								</ns1:apply>
+							</ns1:apply>
+						</ns1:parens>
+					</ns1:apply>
+				</ns1:define>
+			</ns0:math>
+			
+
+--- R32 PLOT ---
+
+--- R33 TEXT ---
+4. Calor específico másico
+
+--- R34 MATH (error: ) ---
+<ns0:math xmlns:ns0="http://schemas.mathsoft.com/worksheet30" xmlns:ns1="http://schemas.mathsoft.com/math30" optimize="false" disable-calc="false">
+				<ns1:define>
+					<ns1:function>
+						<ns1:id xml:space="preserve" subscript="1">Cp</ns1:id>
+						<ns1:boundVars>
+							<ns1:id xml:space="preserve">T</ns1:id>
+						</ns1:boundVars>
+					</ns1:function>
+					<ns1:apply>
+						<ns1:mult style="auto-select" />
+						<ns1:apply>
+							<ns1:mult />
+							<ns1:parens>
+								<ns1:apply>
+									<ns1:plus />
+									<ns1:apply>
+										<ns1:minus />
+										<ns1:apply>
+											<ns1:plus />
+											<ns1:real font="0">258.507</ns1:real>
+											<ns1:apply>
+												<ns1:mult />
+												<ns1:real font="0">1.3429</ns1:real>
+												<ns1:apply>
+													<ns1:div />
+													<ns1:id xml:space="preserve">T</ns1:id>
+													<ns1:id xml:space="preserve">K</ns1:id>
+												</ns1:apply>
+											</ns1:apply>
+										</ns1:apply>
+										<ns1:apply>
+											<ns1:mult />
+											<ns1:real font="0">0.0034546</ns1:real>
+											<ns1:apply>
+												<ns1:pow />
+												<ns1:parens>
+													<ns1:apply>
+														<ns1:div />
+														<ns1:id xml:space="preserve">T</ns1:id>
+														<ns1:id xml:space="preserve">K</ns1:id>
+													</ns1:apply>
+												</ns1:parens>
+												<ns1:real>2</ns1:real>
+											</ns1:apply>
+										</ns1:apply>
+									</ns1:apply>
+									<ns1:apply>
+										<ns1:mult />
+										<ns1:real font="0">0.0000040075</ns1:real>
+										<ns1:apply>
+											<ns1:pow />
+											<ns1:parens>
+												<ns1:apply>
+													<ns1:div />
+													<ns1:id xml:space="preserve">T</ns1:id>
+													<ns1:id xml:space="preserve">K</ns1:id>
+												</ns1:apply>
+											</ns1:parens>
+											<ns1:real>3</ns1:real>
+										</ns1:apply>
+									</ns1:apply>
+								</ns1:apply>
+							</ns1:parens>
+							<ns1:apply>
+								<ns1:div />
+								<ns1:id xml:space="preserve">J</ns1:id>
+								<ns1:apply>
+									<ns1:mult />
+									<ns1:id xml:space="preserve">mol</ns1:id>
+									<ns1:id xml:space="preserve">K</ns1:id>
+								</ns1:apply>
+							</ns1:apply>
+						</ns1:apply>
+						<ns1:apply>
+							<ns1:div />
+							<ns1:real>1</ns1:real>
+							<ns1:parens>
+								<ns1:apply>
+									<ns1:mult style="auto-select" />
+									<ns1:real font="0">212.419</ns1:real>
+									<ns1:apply>
+										<ns1:div />
+										<ns1:id xml:space="preserve">g</ns1:id>
+										<ns1:id xml:space="preserve">mol</ns1:id>
+									</ns1:apply>
+								</ns1:apply>
+							</ns1:parens>
+						</ns1:apply>
+					</ns1:apply>
+				</ns1:define>
+			</ns0:math>
+			
+
+--- R35 MATH (error: ) ---
+<ns0:math xmlns:ns0="http://schemas.mathsoft.com/worksheet30" xmlns:ns1="http://schemas.mathsoft.com/math30" optimize="false" disable-calc="false">
+				<ns1:apply>
+					<ns1:equal />
+					<ns1:id xml:space="preserve" subscript="pm">C</ns1:id>
+					<ns1:apply>
+						<ns1:mult />
+						<ns1:parens>
+							<ns1:apply>
+								<ns1:plus />
+								<ns1:apply>
+									<ns1:plus />
+									<ns1:apply>
+										<ns1:plus />
+										<ns1:id xml:space="preserve">A</ns1:id>
+										<ns1:apply>
+											<ns1:mult />
+											<ns1:id xml:space="preserve">B</ns1:id>
+											<ns1:apply>
+												<ns1:div />
+												<ns1:id xml:space="preserve">T</ns1:id>
+												<ns1:id xml:space="preserve">K</ns1:id>
+											</ns1:apply>
+										</ns1:apply>
+									</ns1:apply>
+									<ns1:apply>
+										<ns1:mult />
+										<ns1:id xml:space="preserve">C</ns1:id>
+										<ns1:apply>
+											<ns1:pow />
+											<ns1:parens>
+												<ns1:apply>
+													<ns1:div />
+													<ns1:id xml:space="preserve">T</ns1:id>
+													<ns1:id xml:space="preserve">K</ns1:id>
+												</ns1:apply>
+											</ns1:parens>
+											<ns1:real>2</ns1:real>
+										</ns1:apply>
+									</ns1:apply>
+								</ns1:apply>
+								<ns1:apply>
+									<ns1:mult />
+									<ns1:id xml:space="preserve">D</ns1:id>
+									<ns1:apply>
+										<ns1:pow />
+										<ns1:parens>
+											<ns1:apply>
+												<ns1:div />
+												<ns1:id xml:space="preserve">T</ns1:id>
+												<ns1:id xml:space="preserve">K</ns1:id>
+											</ns1:apply>
+										</ns1:parens>
+										<ns1:real>3</ns1:real>
+									</ns1:apply>
+								</ns1:apply>
+							</ns1:apply>
+						</ns1:parens>
+						<ns1:apply>
+							<ns1:div />
+							<ns1:id xml:space="preserve">J</ns1:id>
+							<ns1:apply>
+								<ns1:mult />
+								<ns1:id xml:space="preserve">mol</ns1:id>
+								<ns1:id xml:space="preserve">K</ns1:id>
+							</ns1:apply>
+						</ns1:apply>
+					</ns1:apply>
+				</ns1:apply>
+			</ns0:math>
+			
+
+--- R36 MATH (error: ) ---
+<ns0:math xmlns:ns0="http://schemas.mathsoft.com/worksheet30" xmlns:ns1="http://schemas.mathsoft.com/math30" optimize="false" disable-calc="false">
+				<ns1:apply>
+					<ns1:equal />
+					<ns1:id xml:space="preserve" subscript="p">C</ns1:id>
+					<ns1:apply>
+						<ns1:div />
+						<ns1:id xml:space="preserve" subscript="pm">C</ns1:id>
+						<ns1:apply>
+							<ns1:mult />
+							<ns1:id xml:space="preserve">PM</ns1:id>
+							<ns1:apply>
+								<ns1:div />
+								<ns1:id xml:space="preserve">gm</ns1:id>
+								<ns1:id xml:space="preserve">mol</ns1:id>
+							</ns1:apply>
+						</ns1:apply>
+					</ns1:apply>
+				</ns1:apply>
+			</ns0:math>
+			
+
+--- R37 MATH (error: ) ---
+<ns0:math xmlns:ns0="http://schemas.mathsoft.com/worksheet30" xmlns:ns1="http://schemas.mathsoft.com/math30" optimize="false" disable-calc="false">
+				<ns1:define>
+					<ns1:function>
+						<ns1:id xml:space="preserve" subscript="2">Cp</ns1:id>
+						<ns1:boundVars>
+							<ns1:id xml:space="preserve">T</ns1:id>
+						</ns1:boundVars>
+					</ns1:function>
+					<ns1:apply>
+						<ns1:mult style="auto-select" />
+						<ns1:apply>
+							<ns1:mult />
+							<ns1:parens>
+								<ns1:apply>
+									<ns1:plus />
+									<ns1:apply>
+										<ns1:minus />
+										<ns1:apply>
+											<ns1:plus />
+											<ns1:real font="0">266.096</ns1:real>
+											<ns1:apply>
+												<ns1:mult />
+												<ns1:real font="0">1.4888</ns1:real>
+												<ns1:apply>
+													<ns1:div />
+													<ns1:id xml:space="preserve">T</ns1:id>
+													<ns1:id xml:space="preserve">K</ns1:id>
+												</ns1:apply>
+											</ns1:apply>
+										</ns1:apply>
+										<ns1:apply>
+											<ns1:mult />
+											<ns1:real font="0">0.0037813</ns1:real>
+											<ns1:apply>
+												<ns1:pow />
+												<ns1:parens>
+													<ns1:apply>
+														<ns1:div />
+														<ns1:id xml:space="preserve">T</ns1:id>
+														<ns1:id xml:space="preserve">K</ns1:id>
+													</ns1:apply>
+												</ns1:parens>
+												<ns1:real>2</ns1:real>
+											</ns1:apply>
+										</ns1:apply>
+									</ns1:apply>
+									<ns1:apply>
+										<ns1:mult />
+										<ns1:real font="0">0.0000042498</ns1:real>
+										<ns1:apply>
+											<ns1:pow />
+											<ns1:parens>
+												<ns1:apply>
+													<ns1:div />
+													<ns1:id xml:space="preserve">T</ns1:id>
+													<ns1:id xml:space="preserve">K</ns1:id>
+												</ns1:apply>
+											</ns1:parens>
+											<ns1:real>3</ns1:real>
+										</ns1:apply>
+									</ns1:apply>
+								</ns1:apply>
+							</ns1:parens>
+							<ns1:apply>
+								<ns1:div />
+								<ns1:id xml:space="preserve">J</ns1:id>
+								<ns1:apply>
+									<ns1:mult />
+									<ns1:id xml:space="preserve">mol</ns1:id>
+									<ns1:id xml:space="preserve">K</ns1:id>
+								</ns1:apply>
+							</ns1:apply>
+						</ns1:apply>
+						<ns1:apply>
+							<ns1:div />
+							<ns1:real>1</ns1:real>
+							<ns1:parens>
+								<ns1:apply>
+									<ns1:mult style="auto-select" />
+									<ns1:real font="0">226.446</ns1:real>
+									<ns1:apply>
+										<ns1:div />
+										<ns1:id xml:space="preserve">g</ns1:id>
+										<ns1:id xml:space="preserve">mol</ns1:id>
+									</ns1:apply>
+								</ns1:apply>
+							</ns1:parens>
+						</ns1:apply>
+					</ns1:apply>
+				</ns1:define>
+			</ns0:math>
+			
+
+--- R38 MATH (error: ) ---
+<ns0:math xmlns:ns0="http://schemas.mathsoft.com/worksheet30" xmlns:ns1="http://schemas.mathsoft.com/math30" optimize="false" disable-calc="false">
+				<ns1:define>
+					<ns1:id xml:space="preserve" subscript="C.p">Coef</ns1:id>
+					<ns1:matrix rows="3" cols="4">
+						<ns1:real>258.507</ns1:real>
+						<ns1:real>266.096</ns1:real>
+						<ns1:real>89.101</ns1:real>
+						<ns1:real>1.3429</ns1:real>
+						<ns1:real>1.4888</ns1:real>
+						<ns1:real>2.7062</ns1:real>
+						<ns1:real>-0.0034546</ns1:real>
+						<ns1:real>-0.0037813</ns1:real>
+						<ns1:real>-0.0061478</ns1:real>
+						<ns1:real font="0">0.0000040075</ns1:real>
+						<ns1:real font="0">0.0000042498</ns1:real>
+						<ns1:real font="0">0.000005752</ns1:real>
+					</ns1:matrix>
+				</ns1:define>
+			</ns0:math>
+			
+
+--- R39 MATH (error: ) ---
+<ns0:math xmlns:ns0="http://schemas.mathsoft.com/worksheet30" xmlns:ns1="http://schemas.mathsoft.com/math30" optimize="false" disable-calc="false">
+				<ns1:define>
+					<ns1:id xml:space="preserve">PM</ns1:id>
+					<ns1:matrix rows="3" cols="1">
+						<ns1:real>212.419</ns1:real>
+						<ns1:real>226.446</ns1:real>
+						<ns1:real>226.446</ns1:real>
+					</ns1:matrix>
+				</ns1:define>
+			</ns0:math>
+			
+
+--- R40 MATH (error: ) ---
+<ns0:math xmlns:ns0="http://schemas.mathsoft.com/worksheet30" xmlns:ns1="http://schemas.mathsoft.com/math30" optimize="false" disable-calc="false">
+				<ns1:define>
+					<ns1:function>
+						<ns1:id xml:space="preserve" subscript="3">Cp</ns1:id>
+						<ns1:boundVars>
+							<ns1:id xml:space="preserve">T</ns1:id>
+						</ns1:boundVars>
+					</ns1:function>
+					<ns1:apply>
+						<ns1:mult style="auto-select" />
+						<ns1:apply>
+							<ns1:mult />
+							<ns1:parens>
+								<ns1:apply>
+									<ns1:plus />
+									<ns1:apply>
+										<ns1:minus />
+										<ns1:apply>
+											<ns1:plus />
+											<ns1:real font="0">89.101</ns1:real>
+											<ns1:apply>
+												<ns1:mult />
+												<ns1:real font="0">2.7062</ns1:real>
+												<ns1:apply>
+													<ns1:div />
+													<ns1:id xml:space="preserve">T</ns1:id>
+													<ns1:id xml:space="preserve">K</ns1:id>
+												</ns1:apply>
+											</ns1:apply>
+										</ns1:apply>
+										<ns1:apply>
+											<ns1:mult />
+											<ns1:real font="0">0.0061478</ns1:real>
+											<ns1:apply>
+												<ns1:pow />
+												<ns1:parens>
+													<ns1:apply>
+														<ns1:div />
+														<ns1:id xml:space="preserve">T</ns1:id>
+														<ns1:id xml:space="preserve">K</ns1:id>
+													</ns1:apply>
+												</ns1:parens>
+												<ns1:real>2</ns1:real>
+											</ns1:apply>
+										</ns1:apply>
+									</ns1:apply>
+									<ns1:apply>
+										<ns1:mult />
+										<ns1:real font="0">0.000005752</ns1:real>
+										<ns1:apply>
+											<ns1:pow />
+											<ns1:parens>
+												<ns1:apply>
+													<ns1:div />
+													<ns1:id xml:space="preserve">T</ns1:id>
+													<ns1:id xml:space="preserve">K</ns1:id>
+												</ns1:apply>
+											</ns1:parens>
+											<ns1:real>3</ns1:real>
+										</ns1:apply>
+									</ns1:apply>
+								</ns1:apply>
+							</ns1:parens>
+							<ns1:apply>
+								<ns1:div />
+								<ns1:id xml:space="preserve">J</ns1:id>
+								<ns1:apply>
+									<ns1:mult />
+									<ns1:id xml:space="preserve">mol</ns1:id>
+									<ns1:id xml:space="preserve">K</ns1:id>
+								</ns1:apply>
+							</ns1:apply>
+						</ns1:apply>
+						<ns1:apply>
+							<ns1:div />
+							<ns1:real>1</ns1:real>
+							<ns1:parens>
+								<ns1:apply>
+									<ns1:mult style="auto-select" />
+									<ns1:real font="0">226.446</ns1:real>
+									<ns1:apply>
+										<ns1:div />
+										<ns1:id xml:space="preserve">g</ns1:id>
+										<ns1:id xml:space="preserve">mol</ns1:id>
+									</ns1:apply>
+								</ns1:apply>
+							</ns1:parens>
+						</ns1:apply>
+					</ns1:apply>
+				</ns1:define>
+			</ns0:math>
+			
+
+--- R41 MATH (error: ) ---
+<ns0:math xmlns:ns0="http://schemas.mathsoft.com/worksheet30" xmlns:ns1="http://schemas.mathsoft.com/math30" optimize="false" disable-calc="false">
+				<ns1:define>
+					<ns1:function>
+						<ns1:id xml:space="preserve" subscript="pm">C</ns1:id>
+						<ns1:boundVars>
+							<ns1:id xml:space="preserve">T</ns1:id>
+						</ns1:boundVars>
+					</ns1:function>
+					<ns1:apply>
+						<ns1:mult />
+						<ns1:parens>
+							<ns1:apply>
+								<ns1:plus />
+								<ns1:apply>
+									<ns1:plus />
+									<ns1:apply>
+										<ns1:plus />
+										<ns1:apply>
+											<ns1:matcol />
+											<ns1:id xml:space="preserve" subscript="C.p">Coef</ns1:id>
+											<ns1:real>1</ns1:real>
+										</ns1:apply>
+										<ns1:apply>
+											<ns1:mult />
+											<ns1:apply>
+												<ns1:matcol />
+												<ns1:id xml:space="preserve" subscript="C.p">Coef</ns1:id>
+												<ns1:real>2</ns1:real>
+											</ns1:apply>
+											<ns1:parens>
+												<ns1:apply>
+													<ns1:div />
+													<ns1:id xml:space="preserve">T</ns1:id>
+													<ns1:id xml:space="preserve">K</ns1:id>
+												</ns1:apply>
+											</ns1:parens>
+										</ns1:apply>
+									</ns1:apply>
+									<ns1:apply>
+										<ns1:mult />
+										<ns1:apply>
+											<ns1:matcol />
+											<ns1:id xml:space="preserve" subscript="C.p">Coef</ns1:id>
+											<ns1:real>3</ns1:real>
+										</ns1:apply>
+										<ns1:apply>
+											<ns1:pow />
+											<ns1:parens>
+												<ns1:apply>
+													<ns1:div />
+													<ns1:id xml:space="preserve">T</ns1:id>
+													<ns1:id xml:space="preserve">K</ns1:id>
+												</ns1:apply>
+											</ns1:parens>
+											<ns1:real>2</ns1:real>
+										</ns1:apply>
+									</ns1:apply>
+								</ns1:apply>
+								<ns1:apply>
+									<ns1:mult />
+									<ns1:apply>
+										<ns1:matcol />
+										<ns1:id xml:space="preserve" subscript="C.p">Coef</ns1:id>
+										<ns1:real>4</ns1:real>
+									</ns1:apply>
+									<ns1:apply>
+										<ns1:pow />
+										<ns1:parens>
+											<ns1:apply>
+												<ns1:div />
+												<ns1:id xml:space="preserve">T</ns1:id>
+												<ns1:id xml:space="preserve">K</ns1:id>
+											</ns1:apply>
+										</ns1:parens>
+										<ns1:real>3</ns1:real>
+									</ns1:apply>
+								</ns1:apply>
+							</ns1:apply>
+						</ns1:parens>
+						<ns1:apply>
+							<ns1:div />
+							<ns1:id xml:space="preserve">J</ns1:id>
+							<ns1:apply>
+								<ns1:mult />
+								<ns1:id xml:space="preserve">mol</ns1:id>
+								<ns1:id xml:space="preserve">K</ns1:id>
+							</ns1:apply>
+						</ns1:apply>
+					</ns1:apply>
+				</ns1:define>
+			</ns0:math>
+			
+
+--- R42 PLOT ---
+
+--- R43 MATH (error: ) ---
+<ns0:math xmlns:ns0="http://schemas.mathsoft.com/worksheet30" xmlns:ns1="http://schemas.mathsoft.com/math30" optimize="false" disable-calc="false">
+				<ns1:define>
+					<ns1:function>
+						<ns1:id xml:space="preserve" subscript="p">C</ns1:id>
+						<ns1:boundVars>
+							<ns1:id xml:space="preserve">T</ns1:id>
+						</ns1:boundVars>
+					</ns1:function>
+					<ns1:apply>
+						<ns1:div />
+						<ns1:apply>
+							<ns1:id xml:space="preserve" subscript="pm">C</ns1:id>
+							<ns1:id xml:space="preserve">T</ns1:id>
+						</ns1:apply>
+						<ns1:apply>
+							<ns1:mult />
+							<ns1:id xml:space="preserve">PM</ns1:id>
+							<ns1:apply>
+								<ns1:div />
+								<ns1:id xml:space="preserve">gm</ns1:id>
+								<ns1:id xml:space="preserve">mol</ns1:id>
+							</ns1:apply>
+						</ns1:apply>
+					</ns1:apply>
+				</ns1:define>
+			</ns0:math>
+			
+
+--- R44 PLOT ---
+
+--- R45 TEXT ---
+
+					 
+					
+
+--- R46 MATH (error: ) ---
+<ns0:math xmlns:ns0="http://schemas.mathsoft.com/worksheet30" xmlns:ns1="http://schemas.mathsoft.com/math30" optimize="false" disable-calc="false">
+				<ns1:apply>
+					<ns1:equal />
+					<ns1:id xml:space="preserve" subscript="M">μ</ns1:id>
+					<ns1:apply>
+						<ns1:summation />
+						<ns1:lambda>
+							<ns1:boundVars>
+								<ns1:id xml:space="preserve">i</ns1:id>
+							</ns1:boundVars>
+							<ns1:parens>
+								<ns1:apply>
+									<ns1:mult />
+									<ns1:id xml:space="preserve" subscript="i">x</ns1:id>
+									<ns1:id xml:space="preserve" subscript="i">μ</ns1:id>
+								</ns1:apply>
+							</ns1:parens>
+						</ns1:lambda>
+					</ns1:apply>
+				</ns1:apply>
+			</ns0:math>
+			
+
+--- R47 MATH (error: ) ---
+<ns0:math xmlns:ns0="http://schemas.mathsoft.com/worksheet30" xmlns:ns1="http://schemas.mathsoft.com/math30" optimize="false" disable-calc="false">
+				<ns1:define>
+					<ns1:id xml:space="preserve" subscript="1">x</ns1:id>
+					<ns1:real>1</ns1:real>
+				</ns1:define>
+			</ns0:math>
+			
+
+--- R48 MATH (error: ) ---
+<ns0:math xmlns:ns0="http://schemas.mathsoft.com/worksheet30" xmlns:ns1="http://schemas.mathsoft.com/math30" optimize="false" disable-calc="false">
+				<ns1:define>
+					<ns1:id xml:space="preserve" subscript="1">T</ns1:id>
+					<ns1:apply>
+						<ns1:mult style="auto-select" />
+						<ns1:real>273</ns1:real>
+						<ns1:id xml:space="preserve">K</ns1:id>
+					</ns1:apply>
+				</ns1:define>
+			</ns0:math>
+			
+
+--- R49 MATH (error: ) ---
+<ns0:math xmlns:ns0="http://schemas.mathsoft.com/worksheet30" xmlns:ns1="http://schemas.mathsoft.com/math30" optimize="false" disable-calc="false">
+				<ns1:define>
+					<ns1:id xml:space="preserve" subscript="1">μ</ns1:id>
+					<ns1:apply>
+						<ns1:mult style="auto-select" />
+						<ns1:real>0.04053</ns1:real>
+						<ns1:id xml:space="preserve">poise</ns1:id>
+					</ns1:apply>
+				</ns1:define>
+			</ns0:math>
+			
+
+--- R50 MATH (error: ) ---
+<ns0:math xmlns:ns0="http://schemas.mathsoft.com/worksheet30" xmlns:ns1="http://schemas.mathsoft.com/math30" optimize="false" disable-calc="false">
+				<ns1:define>
+					<ns1:id xml:space="preserve" subscript="2">x</ns1:id>
+					<ns1:real>1</ns1:real>
+				</ns1:define>
+			</ns0:math>
+			
+
+--- R51 MATH (error: ) ---
+<ns0:math xmlns:ns0="http://schemas.mathsoft.com/worksheet30" xmlns:ns1="http://schemas.mathsoft.com/math30" optimize="false" disable-calc="false">
+				<ns1:define>
+					<ns1:id xml:space="preserve" subscript="2">T</ns1:id>
+					<ns1:apply>
+						<ns1:mult style="auto-select" />
+						<ns1:real>340</ns1:real>
+						<ns1:id xml:space="preserve">K</ns1:id>
+					</ns1:apply>
+				</ns1:define>
+			</ns0:math>
+			
+
+--- R52 MATH (error: ) ---
+<ns0:math xmlns:ns0="http://schemas.mathsoft.com/worksheet30" xmlns:ns1="http://schemas.mathsoft.com/math30" optimize="false" disable-calc="false">
+				<ns1:define>
+					<ns1:id xml:space="preserve" subscript="2">μ</ns1:id>
+					<ns1:apply>
+						<ns1:mult style="auto-select" />
+						<ns1:real>0.01167</ns1:real>
+						<ns1:id xml:space="preserve">poise</ns1:id>
+					</ns1:apply>
+				</ns1:define>
+			</ns0:math>
+			
+
+--- R53 MATH (error: ) ---
+<ns0:math xmlns:ns0="http://schemas.mathsoft.com/worksheet30" xmlns:ns1="http://schemas.mathsoft.com/math30" optimize="false" disable-calc="false">
+				<ns1:define>
+					<ns1:id xml:space="preserve" subscript="3">x</ns1:id>
+					<ns1:real>1</ns1:real>
+				</ns1:define>
+			</ns0:math>
+			
+
+--- R54 MATH (error: ) ---
+<ns0:math xmlns:ns0="http://schemas.mathsoft.com/worksheet30" xmlns:ns1="http://schemas.mathsoft.com/math30" optimize="false" disable-calc="false">
+				<ns1:id xml:space="preserve">Given</ns1:id>
+			</ns0:math>
+			
+
+--- R55 MATH (error: ) ---
+<ns0:math xmlns:ns0="http://schemas.mathsoft.com/worksheet30" xmlns:ns1="http://schemas.mathsoft.com/math30" optimize="false" disable-calc="false">
+				<ns1:apply>
+					<ns1:equal />
+					<ns1:id xml:space="preserve" subscript="1">μ</ns1:id>
+					<ns1:apply>
+						<ns1:plus />
+						<ns1:apply>
+							<ns1:plus />
+							<ns1:apply>
+								<ns1:mult />
+								<ns1:id xml:space="preserve" subscript="1">x</ns1:id>
+								<ns1:apply>
+									<ns1:indexer />
+									<ns1:apply>
+										<ns1:id xml:space="preserve">μ</ns1:id>
+										<ns1:id xml:space="preserve" subscript="1">T</ns1:id>
+									</ns1:apply>
+									<ns1:real>1</ns1:real>
+								</ns1:apply>
+							</ns1:apply>
+							<ns1:apply>
+								<ns1:mult />
+								<ns1:id xml:space="preserve" subscript="2">x</ns1:id>
+								<ns1:apply>
+									<ns1:indexer />
+									<ns1:apply>
+										<ns1:id xml:space="preserve">μ</ns1:id>
+										<ns1:id xml:space="preserve" subscript="1">T</ns1:id>
+									</ns1:apply>
+									<ns1:real>2</ns1:real>
+								</ns1:apply>
+							</ns1:apply>
+						</ns1:apply>
+						<ns1:apply>
+							<ns1:mult />
+							<ns1:id xml:space="preserve" subscript="3">x</ns1:id>
+							<ns1:apply>
+								<ns1:indexer />
+								<ns1:apply>
+									<ns1:id xml:space="preserve">μ</ns1:id>
+									<ns1:id xml:space="preserve" subscript="1">T</ns1:id>
+								</ns1:apply>
+								<ns1:real>3</ns1:real>
+							</ns1:apply>
+						</ns1:apply>
+					</ns1:apply>
+				</ns1:apply>
+			</ns0:math>
+			
+
+--- R56 MATH (error: ) ---
+<ns0:math xmlns:ns0="http://schemas.mathsoft.com/worksheet30" xmlns:ns1="http://schemas.mathsoft.com/math30" optimize="false" disable-calc="false">
+				<ns1:apply>
+					<ns1:equal />
+					<ns1:id xml:space="preserve" subscript="2">μ</ns1:id>
+					<ns1:apply>
+						<ns1:plus />
+						<ns1:apply>
+							<ns1:plus />
+							<ns1:apply>
+								<ns1:mult />
+								<ns1:id xml:space="preserve" subscript="1">x</ns1:id>
+								<ns1:apply>
+									<ns1:indexer />
+									<ns1:apply>
+										<ns1:id xml:space="preserve">μ</ns1:id>
+										<ns1:id xml:space="preserve" subscript="2">T</ns1:id>
+									</ns1:apply>
+									<ns1:real>1</ns1:real>
+								</ns1:apply>
+							</ns1:apply>
+							<ns1:apply>
+								<ns1:mult />
+								<ns1:id xml:space="preserve" subscript="2">x</ns1:id>
+								<ns1:apply>
+									<ns1:indexer />
+									<ns1:apply>
+										<ns1:id xml:space="preserve">μ</ns1:id>
+										<ns1:id xml:space="preserve" subscript="2">T</ns1:id>
+									</ns1:apply>
+									<ns1:real>2</ns1:real>
+								</ns1:apply>
+							</ns1:apply>
+						</ns1:apply>
+						<ns1:apply>
+							<ns1:mult />
+							<ns1:id xml:space="preserve" subscript="3">x</ns1:id>
+							<ns1:apply>
+								<ns1:indexer />
+								<ns1:apply>
+									<ns1:id xml:space="preserve">μ</ns1:id>
+									<ns1:id xml:space="preserve" subscript="2">T</ns1:id>
+								</ns1:apply>
+								<ns1:real>3</ns1:real>
+							</ns1:apply>
+						</ns1:apply>
+					</ns1:apply>
+				</ns1:apply>
+			</ns0:math>
+			
+
+--- R57 MATH (error: ) ---
+<ns0:math xmlns:ns0="http://schemas.mathsoft.com/worksheet30" xmlns:ns1="http://schemas.mathsoft.com/math30" optimize="false" disable-calc="false">
+				<ns1:apply>
+					<ns1:equal />
+					<ns1:apply>
+						<ns1:plus />
+						<ns1:apply>
+							<ns1:plus />
+							<ns1:id xml:space="preserve" subscript="1">x</ns1:id>
+							<ns1:id xml:space="preserve" subscript="2">x</ns1:id>
+						</ns1:apply>
+						<ns1:id xml:space="preserve" subscript="3">x</ns1:id>
+					</ns1:apply>
+					<ns1:real>1</ns1:real>
+				</ns1:apply>
+			</ns0:math>
+			
+
+--- R58 MATH (error: ) ---
+<ns0:math xmlns:ns0="http://schemas.mathsoft.com/worksheet30" xmlns:ns1="http://schemas.mathsoft.com/math30" optimize="false" disable-calc="false">
+				<ns1:define warning="WarnRedefinedUDScalar">
+					<ns1:matrix rows="3" cols="1">
+						<ns1:id xml:space="preserve" subscript="1">x</ns1:id>
+						<ns1:id xml:space="preserve" subscript="2">x</ns1:id>
+						<ns1:id xml:space="preserve" subscript="3">x</ns1:id>
+					</ns1:matrix>
+					<ns1:apply>
+						<ns1:Find auto-method="true" method="linear" derivative-estimation="central" variable-estimation="tangent" linear-check="false" multistart="false" evolutionary="false" />
+						<ns1:sequence>
+							<ns1:id xml:space="preserve" subscript="1">x</ns1:id>
+							<ns1:id xml:space="preserve" subscript="2">x</ns1:id>
+							<ns1:id xml:space="preserve" subscript="3">x</ns1:id>
+						</ns1:sequence>
+					</ns1:apply>
+				</ns1:define>
+			</ns0:math>
+			
+
+--- R59 MATH (error: ) ---
+<ns0:math xmlns:ns0="http://schemas.mathsoft.com/worksheet30" xmlns:ns1="http://schemas.mathsoft.com/math30" optimize="false" disable-calc="false">
+				<ns1:define>
+					<ns1:id xml:space="preserve">X</ns1:id>
+					<ns1:eval placeholderMultiplicationStyle="default">
+						<ns1:matrix rows="3" cols="1">
+							<ns1:id xml:space="preserve" subscript="1">x</ns1:id>
+							<ns1:id xml:space="preserve" subscript="2">x</ns1:id>
+							<ns1:id xml:space="preserve" subscript="3">x</ns1:id>
+						</ns1:matrix>
+						<ns1:result>
+							<ns1:matrix rows="3" cols="1">
+								<ns1:real>0.48033724960166158</ns1:real>
+								<ns1:real>0.29948175443108105</ns1:real>
+								<ns1:real>0.22018099596725743</ns1:real>
+							</ns1:matrix>
+						</ns1:result>
+					</ns1:eval>
+				</ns1:define>
+			</ns0:math>
+			
+
+--- R61 TEXT ---
+Viscosidad 
+
+--- R62 MATH (error: ) ---
+<ns0:math xmlns:ns0="http://schemas.mathsoft.com/worksheet30" xmlns:ns1="http://schemas.mathsoft.com/math30" optimize="false" disable-calc="false">
+				<ns1:define>
+					<ns1:function>
+						<ns1:id xml:space="preserve" subscript="M">μ</ns1:id>
+						<ns1:boundVars>
+							<ns1:id xml:space="preserve">T</ns1:id>
+						</ns1:boundVars>
+					</ns1:function>
+					<ns1:apply>
+						<ns1:plus />
+						<ns1:apply>
+							<ns1:plus />
+							<ns1:apply>
+								<ns1:mult />
+								<ns1:id xml:space="preserve" subscript="1">x</ns1:id>
+								<ns1:apply>
+									<ns1:indexer />
+									<ns1:apply>
+										<ns1:id xml:space="preserve">μ</ns1:id>
+										<ns1:id xml:space="preserve">T</ns1:id>
+									</ns1:apply>
+									<ns1:real>1</ns1:real>
+								</ns1:apply>
+							</ns1:apply>
+							<ns1:apply>
+								<ns1:mult />
+								<ns1:id xml:space="preserve" subscript="2">x</ns1:id>
+								<ns1:apply>
+									<ns1:indexer />
+									<ns1:apply>
+										<ns1:id xml:space="preserve">μ</ns1:id>
+										<ns1:id xml:space="preserve">T</ns1:id>
+									</ns1:apply>
+									<ns1:real>2</ns1:real>
+								</ns1:apply>
+							</ns1:apply>
+						</ns1:apply>
+						<ns1:apply>
+							<ns1:mult />
+							<ns1:id xml:space="preserve" subscript="3">x</ns1:id>
+							<ns1:apply>
+								<ns1:indexer />
+								<ns1:apply>
+									<ns1:id xml:space="preserve">μ</ns1:id>
+									<ns1:id xml:space="preserve">T</ns1:id>
+								</ns1:apply>
+								<ns1:real>3</ns1:real>
+							</ns1:apply>
+						</ns1:apply>
+					</ns1:apply>
+				</ns1:define>
+			</ns0:math>
+			
+
+--- R63 MATH (error: ) ---
+<ns0:math xmlns:ns0="http://schemas.mathsoft.com/worksheet30" xmlns:ns1="http://schemas.mathsoft.com/math30" xmlns:ns2="http://schemas.mathsoft.com/units10" optimize="false" disable-calc="false">
+				<ns1:eval placeholderMultiplicationStyle="default">
+					<ns1:apply>
+						<ns1:id xml:space="preserve" subscript="M">μ</ns1:id>
+						<ns1:apply>
+							<ns1:mult style="auto-select" />
+							<ns1:real>273</ns1:real>
+							<ns1:id xml:space="preserve">K</ns1:id>
+						</ns1:apply>
+					</ns1:apply>
+					<ns1:result>
+						<ns1:unitedValue>
+							<ns1:real>0.004053</ns1:real>
+							<ns2:unitMonomial>
+								<ns2:unitReference unit="kilogram" />
+								<ns2:unitReference unit="meter" power-numerator="-1" />
+								<ns2:unitReference unit="second" power-numerator="-1" />
+							</ns2:unitMonomial>
+						</ns1:unitedValue>
+					</ns1:result>
+				</ns1:eval>
+			</ns0:math>
+			
+
+--- R64 MATH (error: ) ---
+<ns0:math xmlns:ns0="http://schemas.mathsoft.com/worksheet30" xmlns:ns1="http://schemas.mathsoft.com/math30" xmlns:ns2="http://schemas.mathsoft.com/units10" optimize="false" disable-calc="false">
+				<ns1:eval placeholderMultiplicationStyle="default">
+					<ns1:apply>
+						<ns1:id xml:space="preserve" subscript="M">μ</ns1:id>
+						<ns1:apply>
+							<ns1:mult style="auto-select" />
+							<ns1:real>340</ns1:real>
+							<ns1:id xml:space="preserve">K</ns1:id>
+						</ns1:apply>
+					</ns1:apply>
+					<ns1:result>
+						<ns1:unitedValue>
+							<ns1:real>0.001167</ns1:real>
+							<ns2:unitMonomial>
+								<ns2:unitReference unit="kilogram" />
+								<ns2:unitReference unit="meter" power-numerator="-1" />
+								<ns2:unitReference unit="second" power-numerator="-1" />
+							</ns2:unitMonomial>
+						</ns1:unitedValue>
+					</ns1:result>
+				</ns1:eval>
+			</ns0:math>
+			
+
+--- R65 PLOT ---
+
+--- R66 PLOT ---
+
+--- R67 TEXT ---
+Conductividad térmica
+
+--- R68 TEXT ---
+Calor específico másico
+
+--- R69 MATH (error: ) ---
+<ns0:math xmlns:ns0="http://schemas.mathsoft.com/worksheet30" xmlns:ns1="http://schemas.mathsoft.com/math30" optimize="false" disable-calc="false">
+				<ns1:define>
+					<ns1:function>
+						<ns1:id xml:space="preserve" subscript="M">k</ns1:id>
+						<ns1:boundVars>
+							<ns1:id xml:space="preserve">T</ns1:id>
+						</ns1:boundVars>
+					</ns1:function>
+					<ns1:apply>
+						<ns1:plus />
+						<ns1:apply>
+							<ns1:plus />
+							<ns1:apply>
+								<ns1:mult />
+								<ns1:id xml:space="preserve" subscript="1">x</ns1:id>
+								<ns1:apply>
+									<ns1:indexer />
+									<ns1:apply>
+										<ns1:id xml:space="preserve">k</ns1:id>
+										<ns1:id xml:space="preserve">T</ns1:id>
+									</ns1:apply>
+									<ns1:real>1</ns1:real>
+								</ns1:apply>
+							</ns1:apply>
+							<ns1:apply>
+								<ns1:mult />
+								<ns1:id xml:space="preserve" subscript="2">x</ns1:id>
+								<ns1:apply>
+									<ns1:indexer />
+									<ns1:apply>
+										<ns1:id xml:space="preserve">k</ns1:id>
+										<ns1:id xml:space="preserve">T</ns1:id>
+									</ns1:apply>
+									<ns1:real>2</ns1:real>
+								</ns1:apply>
+							</ns1:apply>
+						</ns1:apply>
+						<ns1:apply>
+							<ns1:mult />
+							<ns1:id xml:space="preserve" subscript="3">x</ns1:id>
+							<ns1:apply>
+								<ns1:indexer />
+								<ns1:apply>
+									<ns1:id xml:space="preserve">k</ns1:id>
+									<ns1:id xml:space="preserve">T</ns1:id>
+								</ns1:apply>
+								<ns1:real>3</ns1:real>
+							</ns1:apply>
+						</ns1:apply>
+					</ns1:apply>
+				</ns1:define>
+			</ns0:math>
+			
+
+--- R70 MATH (error: ) ---
+<ns0:math xmlns:ns0="http://schemas.mathsoft.com/worksheet30" xmlns:ns1="http://schemas.mathsoft.com/math30" optimize="false" disable-calc="false">
+				<ns1:define>
+					<ns1:function>
+						<ns1:id xml:space="preserve" subscript="pM">C</ns1:id>
+						<ns1:boundVars>
+							<ns1:id xml:space="preserve">T</ns1:id>
+						</ns1:boundVars>
+					</ns1:function>
+					<ns1:apply>
+						<ns1:plus />
+						<ns1:apply>
+							<ns1:plus />
+							<ns1:apply>
+								<ns1:mult />
+								<ns1:id xml:space="preserve" subscript="1">x</ns1:id>
+								<ns1:apply>
+									<ns1:indexer />
+									<ns1:apply>
+										<ns1:id xml:space="preserve" subscript="p">C</ns1:id>
+										<ns1:id xml:space="preserve">T</ns1:id>
+									</ns1:apply>
+									<ns1:real>1</ns1:real>
+								</ns1:apply>
+							</ns1:apply>
+							<ns1:apply>
+								<ns1:mult />
+								<ns1:id xml:space="preserve" subscript="2">x</ns1:id>
+								<ns1:apply>
+									<ns1:indexer />
+									<ns1:apply>
+										<ns1:id xml:space="preserve" subscript="p">C</ns1:id>
+										<ns1:id xml:space="preserve">T</ns1:id>
+									</ns1:apply>
+									<ns1:real>2</ns1:real>
+								</ns1:apply>
+							</ns1:apply>
+						</ns1:apply>
+						<ns1:apply>
+							<ns1:mult />
+							<ns1:id xml:space="preserve" subscript="3">x</ns1:id>
+							<ns1:apply>
+								<ns1:indexer />
+								<ns1:apply>
+									<ns1:id xml:space="preserve" subscript="p">C</ns1:id>
+									<ns1:id xml:space="preserve">T</ns1:id>
+								</ns1:apply>
+								<ns1:real>3</ns1:real>
+							</ns1:apply>
+						</ns1:apply>
+					</ns1:apply>
+				</ns1:define>
+			</ns0:math>
+			
+
+--- R71 PLOT ---
+
+--- R72 PLOT ---
+
+--- R73 TEXT ---
+Densidad
+
+--- R74 MATH (error: Este marcador de posición está vacío.) ---
+<ns0:math xmlns:ns0="http://schemas.mathsoft.com/worksheet30" xmlns:ns1="http://schemas.mathsoft.com/math30" error="Este marcador de posición está vacío." optimize="false" disable-calc="false">
+				<ns1:define>
+					<ns1:function>
+						<ns1:id xml:space="preserve" subscript="M">ρ</ns1:id>
+						<ns1:boundVars>
+							<ns1:id xml:space="preserve">T</ns1:id>
+						</ns1:boundVars>
+					</ns1:function>
+					<ns1:placeholder />
+				</ns1:define>
+			</ns0:math>
+			
+
+--- R76 MATH (error: ) ---
+<ns0:math xmlns:ns0="http://schemas.mathsoft.com/worksheet30" xmlns:ns1="http://schemas.mathsoft.com/math30" xmlns:ns2="http://schemas.mathsoft.com/units10" optimize="false" disable-calc="false">
+				<ns1:eval placeholderMultiplicationStyle="default">
+					<ns1:apply>
+						<ns1:id xml:space="preserve" subscript="M">μ</ns1:id>
+						<ns1:apply>
+							<ns1:mult style="auto-select" />
+							<ns1:real>298</ns1:real>
+							<ns1:id xml:space="preserve">K</ns1:id>
+						</ns1:apply>
+					</ns1:apply>
+					<ns1:result>
+						<ns1:unitedValue>
+							<ns1:real>0.0023438864162908758</ns1:real>
+							<ns2:unitMonomial>
+								<ns2:unitReference unit="kilogram" />
+								<ns2:unitReference unit="meter" power-numerator="-1" />
+								<ns2:unitReference unit="second" power-numerator="-1" />
+							</ns2:unitMonomial>
+						</ns1:unitedValue>
+					</ns1:result>
+				</ns1:eval>
+			</ns0:math>
+			
+
+--- R77 MATH (error: ) ---
+<ns0:math xmlns:ns0="http://schemas.mathsoft.com/worksheet30" xmlns:ns1="http://schemas.mathsoft.com/math30" xmlns:ns2="http://schemas.mathsoft.com/units10" optimize="false" disable-calc="false">
+				<ns1:eval placeholderMultiplicationStyle="default">
+					<ns1:apply>
+						<ns1:id xml:space="preserve">ρ</ns1:id>
+						<ns1:apply>
+							<ns1:mult style="auto-select" />
+							<ns1:real>298</ns1:real>
+							<ns1:id xml:space="preserve">K</ns1:id>
+						</ns1:apply>
+					</ns1:apply>
+					<ns1:result>
+						<ns1:unitedValue>
+							<ns1:matrix rows="3" cols="1">
+								<ns1:real>767.78857652282636</ns1:real>
+								<ns1:real>773.12158709513471</ns1:real>
+								<ns1:real>770.26765532334366</ns1:real>
+							</ns1:matrix>
+							<ns2:unitMonomial>
+								<ns2:unitReference unit="kilogram" />
+								<ns2:unitReference unit="meter" power-numerator="-3" />
+							</ns2:unitMonomial>
+						</ns1:unitedValue>
+					</ns1:result>
+				</ns1:eval>
+			</ns0:math>
+			
+
+--- R78 MATH (error: ) ---
+<ns0:math xmlns:ns0="http://schemas.mathsoft.com/worksheet30" xmlns:ns1="http://schemas.mathsoft.com/math30" xmlns:ns2="http://schemas.mathsoft.com/units10" optimize="false" disable-calc="false">
+				<ns1:eval placeholderMultiplicationStyle="default">
+					<ns1:apply>
+						<ns1:id xml:space="preserve">μ</ns1:id>
+						<ns1:apply>
+							<ns1:mult style="auto-select" />
+							<ns1:real>298</ns1:real>
+							<ns1:id xml:space="preserve">K</ns1:id>
+						</ns1:apply>
+					</ns1:apply>
+					<ns1:unitOverride>
+						<ns1:apply>
+							<ns1:mult />
+							<ns1:id xml:space="preserve">Pa</ns1:id>
+							<ns1:id xml:space="preserve">s</ns1:id>
+						</ns1:apply>
+					</ns1:unitOverride>
+					<ns1:result>
+						<ns1:unitedValue>
+							<ns1:matrix rows="3" cols="1">
+								<ns1:real>0.002005226637339617</ns1:real>
+								<ns1:real>0.0023036454172437352</ns1:real>
+								<ns1:real>0.0031374260721512477</ns1:real>
+							</ns1:matrix>
+							<ns2:unitMonomial>
+								<ns2:unitReference unit="pascal" />
+								<ns2:unitReference unit="second" />
+							</ns2:unitMonomial>
+						</ns1:unitedValue>
+					</ns1:result>
+				</ns1:eval>
+			</ns0:math>
+			
+
+--- R79 MATH (error: ) ---
+<ns0:math xmlns:ns0="http://schemas.mathsoft.com/worksheet30" xmlns:ns1="http://schemas.mathsoft.com/math30" xmlns:ns2="http://schemas.mathsoft.com/units10" optimize="false" disable-calc="false">
+				<ns1:eval placeholderMultiplicationStyle="default">
+					<ns1:apply>
+						<ns1:id xml:space="preserve" subscript="M">k</ns1:id>
+						<ns1:apply>
+							<ns1:mult style="auto-select" />
+							<ns1:real>298</ns1:real>
+							<ns1:id xml:space="preserve">K</ns1:id>
+						</ns1:apply>
+					</ns1:apply>
+					<ns1:unitOverride>
+						<ns1:apply>
+							<ns1:div />
+							<ns1:id xml:space="preserve">W</ns1:id>
+							<ns1:apply>
+								<ns1:mult />
+								<ns1:id xml:space="preserve">m</ns1:id>
+								<ns1:id xml:space="preserve">K</ns1:id>
+							</ns1:apply>
+						</ns1:apply>
+					</ns1:unitOverride>
+					<ns1:result>
+						<ns1:unitedValue>
+							<ns1:real>0.124891818491041</ns1:real>
+							<ns2:unitMonomial>
+								<ns2:unitReference unit="kelvin" power-numerator="-1" />
+								<ns2:unitReference unit="meter" power-numerator="-1" />
+								<ns2:unitReference unit="watt" />
+							</ns2:unitMonomial>
+						</ns1:unitedValue>
+					</ns1:result>
+				</ns1:eval>
+			</ns0:math>
+			
+
+--- R80 MATH (error: ) ---
+<ns0:math xmlns:ns0="http://schemas.mathsoft.com/worksheet30" xmlns:ns1="http://schemas.mathsoft.com/math30" xmlns:ns2="http://schemas.mathsoft.com/units10" optimize="false" disable-calc="false">
+				<ns1:eval placeholderMultiplicationStyle="default">
+					<ns1:apply>
+						<ns1:id xml:space="preserve" subscript="pM">C</ns1:id>
+						<ns1:apply>
+							<ns1:mult style="auto-select" />
+							<ns1:real>298</ns1:real>
+							<ns1:id xml:space="preserve">K</ns1:id>
+						</ns1:apply>
+					</ns1:apply>
+					<ns1:unitOverride>
+						<ns1:apply>
+							<ns1:div />
+							<ns1:id xml:space="preserve">J</ns1:id>
+							<ns1:apply>
+								<ns1:mult />
+								<ns1:id xml:space="preserve">kg</ns1:id>
+								<ns1:id xml:space="preserve">K</ns1:id>
+							</ns1:apply>
+						</ns1:apply>
+					</ns1:unitOverride>
+					<ns1:result>
+						<ns1:unitedValue>
+							<ns1:real>2166.8276040695278</ns1:real>
+							<ns2:unitMonomial>
+								<ns2:unitReference unit="joule" />
+								<ns2:unitReference unit="kelvin" power-numerator="-1" />
+								<ns2:unitReference unit="kilogram" power-numerator="-1" />
+							</ns2:unitMonomial>
+						</ns1:unitedValue>
+					</ns1:result>
+				</ns1:eval>
+			</ns0:math>
+			
+
+--- R81 MATH (error: ) ---
+<ns0:math xmlns:ns0="http://schemas.mathsoft.com/worksheet30" xmlns:ns1="http://schemas.mathsoft.com/math30" xmlns:ns2="http://schemas.mathsoft.com/units10" optimize="false" disable-calc="false">
+				<ns1:eval placeholderMultiplicationStyle="default">
+					<ns1:apply>
+						<ns1:id xml:space="preserve" subscript="p">C</ns1:id>
+						<ns1:apply>
+							<ns1:mult style="auto-select" />
+							<ns1:real>298</ns1:real>
+							<ns1:id xml:space="preserve">K</ns1:id>
+						</ns1:apply>
+					</ns1:apply>
+					<ns1:unitOverride>
+						<ns1:apply>
+							<ns1:div />
+							<ns1:id xml:space="preserve">J</ns1:id>
+							<ns1:apply>
+								<ns1:mult />
+								<ns1:id xml:space="preserve">kg</ns1:id>
+								<ns1:id xml:space="preserve">K</ns1:id>
+							</ns1:apply>
+						</ns1:apply>
+					</ns1:unitOverride>
+					<ns1:result>
+						<ns1:unitedValue>
+							<ns1:matrix rows="3" cols="1">
+								<ns1:real>2155.9358933993658</ns1:real>
+								<ns1:real>2148.1006866166763</ns1:real>
+								<ns1:real>2216.0601202229227</ns1:real>
+							</ns1:matrix>
+							<ns2:unitMonomial>
+								<ns2:unitReference unit="joule" />
+								<ns2:unitReference unit="kelvin" power-numerator="-1" />
+								<ns2:unitReference unit="kilogram" power-numerator="-1" />
+							</ns2:unitMonomial>
+						</ns1:unitedValue>
+					</ns1:result>
+				</ns1:eval>
+			</ns0:math>
+			
+
+--- R82 MATH (error: ) ---
+<ns0:math xmlns:ns0="http://schemas.mathsoft.com/worksheet30" xmlns:ns1="http://schemas.mathsoft.com/math30" xmlns:ns2="http://schemas.mathsoft.com/units10" optimize="false" disable-calc="false">
+				<ns1:eval placeholderMultiplicationStyle="default">
+					<ns1:apply>
+						<ns1:id xml:space="preserve">k</ns1:id>
+						<ns1:apply>
+							<ns1:mult style="auto-select" />
+							<ns1:real>298</ns1:real>
+							<ns1:id xml:space="preserve">K</ns1:id>
+						</ns1:apply>
+					</ns1:apply>
+					<ns1:unitOverride>
+						<ns1:apply>
+							<ns1:div />
+							<ns1:id xml:space="preserve">W</ns1:id>
+							<ns1:apply>
+								<ns1:mult />
+								<ns1:id xml:space="preserve">m</ns1:id>
+								<ns1:id xml:space="preserve">K</ns1:id>
+							</ns1:apply>
+						</ns1:apply>
+					</ns1:unitOverride>
+					<ns1:result>
+						<ns1:unitedValue>
+							<ns1:matrix rows="3" cols="1">
+								<ns1:real>0.12080728768</ns1:real>
+								<ns1:real>0.11962247947999999</ns1:real>
+								<ns1:real>0.14096960564</ns1:real>
+							</ns1:matrix>
+							<ns2:unitMonomial>
+								<ns2:unitReference unit="kelvin" power-numerator="-1" />
+								<ns2:unitReference unit="meter" power-numerator="-1" />
+								<ns2:unitReference unit="watt" />
+							</ns2:unitMonomial>
+						</ns1:unitedValue>
+					</ns1:result>
+				</ns1:eval>
+			</ns0:math>
+			
+
+--- R83 MATH (error: Esta variable no está definida.) ---
+<ns0:math xmlns:ns0="http://schemas.mathsoft.com/worksheet30" xmlns:ns1="http://schemas.mathsoft.com/math30" error="Esta variable no está definida." optimize="false" disable-calc="false">
+				<ns1:eval placeholderMultiplicationStyle="default">
+					<ns1:apply>
+						<ns1:id xml:space="preserve" subscript="M">ρ</ns1:id>
+						<ns1:apply>
+							<ns1:mult style="auto-select" />
+							<ns1:real>298</ns1:real>
+							<ns1:id xml:space="preserve">K</ns1:id>
+						</ns1:apply>
+					</ns1:apply>
+				</ns1:eval>
+			</ns0:math>
+			
+

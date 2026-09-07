@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mathcad format="2.5.30.5" version="15.0.0.436" xml:lang="en">
+	<editor view-annotations="false" view-regions="false">
+		<ruler is-visible="false" ruler-unit="in"/>
+		<grid granularity-x="6" granularity-y="6"/>
+	</editor>
+	<fileFormat image-type="image/png" image-quality="75" save-numeric-results="true" exclude-large-results="true" save-text-images="false" screen-dpi="96"/>
+	<regions>
+		<region region-id="1" left="42" top="31" width="53" height="15" align-x="66" align-y="42" show-border="false" show-highlight="false" is-protected="false" z-order="0" background-color="inherit" tag="">
+			<math optimize="false" disable-calc="false">
+				<ml:id xmlns:ml="http://schemas.mathsoft.com/math30" xml:space="preserve" subscript="V.PR.puro">ϕ</ml:id>
+			</math>
+		</region>
+	</regions>
+</mathcad>

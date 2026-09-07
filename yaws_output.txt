@@ -1,0 +1,147 @@
+Available sheets: ['Hf (Org)', 'Hf, Ef y Sf (Inorg)', '∆Gf (Org)', '∆Gf (Inorg)', '∆Af (Org)', '∆Ef (Org)', 'Sf gas (Org)', '∆Hm (Org)', '∆Hm (Inorg)', '∆Hb (Org)', '∆Hb (Inorg)', 'Cp G (Org)', 'Cp G (Inorg)', 'Cp L (Org)', 'Cp L (Inorg)', 'Cp S (Org)', 'Cp S (Inorg)', 'VP (Org) (°C)', 'VP (Org) (K)', 'VP (Inorg) (K)', 'Tc, Pc, Vc, Zc,ρ, ω (Org)', 'Tc, Pc, Vc, Zc,ρ, ω (Inorg)', 'Liq Viscos (Org)', 'Liq Viscos (Inorg)', 'Gas Viscos (Org)', 'Gas Viscos (Inorg)', 'ρ liq (Org)', 'ρ liq (Inorg)', 'S gas (Org)', '∆Hc (Org)', 'Hazard', 'Surface Tension (Org)', 'Surface Tension (Inorg)', 'K gas-Thermal Cond (Organic)', 'K liq-Thermal Cond (Organic)', 'Liq Thermal Exp (Organic)', 'Liq Adsorption (Organic)', 'Gas Adsorption (Organic)', 'Liq Vol, dipole, Van der walls', 'Diffu Coeff in Air (Organic)', 'Diffu Coeff in water (Organic)', 'Solubility in H2O (Organic)', 'Solubility in Octanol-water', 'Solubility in salt water', 'Refractive Index', 'D°', 'D', "Henry's Law Constant", 'Threshold, Exposure']
+Searching in sheet 'Hf (Org)' using column 'Unnamed: 4'
+Searching in sheet 'Hf, Ef y Sf (Inorg)' using column 'Unnamed: 1'
+Searching in sheet '∆Gf (Org)' using column 'Unnamed: 0'
+Searching in sheet '∆Gf (Inorg)' using column 'Unnamed: 1'
+Searching in sheet '∆Af (Org)' using column 'Unnamed: 0'
+Searching in sheet '∆Ef (Org)' using column 'Unnamed: 0'
+Searching in sheet 'Sf gas (Org)' using column 'Unnamed: 0'
+Searching in sheet '∆Hm (Org)' using column 'Unnamed: 1'
+Searching in sheet '∆Hm (Inorg)' using column 'Name'
+Searching in sheet '∆Hb (Org)' using column 'Unnamed: 1'
+
+Found 2,4-dimethyltridecane in ∆Hb (Org):
+{'∆Hvap = A(1-T/Tc)^n': 1800, 'Unnamed: 1': '2,4-dimethyltridecane', '∆Hvap (kJ/mol)': 'C15H32', 'Unnamed: 3': 80.376, 'T(K)': 683.39, 'Unnamed: 5': 0.38, 'Unnamed: 6': 228.31, 'Unnamed: 7': 683.39, 'Unnamed: 8': 524.15, 'Unnamed: 9': 46.209, 'Unnamed: 10': 212.419}
+
+Found 2,4-dimethyltetradecane in ∆Hb (Org):
+{'∆Hvap = A(1-T/Tc)^n': 1729, 'Unnamed: 1': '2,4-dimethyltetradecane', '∆Hvap (kJ/mol)': 'C16H34', 'Unnamed: 3': 84.015, 'T(K)': 695.62, 'Unnamed: 5': 0.38, 'Unnamed: 6': 239.58, 'Unnamed: 7': 695.62, 'Unnamed: 8': 539.15, 'Unnamed: 9': 47.658, 'Unnamed: 10': 226.446}
+
+Found hexadecane in ∆Hb (Org):
+{'∆Hvap = A(1-T/Tc)^n': 196, 'Unnamed: 1': '1-bromohexadecane', '∆Hvap (kJ/mol)': 'C16H33Br', 'Unnamed: 3': 98.085, 'T(K)': 773.66, 'Unnamed: 5': 0.38, 'Unnamed: 6': 291.05, 'Unnamed: 7': 773.66, 'Unnamed: 8': 609.15, 'Unnamed: 9': 54.464, 'Unnamed: 10': 305.342}
+{'∆Hvap = A(1-T/Tc)^n': 459, 'Unnamed: 1': '1-chlorohexadecane', '∆Hvap (kJ/mol)': 'C16H33Cl', 'Unnamed: 3': 96.266, 'T(K)': 762.66, 'Unnamed: 5': 0.38, 'Unnamed: 6': 291.05, 'Unnamed: 7': 762.66, 'Unnamed: 8': 599.75, 'Unnamed: 9': 53.546, 'Unnamed: 10': 260.891}
+{'∆Hvap = A(1-T/Tc)^n': 532, 'Unnamed: 1': 'cyclohexadecane', '∆Hvap (kJ/mol)': 'C16H32', 'Unnamed: 3': 81.861, 'T(K)': 804.08, 'Unnamed: 5': 0.38, 'Unnamed: 6': 335.25, 'Unnamed: 7': 804.08, 'Unnamed: 8': 573.15, 'Unnamed: 9': 50.955, 'Unnamed: 10': 224.43}
+{'∆Hvap = A(1-T/Tc)^n': 642, 'Unnamed: 1': '1,1-dibromohexadecane', '∆Hvap (kJ/mol)': 'C16H32Br2', 'Unnamed: 3': 104.05, 'T(K)': 808.08, 'Unnamed: 5': 0.38, 'Unnamed: 6': 374.18, 'Unnamed: 7': 808.08, 'Unnamed: 8': 639.15, 'Unnamed: 9': 57.402, 'Unnamed: 10': 384.238}
+{'∆Hvap = A(1-T/Tc)^n': 768, 'Unnamed: 1': '1,1-dichlorohexadecane', '∆Hvap (kJ/mol)': 'C16H32Cl2', 'Unnamed: 3': 99.808, 'T(K)': 782.08, 'Unnamed: 5': 0.38, 'Unnamed: 6': 314.42, 'Unnamed: 7': 782.08, 'Unnamed: 8': 617.15, 'Unnamed: 9': 55.246, 'Unnamed: 10': 295.335}
+{'∆Hvap = A(1-T/Tc)^n': 820, 'Unnamed: 1': '1,1-dicyclohexylhexadecane', '∆Hvap (kJ/mol)': 'C28H54', 'Unnamed: 3': 119.52, 'T(K)': 856.76, 'Unnamed: 5': 0.38, 'Unnamed: 6': 419.58, 'Unnamed: 7': 856.76, 'Unnamed: 8': 697.15, 'Unnamed: 9': 63.114, 'Unnamed: 10': 390.737}
+{'∆Hvap = A(1-T/Tc)^n': 972, 'Unnamed: 1': '1,1-difluorohexadecane', '∆Hvap (kJ/mol)': 'C16H32F2', 'Unnamed: 3': 86.657, 'T(K)': 712.1, 'Unnamed: 5': 0.38, 'Unnamed: 6': 318.88, 'Unnamed: 7': 712.1, 'Unnamed: 8': 553.15, 'Unnamed: 9': 49.014, 'Unnamed: 10': 262.427}
+{'∆Hvap = A(1-T/Tc)^n': 1064, 'Unnamed: 1': '1,1-diiodohexadecane', '∆Hvap (kJ/mol)': 'C16H32I2', 'Unnamed: 3': 123.17, 'T(K)': 955.15, 'Unnamed: 5': 0.38, 'Unnamed: 6': 370.7, 'Unnamed: 7': 955.15, 'Unnamed: 8': 751.32, 'Unnamed: 9': 68.486, 'Unnamed: 10': 478.239}
+{'∆Hvap = A(1-T/Tc)^n': 1608, 'Unnamed: 1': '2,2-dimethylhexadecane', '∆Hvap (kJ/mol)': 'C18H38', 'Unnamed: 3': 92.522, 'T(K)': 734.97, 'Unnamed: 5': 0.38, 'Unnamed: 6': 294.54, 'Unnamed: 7': 734.97, 'Unnamed: 8': 578.15, 'Unnamed: 9': 51.441, 'Unnamed: 10': 254.5}
+{'∆Hvap = A(1-T/Tc)^n': 1609, 'Unnamed: 1': '2,3-dimethylhexadecane', '∆Hvap (kJ/mol)': 'C18H38', 'Unnamed: 3': 94.336, 'T(K)': 742.82, 'Unnamed: 5': 0.38, 'Unnamed: 6': 262.12, 'Unnamed: 7': 742.82, 'Unnamed: 8': 586.15, 'Unnamed: 9': 52.22, 'Unnamed: 10': 254.5}
+{'∆Hvap = A(1-T/Tc)^n': 1610, 'Unnamed: 1': '2,4-dimethylhexadecane', '∆Hvap (kJ/mol)': 'C18H38', 'Unnamed: 3': 91.173, 'T(K)': 720.01, 'Unnamed: 5': 0.38, 'Unnamed: 6': 262.12, 'Unnamed: 7': 720.01, 'Unnamed: 8': 568.15, 'Unnamed: 9': 50.469, 'Unnamed: 10': 254.5}
+{'∆Hvap = A(1-T/Tc)^n': 1859, 'Unnamed: 1': '1,1-diphenylhexadecane', '∆Hvap (kJ/mol)': 'C28H42', 'Unnamed: 3': 118.24, 'T(K)': 850.1, 'Unnamed: 5': 0.38, 'Unnamed: 6': 299.15, 'Unnamed: 7': 850.1, 'Unnamed: 8': 691.15, 'Unnamed: 9': 62.521, 'Unnamed: 10': 378.641}
+{'∆Hvap = A(1-T/Tc)^n': 2364, 'Unnamed: 1': '1-fluorohexadecane', '∆Hvap (kJ/mol)': 'C16H33F', 'Unnamed: 3': 89.73, 'T(K)': 714.6, 'Unnamed: 5': 0.38, 'Unnamed: 6': 291.15, 'Unnamed: 7': 714.6, 'Unnamed: 8': 562.15, 'Unnamed: 9': 49.886, 'Unnamed: 10': 244.437}
+{'∆Hvap = A(1-T/Tc)^n': 2524, 'Unnamed: 1': 'hexadecane', '∆Hvap (kJ/mol)': 'C16H34', 'Unnamed: 3': 96.68, 'T(K)': 720.6, 'Unnamed: 5': 0.422, 'Unnamed: 6': 291.32, 'Unnamed: 7': 720.6, 'Unnamed: 8': 560.01, 'Unnamed: 9': 51.31, 'Unnamed: 10': 226.446}
+{'∆Hvap = A(1-T/Tc)^n': 2525, 'Unnamed: 1': '1,16-hexadecanediol', '∆Hvap (kJ/mol)': 'C16H34O2', 'Unnamed: 3': 112.35, 'T(K)': 804.31, 'Unnamed: 5': 0.38, 'Unnamed: 6': 364.75, 'Unnamed: 7': 804.31, 'Unnamed: 8': 656.15, 'Unnamed: 9': 59.072, 'Unnamed: 10': 258.445}
+{'∆Hvap = A(1-T/Tc)^n': 2526, 'Unnamed: 1': '1,2-hexadecanediol', '∆Hvap (kJ/mol)': 'C16H34O2', 'Unnamed: 3': 108.68, 'T(K)': 781.52, 'Unnamed: 5': 0.38, 'Unnamed: 6': 347.15, 'Unnamed: 7': 781.52, 'Unnamed: 8': 637.15, 'Unnamed: 9': 57.206, 'Unnamed: 10': 258.445}
+{'∆Hvap = A(1-T/Tc)^n': 2527, 'Unnamed: 1': '1,4-hexadecanediol', '∆Hvap (kJ/mol)': 'C16H34O2', 'Unnamed: 3': 114.66, 'T(K)': 820.77, 'Unnamed: 5': 0.38, 'Unnamed: 6': 376.22, 'Unnamed: 7': 820.77, 'Unnamed: 8': 669.15, 'Unnamed: 9': 60.351, 'Unnamed: 10': 258.445}
+{'∆Hvap = A(1-T/Tc)^n': 2528, 'Unnamed: 1': '1,3-hexadecanediol', '∆Hvap (kJ/mol)': 'C16H34O2', 'Unnamed: 3': 110.73, 'T(K)': 795.01, 'Unnamed: 5': 0.38, 'Unnamed: 6': 376.22, 'Unnamed: 7': 795.01, 'Unnamed: 8': 648.15, 'Unnamed: 9': 58.285, 'Unnamed: 10': 258.445}
+{'∆Hvap = A(1-T/Tc)^n': 2529, 'Unnamed: 1': 'hexadecanenitrile', '∆Hvap (kJ/mol)': 'C16H31N', 'Unnamed: 3': 99.098, 'T(K)': 768.13, 'Unnamed: 5': 0.38, 'Unnamed: 6': 304.65, 'Unnamed: 7': 768.13, 'Unnamed: 8': 609.15, 'Unnamed: 9': 54.464, 'Unnamed: 10': 237.429}
+{'∆Hvap = A(1-T/Tc)^n': 2530, 'Unnamed: 1': '1-hexadecanethiol', '∆Hvap (kJ/mol)': 'C16H34S', 'Unnamed: 3': 108.9, 'T(K)': 774.68, 'Unnamed: 5': 0.38, 'Unnamed: 6': 290.93, 'Unnamed: 7': 774.68, 'Unnamed: 8': 607.16, 'Unnamed: 9': 60.86, 'Unnamed: 10': 258.512}
+{'∆Hvap = A(1-T/Tc)^n': 2531, 'Unnamed: 1': '2-hexadecanethiol', '∆Hvap (kJ/mol)': 'C16H34S', 'Unnamed: 3': 95.502, 'T(K)': 768, 'Unnamed: 5': 0.38, 'Unnamed: 6': 288.15, 'Unnamed: 7': 768, 'Unnamed: 8': 600.15, 'Unnamed: 9': 53.585, 'Unnamed: 10': 258.512}
+{'∆Hvap = A(1-T/Tc)^n': 2746, 'Unnamed: 1': '1-iodohexadecane', '∆Hvap (kJ/mol)': 'C16H33I', 'Unnamed: 3': 105.1, 'T(K)': 783.25, 'Unnamed: 5': 0.38, 'Unnamed: 6': 297.85, 'Unnamed: 7': 783.25, 'Unnamed: 8': 630.15, 'Unnamed: 9': 56.519, 'Unnamed: 10': 352.342}
+{'∆Hvap = A(1-T/Tc)^n': 3489, 'Unnamed: 1': '2-methylhexadecane', '∆Hvap (kJ/mol)': 'C17H36', 'Unnamed: 3': 90.873, 'T(K)': 726.23, 'Unnamed: 5': 0.38, 'Unnamed: 6': 277.15, 'Unnamed: 7': 726.23, 'Unnamed: 8': 570.15, 'Unnamed: 9': 50.663, 'Unnamed: 10': 240.473}
+{'∆Hvap = A(1-T/Tc)^n': 3490, 'Unnamed: 1': '3-methylhexadecane', '∆Hvap (kJ/mol)': 'C17H36', 'Unnamed: 3': 91.047, 'T(K)': 727.5, 'Unnamed: 5': 0.38, 'Unnamed: 6': 258.15, 'Unnamed: 7': 727.5, 'Unnamed: 8': 571.15, 'Unnamed: 9': 50.761, 'Unnamed: 10': 240.473}
+{'∆Hvap = A(1-T/Tc)^n': 3655, 'Unnamed: 1': '1-nitrohexadecane', '∆Hvap (kJ/mol)': 'C16H33NO2', 'Unnamed: 3': 102.32, 'T(K)': 782, 'Unnamed: 5': 0.38, 'Unnamed: 6': 413.19, 'Unnamed: 7': 782, 'Unnamed: 8': 623.15, 'Unnamed: 9': 55.834, 'Unnamed: 10': 271.444}
+{'∆Hvap = A(1-T/Tc)^n': 3987, 'Unnamed: 1': '1-phenylhexadecane', '∆Hvap (kJ/mol)': 'C22H38', 'Unnamed: 3': 113.89, 'T(K)': 808, 'Unnamed: 5': 0.38, 'Unnamed: 6': 300.16, 'Unnamed: 7': 808, 'Unnamed: 8': 651.16, 'Unnamed: 9': 61.09, 'Unnamed: 10': 302.544}
+{'∆Hvap = A(1-T/Tc)^n': 4370, 'Unnamed: 1': 'thiacyclohexadecane', '∆Hvap (kJ/mol)': 'C15H30S', 'Unnamed: 3': 84.246, 'T(K)': 836.95, 'Unnamed: 5': 0.38, 'Unnamed: 6': 318.18, 'Unnamed: 7': 836.95, 'Unnamed: 8': 592.15, 'Unnamed: 9': 52.805, 'Unnamed: 10': 242.469}
+{'∆Hvap = A(1-T/Tc)^n': 4424, 'Unnamed: 1': '1,1,1-tribromohexadecane', '∆Hvap (kJ/mol)': 'C16H31Br3', 'Unnamed: 3': 108.73, 'T(K)': 838.47, 'Unnamed: 5': 0.38, 'Unnamed: 6': 451.4, 'Unnamed: 7': 838.47, 'Unnamed: 8': 664.15, 'Unnamed: 9': 59.859, 'Unnamed: 10': 463.134}
+{'∆Hvap = A(1-T/Tc)^n': 4477, 'Unnamed: 1': '1,1,1-trichlorohexadecane', '∆Hvap (kJ/mol)': 'C16H31Cl3', 'Unnamed: 3': 102.16, 'T(K)': 798.28, 'Unnamed: 5': 0.38, 'Unnamed: 6': 361.76, 'Unnamed: 7': 798.28, 'Unnamed: 8': 630.15, 'Unnamed: 9': 56.519, 'Unnamed: 10': 329.78}
+{'∆Hvap = A(1-T/Tc)^n': 4562, 'Unnamed: 1': '1,1,1-trifluorohexadecane', '∆Hvap (kJ/mol)': 'C16H31F3', 'Unnamed: 3': 85.876, 'T(K)': 698.2, 'Unnamed: 5': 0.38, 'Unnamed: 6': 368.45, 'Unnamed: 7': 698.2, 'Unnamed: 8': 545.15, 'Unnamed: 9': 48.239, 'Unnamed: 10': 280.418}
+{'∆Hvap = A(1-T/Tc)^n': 4604, 'Unnamed: 1': '1,1,1-triiodohexadecane', '∆Hvap (kJ/mol)': 'C16H31I3', 'Unnamed: 3': 139.16, 'T(K)': 1071.4, 'Unnamed: 5': 0.38, 'Unnamed: 6': 446.18, 'Unnamed: 7': 1071.4, 'Unnamed: 8': 841.67, 'Unnamed: 9': 77.516, 'Unnamed: 10': 604.136}
+Searching in sheet '∆Hb (Inorg)' using column 'Unnamed: 0'
+Searching in sheet 'Cp G (Org)' using column 'Unnamed: 1'
+Searching in sheet 'Cp G (Inorg)' using column 'Unnamed: 1'
+Searching in sheet 'Cp L (Org)' using column 'Unnamed: 1'
+Searching in sheet 'Cp L (Inorg)' using column 'Unnamed: 0'
+Searching in sheet 'Cp S (Org)' using column 'Unnamed: 1'
+Searching in sheet 'Cp S (Inorg)' using column 'Unnamed: 0'
+Searching in sheet 'VP (Org) (°C)' using column 'Unnamed: 0'
+Searching in sheet 'VP (Org) (K)' using column 'Unnamed: 1'
+Searching in sheet 'VP (Inorg) (K)' using column 'Unnamed: 0'
+Searching in sheet 'Tc, Pc, Vc, Zc,ρ, ω (Org)' using column 'Unnamed: 1'
+Searching in sheet 'Tc, Pc, Vc, Zc,ρ, ω (Inorg)' using column 'Unnamed: 1'
+Searching in sheet 'Liq Viscos (Org)' using column 'Unnamed: 1'
+Searching in sheet 'Liq Viscos (Inorg)' using column 'Unnamed: 1'
+Searching in sheet 'Gas Viscos (Org)' using column 'Unnamed: 0'
+Searching in sheet 'Gas Viscos (Inorg)' using column 'Unnamed: 1'
+Searching in sheet 'ρ liq (Org)' using column 'Unnamed: 0'
+Searching in sheet 'ρ liq (Inorg)' using column 'Unnamed: 0'
+Searching in sheet 'S gas (Org)' using column 'Unnamed: 0'
+Searching in sheet '∆Hc (Org)' using column 'Unnamed: 0'
+Searching in sheet 'Hazard' using column 'Name'
+
+Found 2,4-dimethyltridecane in Hazard:
+{'No': 1185.0, 'Name': '2,4-dimethyltridecane ', 'Formula': 'C15H32 ', 'Limits of explosion': 0.5, 'Unnamed: 4': 3.2, 'Code': 'estimate ', 'Unnamed: 6': nan, 'Flash': 96.11111111111111, 'Flash.1': 205, 'Code.1': 'estimate ', 'Unnamed: 10': nan, 'AIT': nan, 'AIT.1': nan, 'Code.2': nan}
+
+Found 2,4-dimethyltetradecane in Hazard:
+{'No': 1171.0, 'Name': '2,4-dimethyltetradecane ', 'Formula': 'C16H34 ', 'Limits of explosion': 0.5, 'Unnamed: 4': 3, 'Code': 'estimate ', 'Unnamed: 6': nan, 'Flash': 105.55555555555556, 'Flash.1': 222, 'Code.1': 'estimate ', 'Unnamed: 10': nan, 'AIT': nan, 'AIT.1': nan, 'Code.2': nan}
+
+Found hexadecane in Hazard:
+{'No': 179.0, 'Name': '1-bromohexadecane ', 'Formula': 'C16H33Br ', 'Limits of explosion': nan, 'Unnamed: 4': nan, 'Code': nan, 'Unnamed: 6': nan, 'Flash': 148.88888888888889, 'Flash.1': 300, 'Code.1': 'estimate ', 'Unnamed: 10': nan, 'AIT': nan, 'AIT.1': nan, 'Code.2': nan}
+{'No': 388.0, 'Name': '1-chlorohexadecane ', 'Formula': 'C16H33Cl ', 'Limits of explosion': nan, 'Unnamed: 4': nan, 'Code': nan, 'Unnamed: 6': nan, 'Flash': 144.44444444444446, 'Flash.1': 292, 'Code.1': 'estimate ', 'Unnamed: 10': nan, 'AIT': nan, 'AIT.1': nan, 'Code.2': nan}
+{'No': 430.0, 'Name': 'cyclohexadecane ', 'Formula': 'C16H32 ', 'Limits of explosion': 0.5, 'Unnamed: 4': 3, 'Code': 'estimate ', 'Unnamed: 6': nan, 'Flash': 127.22222222222223, 'Flash.1': 261, 'Code.1': 'estimate ', 'Unnamed: 10': nan, 'AIT': nan, 'AIT.1': nan, 'Code.2': nan}
+{'No': 1530.0, 'Name': '1-fluorohexadecane ', 'Formula': 'C16H33F ', 'Limits of explosion': nan, 'Unnamed: 4': nan, 'Code': nan, 'Unnamed: 6': nan, 'Flash': 126.66666666666667, 'Flash.1': 260, 'Code.1': 'estimate ', 'Unnamed: 10': nan, 'AIT': nan, 'AIT.1': nan, 'Code.2': nan}
+{'No': 1594.0, 'Name': 'hexadecane ', 'Formula': 'C16H34 ', 'Limits of explosion': 0.5, 'Unnamed: 4': 4.7, 'Code': 'estimate ', 'Unnamed: 6': nan, 'Flash': 118.8888888888889, 'Flash.1': 246, 'Code.1': 'estimate ', 'Unnamed: 10': nan, 'AIT': 202.22222222222223, 'AIT.1': 396, 'Code.2': 'experiment '}
+{'No': 1595.0, 'Name': 'hexadecanenitrile ', 'Formula': 'C16H31N ', 'Limits of explosion': nan, 'Unnamed: 4': nan, 'Code': nan, 'Unnamed: 6': nan, 'Flash': 155.55555555555557, 'Flash.1': 312, 'Code.1': 'estimate ', 'Unnamed: 10': nan, 'AIT': nan, 'AIT.1': nan, 'Code.2': nan}
+{'No': 1596.0, 'Name': '1-hexadecanethiol ', 'Formula': 'C16H34S ', 'Limits of explosion': nan, 'Unnamed: 4': nan, 'Code': nan, 'Unnamed: 6': nan, 'Flash': 161.66666666666669, 'Flash.1': 323, 'Code.1': 'estimate ', 'Unnamed: 10': nan, 'AIT': nan, 'AIT.1': nan, 'Code.2': nan}
+{'No': 1597.0, 'Name': '2-hexadecanethiol ', 'Formula': 'C16H34S ', 'Limits of explosion': nan, 'Unnamed: 4': nan, 'Code': nan, 'Unnamed: 6': nan, 'Flash': 157.22222222222223, 'Flash.1': 315, 'Code.1': 'estimate ', 'Unnamed: 10': nan, 'AIT': nan, 'AIT.1': nan, 'Code.2': nan}
+{'No': 1775.0, 'Name': '1-iodohexadecane ', 'Formula': 'C16H33I ', 'Limits of explosion': nan, 'Unnamed: 4': nan, 'Code': nan, 'Unnamed: 6': nan, 'Flash': 158.33333333333334, 'Flash.1': 317, 'Code.1': 'estimate ', 'Unnamed: 10': nan, 'AIT': nan, 'AIT.1': nan, 'Code.2': nan}
+{'No': 2531.0, 'Name': '1-nitrohexadecane ', 'Formula': 'C16H33NO2 ', 'Limits of explosion': nan, 'Unnamed: 4': nan, 'Code': nan, 'Unnamed: 6': nan, 'Flash': 161.66666666666669, 'Flash.1': 323, 'Code.1': 'estimate ', 'Unnamed: 10': nan, 'AIT': nan, 'AIT.1': nan, 'Code.2': nan}
+{'No': 2769.0, 'Name': '1-phenylhexadecane ', 'Formula': 'C22H38 ', 'Limits of explosion': 0.4, 'Unnamed: 4': 2.3, 'Code': 'estimate ', 'Unnamed: 6': nan, 'Flash': nan, 'Flash.1': nan, 'Code.1': nan, 'Unnamed: 10': nan, 'AIT': nan, 'AIT.1': nan, 'Code.2': nan}
+Searching in sheet 'Surface Tension (Org)' using column 'Unnamed: 0'
+Searching in sheet 'Surface Tension (Inorg)' using column 'Unnamed: 0'
+Searching in sheet 'K gas-Thermal Cond (Organic)' using column 'Unnamed: 0'
+Searching in sheet 'K liq-Thermal Cond (Organic)' using column 'Unnamed: 0'
+Searching in sheet 'Liq Thermal Exp (Organic)' using column 'Unnamed: 0'
+Searching in sheet 'Liq Adsorption (Organic)' using column 'Unnamed: 0'
+Searching in sheet 'Gas Adsorption (Organic)' using column 'Unnamed: 0'
+Searching in sheet 'Liq Vol, dipole, Van der walls' using column 'Unnamed: 1'
+
+Found 2,4-dimethyltridecane in Liq Vol, dipole, Van der walls:
+{'Solubility Parameter, Liquid Volume, Dipole Moment, and Other Properties': 1797, 'Unnamed: 1': '2,4-dimethyltridecane ', 'Unnamed: 2': 'C15H32 ', 'Unnamed: 3': 25, 'Unnamed: 4': 14.988, 'Unnamed: 5': 276.731, 'Unnamed: 6': '  ', 'van der Waals (vdW)': '  ', 'Unnamed: 8': '  ', 'Unnamed: 9': '  ', 'Unnamed: 10': '  '}
+
+Found 2,4-dimethyltetradecane in Liq Vol, dipole, Van der walls:
+{'Solubility Parameter, Liquid Volume, Dipole Moment, and Other Properties': 1746, 'Unnamed: 1': '2,4-dimethyltetradecane ', 'Unnamed: 2': 'C16H34 ', 'Unnamed: 3': 25, 'Unnamed: 4': 14.945, 'Unnamed: 5': 292.982, 'Unnamed: 6': '  ', 'van der Waals (vdW)': '  ', 'Unnamed: 8': '  ', 'Unnamed: 9': '  ', 'Unnamed: 10': '  '}
+
+Found hexadecane in Liq Vol, dipole, Van der walls:
+{'Solubility Parameter, Liquid Volume, Dipole Moment, and Other Properties': 197, 'Unnamed: 1': '1-bromohexadecane ', 'Unnamed: 2': 'C16H33Br ', 'Unnamed: 3': 25, 'Unnamed: 4': 16.05, 'Unnamed: 5': 306.846, 'Unnamed: 6': '  ', 'van der Waals (vdW)': '  ', 'Unnamed: 8': '  ', 'Unnamed: 9': '  ', 'Unnamed: 10': '  '}
+{'Solubility Parameter, Liquid Volume, Dipole Moment, and Other Properties': 480, 'Unnamed: 1': '1-chlorohexadecane ', 'Unnamed: 2': 'C16H33Cl ', 'Unnamed: 3': 25, 'Unnamed: 4': 15.96, 'Unnamed: 5': 303.291, 'Unnamed: 6': '  ', 'van der Waals (vdW)': '  ', 'Unnamed: 8': '  ', 'Unnamed: 9': '  ', 'Unnamed: 10': '  '}
+{'Solubility Parameter, Liquid Volume, Dipole Moment, and Other Properties': 542, 'Unnamed: 1': 'cyclohexadecane ', 'Unnamed: 2': 'C16H32 ', 'Unnamed: 3': 62, 'Unnamed: 4': 15.414, 'Unnamed: 5': 268.943, 'Unnamed: 6': '  ', 'van der Waals (vdW)': '  ', 'Unnamed: 8': '  ', 'Unnamed: 9': '  ', 'Unnamed: 10': '  '}
+{'Solubility Parameter, Liquid Volume, Dipole Moment, and Other Properties': 658, 'Unnamed: 1': '1,1-dibromohexadecane ', 'Unnamed: 2': 'C16H32Br2 ', 'Unnamed: 3': 101, 'Unnamed: 4': 15.199, 'Unnamed: 5': 342.16, 'Unnamed: 6': '  ', 'van der Waals (vdW)': '  ', 'Unnamed: 8': '  ', 'Unnamed: 9': '  ', 'Unnamed: 10': '  '}
+{'Solubility Parameter, Liquid Volume, Dipole Moment, and Other Properties': 770, 'Unnamed: 1': '1,1-dichlorohexadecane ', 'Unnamed: 2': 'C16H32Cl2 ', 'Unnamed: 3': 41, 'Unnamed: 4': 15.735, 'Unnamed: 5': 320.994, 'Unnamed: 6': '  ', 'van der Waals (vdW)': '  ', 'Unnamed: 8': '  ', 'Unnamed: 9': '  ', 'Unnamed: 10': '  '}
+{'Solubility Parameter, Liquid Volume, Dipole Moment, and Other Properties': 820, 'Unnamed: 1': '1,1-dicyclohexylhexadecane ', 'Unnamed: 2': 'C28H54 ', 'Unnamed: 3': 146, 'Unnamed: 4': 13.521, 'Unnamed: 5': 487.239, 'Unnamed: 6': '  ', 'van der Waals (vdW)': '  ', 'Unnamed: 8': '  ', 'Unnamed: 9': '  ', 'Unnamed: 10': '  '}
+{'Solubility Parameter, Liquid Volume, Dipole Moment, and Other Properties': 971, 'Unnamed: 1': '1,1-difluorohexadecane ', 'Unnamed: 2': 'C16H32F2 ', 'Unnamed: 3': 46, 'Unnamed: 4': 14.808, 'Unnamed: 5': 303.281, 'Unnamed: 6': '  ', 'van der Waals (vdW)': '  ', 'Unnamed: 8': '  ', 'Unnamed: 9': '  ', 'Unnamed: 10': '  '}
+{'Solubility Parameter, Liquid Volume, Dipole Moment, and Other Properties': 1063, 'Unnamed: 1': '1,1-diiodohexadecane ', 'Unnamed: 2': 'C16H32I2 ', 'Unnamed: 3': 98, 'Unnamed: 4': 16.87, 'Unnamed: 5': 348.271, 'Unnamed: 6': '  ', 'van der Waals (vdW)': '  ', 'Unnamed: 8': '  ', 'Unnamed: 9': '  ', 'Unnamed: 10': '  '}
+{'Solubility Parameter, Liquid Volume, Dipole Moment, and Other Properties': 1619, 'Unnamed: 1': '2,2-dimethylhexadecane ', 'Unnamed: 2': 'C18H38 ', 'Unnamed: 3': 25, 'Unnamed: 4': 14.963, 'Unnamed: 5': 328.048, 'Unnamed: 6': '  ', 'van der Waals (vdW)': '  ', 'Unnamed: 8': '  ', 'Unnamed: 9': '  ', 'Unnamed: 10': '  '}
+{'Solubility Parameter, Liquid Volume, Dipole Moment, and Other Properties': 1620, 'Unnamed: 1': '2,3-dimethylhexadecane ', 'Unnamed: 2': 'C18H38 ', 'Unnamed: 3': 25, 'Unnamed: 4': 15.285, 'Unnamed: 5': 321.622, 'Unnamed: 6': '  ', 'van der Waals (vdW)': '  ', 'Unnamed: 8': '  ', 'Unnamed: 9': '  ', 'Unnamed: 10': '  '}
+{'Solubility Parameter, Liquid Volume, Dipole Moment, and Other Properties': 1621, 'Unnamed: 1': '2,4-dimethylhexadecane ', 'Unnamed: 2': 'C18H38 ', 'Unnamed: 3': 25, 'Unnamed: 4': 14.866, 'Unnamed: 5': 325.489, 'Unnamed: 6': '  ', 'van der Waals (vdW)': '  ', 'Unnamed: 8': '  ', 'Unnamed: 9': '  ', 'Unnamed: 10': '  '}
+{'Solubility Parameter, Liquid Volume, Dipole Moment, and Other Properties': 1855, 'Unnamed: 1': '1,1-diphenylhexadecane ', 'Unnamed: 2': 'C28H42 ', 'Unnamed: 3': 26, 'Unnamed: 4': 15.326, 'Unnamed: 5': 416.282, 'Unnamed: 6': '  ', 'van der Waals (vdW)': '  ', 'Unnamed: 8': '  ', 'Unnamed: 9': '  ', 'Unnamed: 10': '  '}
+{'Solubility Parameter, Liquid Volume, Dipole Moment, and Other Properties': 2361, 'Unnamed: 1': '1-fluorohexadecane ', 'Unnamed: 2': 'C16H33F ', 'Unnamed: 3': 25, 'Unnamed: 4': 15.467, 'Unnamed: 5': 295.142, 'Unnamed: 6': '  ', 'van der Waals (vdW)': '  ', 'Unnamed: 8': '  ', 'Unnamed: 9': '  ', 'Unnamed: 10': '  '}
+{'Solubility Parameter, Liquid Volume, Dipole Moment, and Other Properties': 2514, 'Unnamed: 1': 'hexadecane ', 'Unnamed: 2': 'C16H34 ', 'Unnamed: 3': 25, 'Unnamed: 4': 15.938, 'Unnamed: 5': 294.066, 'Unnamed: 6': 'gas ', 'van der Waals (vdW)': 0, 'Unnamed: 8': 23140000000, 'Unnamed: 9': 170.56, 'Unnamed: 10': 7.063}
+{'Solubility Parameter, Liquid Volume, Dipole Moment, and Other Properties': 2515, 'Unnamed: 1': '1,2-hexadecanediol ', 'Unnamed: 2': 'C16H34O2 ', 'Unnamed: 3': 74, 'Unnamed: 4': 16.92, 'Unnamed: 5': 293.601, 'Unnamed: 6': '  ', 'van der Waals (vdW)': '  ', 'Unnamed: 8': '  ', 'Unnamed: 9': '  ', 'Unnamed: 10': '  '}
+{'Solubility Parameter, Liquid Volume, Dipole Moment, and Other Properties': 2516, 'Unnamed: 1': '1,3-hexadecanediol ', 'Unnamed: 2': 'C16H34O2 ', 'Unnamed: 3': 103, 'Unnamed: 4': 16.635, 'Unnamed: 5': 302.351, 'Unnamed: 6': '  ', 'van der Waals (vdW)': '  ', 'Unnamed: 8': '  ', 'Unnamed: 9': '  ', 'Unnamed: 10': '  '}
+{'Solubility Parameter, Liquid Volume, Dipole Moment, and Other Properties': 2517, 'Unnamed: 1': '1,4-hexadecanediol ', 'Unnamed: 2': 'C16H34O2 ', 'Unnamed: 3': 103, 'Unnamed: 4': 16.896, 'Unnamed: 5': 307.181, 'Unnamed: 6': '  ', 'van der Waals (vdW)': '  ', 'Unnamed: 8': '  ', 'Unnamed: 9': '  ', 'Unnamed: 10': '  '}
+{'Solubility Parameter, Liquid Volume, Dipole Moment, and Other Properties': 2518, 'Unnamed: 1': '1,16-hexadecanediol ', 'Unnamed: 2': 'C16H34O2 ', 'Unnamed: 3': 92, 'Unnamed: 4': 17.02, 'Unnamed: 5': 297.806, 'Unnamed: 6': '  ', 'van der Waals (vdW)': '  ', 'Unnamed: 8': '  ', 'Unnamed: 9': '  ', 'Unnamed: 10': '  '}
+{'Solubility Parameter, Liquid Volume, Dipole Moment, and Other Properties': 2519, 'Unnamed: 1': 'hexadecanenitrile ', 'Unnamed: 2': 'C16H31N ', 'Unnamed: 3': 32, 'Unnamed: 4': 16.575, 'Unnamed: 5': 288.473, 'Unnamed: 6': '  ', 'van der Waals (vdW)': '  ', 'Unnamed: 8': '  ', 'Unnamed: 9': '  ', 'Unnamed: 10': '  '}
+{'Solubility Parameter, Liquid Volume, Dipole Moment, and Other Properties': 2520, 'Unnamed: 1': '1-hexadecanethiol ', 'Unnamed: 2': 'C16H34S ', 'Unnamed: 3': 25, 'Unnamed: 4': 16.945, 'Unnamed: 5': 306.686, 'Unnamed: 6': '  ', 'van der Waals (vdW)': '  ', 'Unnamed: 8': 24440000000, 'Unnamed: 9': 185.37, 'Unnamed: 10': '  '}
+{'Solubility Parameter, Liquid Volume, Dipole Moment, and Other Properties': 2521, 'Unnamed: 1': '2-hexadecanethiol ', 'Unnamed: 2': 'C16H34S ', 'Unnamed: 3': 25, 'Unnamed: 4': 15.786, 'Unnamed: 5': 308.009, 'Unnamed: 6': '  ', 'van der Waals (vdW)': '  ', 'Unnamed: 8': '  ', 'Unnamed: 9': '  ', 'Unnamed: 10': '  '}
+{'Solubility Parameter, Liquid Volume, Dipole Moment, and Other Properties': 2744, 'Unnamed: 1': '1-iodohexadecane ', 'Unnamed: 2': 'C16H33I ', 'Unnamed: 3': 25, 'Unnamed: 4': 16.459, 'Unnamed: 5': 314.227, 'Unnamed: 6': '  ', 'van der Waals (vdW)': '  ', 'Unnamed: 8': '  ', 'Unnamed: 9': '  ', 'Unnamed: 10': '  '}
+{'Solubility Parameter, Liquid Volume, Dipole Moment, and Other Properties': 3486, 'Unnamed: 1': '2-methylhexadecane ', 'Unnamed: 2': 'C17H36 ', 'Unnamed: 3': 25, 'Unnamed: 4': 15.188, 'Unnamed: 5': 311.493, 'Unnamed: 6': '  ', 'van der Waals (vdW)': '  ', 'Unnamed: 8': '  ', 'Unnamed: 9': '  ', 'Unnamed: 10': '  '}
+{'Solubility Parameter, Liquid Volume, Dipole Moment, and Other Properties': 3487, 'Unnamed: 1': '3-methylhexadecane ', 'Unnamed: 2': 'C17H36 ', 'Unnamed: 3': 25, 'Unnamed: 4': 15.261, 'Unnamed: 5': 309.29, 'Unnamed: 6': '  ', 'van der Waals (vdW)': '  ', 'Unnamed: 8': '  ', 'Unnamed: 9': '  ', 'Unnamed: 10': '  '}
+{'Solubility Parameter, Liquid Volume, Dipole Moment, and Other Properties': 3661, 'Unnamed: 1': '1-nitrohexadecane ', 'Unnamed: 2': 'C16H33NO2 ', 'Unnamed: 3': 140, 'Unnamed: 4': 14.823, 'Unnamed: 5': 334.322, 'Unnamed: 6': '  ', 'van der Waals (vdW)': '  ', 'Unnamed: 8': '  ', 'Unnamed: 9': '  ', 'Unnamed: 10': '  '}
+{'Solubility Parameter, Liquid Volume, Dipole Moment, and Other Properties': 4021, 'Unnamed: 1': '1-phenylhexadecane ', 'Unnamed: 2': 'C22H38 ', 'Unnamed: 3': 27, 'Unnamed: 4': 16.751, 'Unnamed: 5': 331.324, 'Unnamed: 6': '  ', 'van der Waals (vdW)': '  ', 'Unnamed: 8': 28370000000, 'Unnamed: 9': 215.52, 'Unnamed: 10': '  '}
+{'Solubility Parameter, Liquid Volume, Dipole Moment, and Other Properties': 4403, 'Unnamed: 1': 'thiacyclohexadecane ', 'Unnamed: 2': 'C15H30S ', 'Unnamed: 3': 45, 'Unnamed: 4': 15.408, 'Unnamed: 5': 284.734, 'Unnamed: 6': '  ', 'van der Waals (vdW)': '  ', 'Unnamed: 8': '  ', 'Unnamed: 9': '  ', 'Unnamed: 10': '  '}
+{'Solubility Parameter, Liquid Volume, Dipole Moment, and Other Properties': 4453, 'Unnamed: 1': '1,1,1-tribromohexadecane ', 'Unnamed: 2': 'C16H31Br3 ', 'Unnamed: 3': 178, 'Unnamed: 4': 14.362, 'Unnamed: 5': 374.787, 'Unnamed: 6': '  ', 'van der Waals (vdW)': '  ', 'Unnamed: 8': '  ', 'Unnamed: 9': '  ', 'Unnamed: 10': '  '}
+{'Solubility Parameter, Liquid Volume, Dipole Moment, and Other Properties': 4506, 'Unnamed: 1': '1,1,1-trichlorohexadecane ', 'Unnamed: 2': 'C16H31Cl3 ', 'Unnamed: 3': 89, 'Unnamed: 4': 15.045, 'Unnamed: 5': 345.547, 'Unnamed: 6': '  ', 'van der Waals (vdW)': '  ', 'Unnamed: 8': '  ', 'Unnamed: 9': '  ', 'Unnamed: 10': '  '}
+{'Solubility Parameter, Liquid Volume, Dipole Moment, and Other Properties': 4591, 'Unnamed: 1': '1,1,1-trifluorohexadecane ', 'Unnamed: 2': 'C16H31F3 ', 'Unnamed: 3': 95, 'Unnamed: 4': 13.703, 'Unnamed: 5': 327.584, 'Unnamed: 6': '  ', 'van der Waals (vdW)': '  ', 'Unnamed: 8': '  ', 'Unnamed: 9': '  ', 'Unnamed: 10': '  '}
+{'Solubility Parameter, Liquid Volume, Dipole Moment, and Other Properties': 4633, 'Unnamed: 1': '1,1,1-triiodohexadecane ', 'Unnamed: 2': 'C16H31I3 ', 'Unnamed: 3': 173, 'Unnamed: 4': 18.477, 'Unnamed: 5': 321.295, 'Unnamed: 6': '  ', 'van der Waals (vdW)': '  ', 'Unnamed: 8': '  ', 'Unnamed: 9': '  ', 'Unnamed: 10': '  '}
+Searching in sheet 'Diffu Coeff in Air (Organic)' using column 'Unnamed: 0'
+Searching in sheet 'Diffu Coeff in water (Organic)' using column 'Unnamed: 0'
+Searching in sheet 'Solubility in H2O (Organic)' using column 'Unnamed: 0'
+Searching in sheet 'Solubility in Octanol-water' using column 'Unnamed: 0'
+Searching in sheet 'Solubility in salt water' using column 'Unnamed: 0'
+Searching in sheet 'Refractive Index' using column 'Unnamed: 0'
+Searching in sheet 'D°' using column 'Unnamed: 0'
+Searching in sheet 'D' using column 'Unnamed: 0'
+Searching in sheet 'Henry's Law Constant' using column 'Unnamed: 0'
+Searching in sheet 'Threshold, Exposure' using column 'Unnamed: 0'

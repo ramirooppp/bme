@@ -1,0 +1,49 @@
+Hf (Org)
+Hf, Ef y Sf (Inorg)
+∆Gf (Org)
+∆Gf (Inorg)
+∆Af (Org)
+∆Ef (Org)
+Sf gas (Org)
+∆Hm (Org)
+∆Hm (Inorg)
+∆Hb (Org)
+∆Hb (Inorg)
+Cp G (Org)
+Cp G (Inorg)
+Cp L (Org)
+Cp L (Inorg)
+Cp S (Org)
+Cp S (Inorg)
+VP (Org) (°C)
+VP (Org) (K)
+VP (Inorg) (K)
+Tc, Pc, Vc, Zc,ρ, ω (Org)
+Tc, Pc, Vc, Zc,ρ, ω (Inorg)
+Liq Viscos (Org)
+Liq Viscos (Inorg)
+Gas Viscos (Org)
+Gas Viscos (Inorg)
+ρ liq (Org)
+ρ liq (Inorg)
+S gas (Org)
+∆Hc (Org)
+Hazard
+Surface Tension (Org)
+Surface Tension (Inorg)
+K gas-Thermal Cond (Organic)
+K liq-Thermal Cond (Organic)
+Liq Thermal Exp (Organic)
+Liq Adsorption (Organic)
+Gas Adsorption (Organic)
+Liq Vol, dipole, Van der walls
+Diffu Coeff in Air (Organic)
+Diffu Coeff in water (Organic)
+Solubility in H2O (Organic)
+Solubility in Octanol-water
+Solubility in salt water
+Refractive Index
+D°
+D
+Henry's Law Constant
+Threshold, Exposure

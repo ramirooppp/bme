@@ -1,0 +1,531 @@
+<?xml version='1.0' encoding='utf-8'?>
+<worksheet xmlns="http://schemas.mathsoft.com/worksheet30" xmlns:ml="http://schemas.mathsoft.com/math30" xmlns:p="http://schemas.mathsoft.com/provenance10" version="3.0.3">
+	<pointReleaseData />
+	<metadata>
+		<generator>Mathcad Professional 14.1</generator>
+		<userData>
+			<title />
+			<description />
+			<author>nahuel.quintero70@gmail.com</author>
+			<company>Parametric Technology Corporation</company>
+			<keywords />
+			<revisedBy>nahuel.quintero70@gmail.com</revisedBy>
+		</userData>
+		<identityInfo>
+			<revision>2</revision>
+			<documentID>13FBBE2E-535B-4F34-94FB-4D816D5533CF</documentID>
+			<versionID>80596B6B-990A-4DB9-9E6A-954A076EAA03</versionID>
+			<parentVersionID>00000000-0000-0000-0000-000000000000</parentVersionID>
+			<branchID>00000000-0000-0000-0000-000000000000</branchID>
+		</identityInfo>
+	</metadata>
+	<settings>
+		<presentation>
+			<textRendering>
+				<textStyles>
+					<textStyle name="Normal">
+						<blockAttr margin-left="0" margin-right="0" text-indent="inherit" text-align="left" list-style-type="inherit" tabs="inherit" />
+						<inlineAttr font-family="Arial" font-charset="0" font-size="10" font-weight="normal" font-style="normal" underline="false" line-through="false" vertical-align="baseline" />
+					</textStyle>
+					<textStyle name="Heading 1">
+						<blockAttr margin-left="0" margin-right="0" text-indent="inherit" text-align="left" list-style-type="inherit" tabs="inherit" />
+						<inlineAttr font-family="Arial" font-charset="0" font-size="14" font-weight="bold" font-style="normal" underline="false" line-through="false" vertical-align="baseline" />
+					</textStyle>
+					<textStyle name="Heading 2">
+						<blockAttr margin-left="0" margin-right="0" text-indent="inherit" text-align="left" list-style-type="inherit" tabs="inherit" />
+						<inlineAttr font-family="Arial" font-charset="0" font-size="12" font-weight="bold" font-style="italic" underline="false" line-through="false" vertical-align="baseline" />
+					</textStyle>
+					<textStyle name="Heading 3">
+						<blockAttr margin-left="0" margin-right="0" text-indent="inherit" text-align="left" list-style-type="inherit" tabs="inherit" />
+						<inlineAttr font-family="Arial" font-charset="0" font-size="12" font-weight="normal" font-style="normal" underline="false" line-through="false" vertical-align="baseline" />
+					</textStyle>
+					<textStyle name="Paragraph">
+						<blockAttr margin-left="0" margin-right="0" text-indent="21" text-align="left" list-style-type="inherit" tabs="inherit" />
+						<inlineAttr font-family="Arial" font-charset="0" font-size="10" font-weight="normal" font-style="normal" underline="false" line-through="false" vertical-align="baseline" />
+					</textStyle>
+					<textStyle name="List">
+						<blockAttr margin-left="14.25" margin-right="0" text-indent="-14.25" text-align="left" list-style-type="inherit" tabs="inherit" />
+						<inlineAttr font-family="Arial" font-charset="0" font-size="10" font-weight="normal" font-style="normal" underline="false" line-through="false" vertical-align="baseline" />
+					</textStyle>
+					<textStyle name="Indent">
+						<blockAttr margin-left="108" margin-right="0" text-indent="inherit" text-align="left" list-style-type="inherit" tabs="inherit" />
+						<inlineAttr font-family="Arial" font-charset="0" font-size="10" font-weight="normal" font-style="normal" underline="false" line-through="false" vertical-align="baseline" />
+					</textStyle>
+					<textStyle name="Title">
+						<blockAttr margin-left="0" margin-right="0" text-indent="inherit" text-align="center" list-style-type="inherit" tabs="inherit" />
+						<inlineAttr font-family="Times New Roman" font-charset="0" font-size="24" font-weight="bold" font-style="normal" underline="false" line-through="false" vertical-align="baseline" />
+					</textStyle>
+					<textStyle name="Subtitle" base-style="Title">
+						<blockAttr margin-left="0" margin-right="0" text-indent="inherit" text-align="center" list-style-type="inherit" tabs="inherit" />
+						<inlineAttr font-family="Times New Roman" font-charset="0" font-size="18" font-weight="normal" font-style="normal" underline="false" line-through="false" vertical-align="baseline" />
+					</textStyle>
+				</textStyles>
+			</textRendering>
+			<mathRendering equation-color="#000">
+				<operators multiplication="narrow-dot" derivative="derivative" literal-subscript="large" definition="colon-equal" global-definition="triple-equal" local-definition="left-arrow" equality="bold-equal" symbolic-evaluation="right-arrow" />
+				<mathStyles>
+					<mathStyle name="Variables" font-family="Times New Roman" font-charset="0" font-size="10" font-weight="normal" font-style="normal" underline="false" />
+					<mathStyle name="Constants" font-family="Times New Roman" font-charset="0" font-size="10" font-weight="normal" font-style="normal" underline="false" />
+					<mathStyle name="User 1" font-family="Arial" font-charset="0" font-size="10" font-weight="normal" font-style="normal" underline="false" />
+					<mathStyle name="User 2" font-family="Courier New" font-charset="0" font-size="10" font-weight="normal" font-style="normal" underline="false" />
+					<mathStyle name="User 3" font-family="Arial" font-charset="0" font-size="10" font-weight="bold" font-style="normal" underline="false" />
+					<mathStyle name="User 4" font-family="Times New Roman" font-charset="0" font-size="10" font-weight="normal" font-style="italic" underline="false" />
+					<mathStyle name="User 5" font-family="Times New Roman" font-charset="0" font-size="10" font-weight="normal" font-style="normal" underline="false" />
+					<mathStyle name="User 6" font-family="Arial" font-charset="0" font-size="10" font-weight="normal" font-style="normal" underline="false" />
+					<mathStyle name="User 7" font-family="Times New Roman" font-charset="0" font-size="10" font-weight="normal" font-style="normal" underline="false" />
+					<mathStyle name="Math Text Font" font-family="Times New Roman" font-charset="0" font-size="14" font-weight="normal" font-style="normal" underline="false" />
+				</mathStyles>
+				<dimensionNames mass="mass" length="length" time="time" current="current" thermodynamic-temperature="temperature" luminous-intensity="luminosity" amount-of-substance="substance" display="false" />
+				<symbolics derivation-steps-style="vertical-insert" show-comments="false" evaluate-in-place="false" />
+				<results numeric-only="true">
+					<general precision="3" show-trailing-zeros="false" radix="dec" complex-threshold="10" zero-threshold="15" imaginary-value="i" exponential-threshold="3" />
+					<matrix display-style="auto" expand-nested-arrays="false" />
+					<unit format-units="true" simplify-units="true" fractional-unit-exponent="false" />
+				</results>
+			</mathRendering>
+			<pageModel show-page-frame="false" show-header-frame="false" show-footer-frame="false" header-footer-start-page="1" paper-code="1" orientation="portrait" print-single-page-width="false" page-width="612" page-height="792">
+				<margins left="86.4" right="86.4" top="86.4" bottom="86.4" />
+				<header use-full-page-width="false" />
+				<footer use-full-page-width="false" />
+			</pageModel>
+			<colorModel background-color="#fff" default-highlight-color="#ffff80" />
+			<language math="en" UI="en" />
+		</presentation>
+		<calculation>
+			<builtInVariables array-origin="0" convergence-tolerance="0.001" constraint-tolerance="0.001" random-seed="1" prn-precision="4" prn-col-width="8" />
+			<calculationBehavior automatic-recalculation="true" matrix-strict-singularity-check="false" optimize-expressions="false" exact-boolean="true" strings-use-origin="false" zero-over-zero="error">
+				<compatibility multiple-assignment="MC12" local-assignment="MC11" />
+			</calculationBehavior>
+			<units>
+				<currentUnitSystem name="si" customized="false" />
+			</units>
+		</calculation>
+		<editor view-annotations="false" view-regions="false">
+			<ruler is-visible="false" ruler-unit="in" />
+			<grid granularity-x="6" granularity-y="6" />
+		</editor>
+		<fileFormat image-type="image/png" image-quality="75" save-numeric-results="true" exclude-large-results="true" save-text-images="false" screen-dpi="96" />
+		<miscellaneous>
+			<handbook handbook-region-tag-ub="0" can-delete-original-handbook-regions="true" can-delete-user-regions="true" can-print="true" can-copy="true" can-save="true" file-permission-mask="4294967295" />
+		</miscellaneous>
+	</settings>
+	<regions>
+		<region region-id="1" left="50" top="30" width="348" height="10.5" align-x="50" align-y="30" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
+        <reference>
+            <p:originRef doc-id="DC486E47-2293-4E0A-A743-43A265E151AB" version-id="B4C56D02-291F-457C-B722-E0510855F909" branch-id="00000000-0000-0000-0000-000000000000" revision-num="1" is-modified="true" region-id="0" href="C:\Users\nahue\Desktop\segundo cuatrimestre\Nueva carpeta\Modelos de coeficientes de fugacidad-20260818\SRK.xmcdz">
+                <p:hash />
+            </p:originRef>
+            <p:parentRef doc-id="3F06CA9B-92AB-4AAB-8231-D86025C635B1" version-id="30E9C137-4450-4EE5-A623-1F48311797F3" branch-id="00000000-0000-0000-0000-000000000000" revision-num="1" is-modified="true" region-id="1" href="C:/Users/nahue/Desktop/segundo cuatrimestre/mathcad/Ejercicio_2_Inyectado.xmcd">
+                <p:hash />
+            </p:parentRef>
+            <p:comment />
+            <p:originComment />
+        </reference>
+        <link href="C:\Users\nahue\Desktop\segundo cuatrimestre\Nueva carpeta\Modelos de coeficientes de fugacidad-20260818\SRK.xmcdz" />
+    </region>
+
+    
+    <region region-id="2" left="50" top="55" width="80" height="12" show-border="false" show-highlight="false" is-protected="false" align-x="50" align-y="55" z-order="0" background-color="inherit" tag="">
+        <math><ml:define><ml:id xml:space="preserve">ORIGIN</ml:id><ml:real>1</ml:real></ml:define></math>
+    </region>
+
+    
+    <region region-id="100" left="20" top="80" width="600" height="25" show-border="false" show-highlight="false" is-protected="false" align-x="20" align-y="80" z-order="0" background-color="inherit" tag="">
+        <text use-page-width="false" push-down="false" lock-width="true">
+            <p style="Heading 1" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">TERMODINAMICA DE SOLUCIONES - EJERCICIO 2 (SRK)</p>
+        </text>
+    </region>
+
+    <region region-id="101" left="20" top="115" width="650" height="30" show-border="false" show-highlight="false" is-protected="false" align-x="20" align-y="115" z-order="0" background-color="inherit" tag="">
+        <text use-page-width="false" push-down="false" lock-width="true">
+            <p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">Mezcla ternaria liquida: Benceno(1), Ciclohexano(2), Naftaleno(3) en tanque atmosferico a 300 K.</p>
+            <p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">Composicion: x1 = 0.60, x3 = 0.30 -&gt; x2 = 1 - x1 - x3 = 0.10. Modelo: Soave-Redlich-Kwong (SRK).</p>
+        </text>
+    </region>
+
+    
+    <region region-id="102" left="20" top="155" width="550" height="20" show-border="false" show-highlight="false" is-protected="false" align-x="20" align-y="155" z-order="0" background-color="inherit" tag="">
+        <text use-page-width="false" push-down="false" lock-width="true">
+            <p style="Heading 2" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">1. Parametros criticos, factor acentrico y composicion de la mezcla</p>
+        </text>
+    </region>
+
+    <region region-id="103" left="50" top="185" width="90" height="40" show-border="false" show-highlight="false" is-protected="false" align-x="50" align-y="185" z-order="0" background-color="inherit" tag="">
+        <math><ml:define><ml:id xml:space="preserve" subscript="c">T</ml:id><ml:matrix rows="3" cols="1"><ml:real>562.2</ml:real><ml:real>553.6</ml:real><ml:real>748.4</ml:real></ml:matrix></ml:define></math>
+    </region>
+    <region region-id="104" left="170" top="185" width="90" height="40" show-border="false" show-highlight="false" is-protected="false" align-x="170" align-y="185" z-order="0" background-color="inherit" tag="">
+        <math><ml:define><ml:id xml:space="preserve" subscript="c">P</ml:id><ml:matrix rows="3" cols="1"><ml:real>48.98</ml:real><ml:real>40.73</ml:real><ml:real>40.51</ml:real></ml:matrix></ml:define></math>
+    </region>
+    <region region-id="105" left="290" top="185" width="90" height="40" show-border="false" show-highlight="false" is-protected="false" align-x="290" align-y="185" z-order="0" background-color="inherit" tag="">
+        <math><ml:define><ml:id xml:space="preserve">w</ml:id><ml:matrix rows="3" cols="1"><ml:real>0.210</ml:real><ml:real>0.210</ml:real><ml:real>0.302</ml:real></ml:matrix></ml:define></math>
+    </region>
+    <region region-id="106" left="410" top="185" width="90" height="40" show-border="false" show-highlight="false" is-protected="false" align-x="410" align-y="185" z-order="0" background-color="inherit" tag="">
+        <math><ml:define><ml:id xml:space="preserve">x</ml:id><ml:matrix rows="3" cols="1"><ml:real>0.60</ml:real><ml:real>0.10</ml:real><ml:real>0.30</ml:real></ml:matrix></ml:define></math>
+    </region>
+
+    
+    <region region-id="107" left="50" top="250" width="80" height="12" show-border="false" show-highlight="false" is-protected="false" align-x="50" align-y="250" z-order="0" background-color="inherit" tag="">
+        <math><ml:define><ml:id xml:space="preserve" subscript="1">x</ml:id><ml:real>0.60</ml:real></ml:define></math>
+    </region>
+    <region region-id="108" left="170" top="250" width="80" height="12" show-border="false" show-highlight="false" is-protected="false" align-x="170" align-y="250" z-order="0" background-color="inherit" tag="">
+        <math><ml:define><ml:id xml:space="preserve" subscript="2">x</ml:id><ml:real>0.10</ml:real></ml:define></math>
+    </region>
+    <region region-id="109" left="290" top="250" width="80" height="12" show-border="false" show-highlight="false" is-protected="false" align-x="290" align-y="250" z-order="0" background-color="inherit" tag="">
+        <math><ml:define><ml:id xml:space="preserve" subscript="3">x</ml:id><ml:real>0.30</ml:real></ml:define></math>
+    </region>
+
+    
+    <region region-id="110" left="20" top="280" width="650" height="20" show-border="false" show-highlight="false" is-protected="false" align-x="20" align-y="280" z-order="0" background-color="inherit" tag="">
+        <text use-page-width="false" push-down="false" lock-width="true">
+            <p style="Heading 2" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">PARTE A) Fugacidad de Benceno(1) Puro vs Mezcla en funcion de T (P = 1 atm). Evaluacion a T = 450 K</p>
+        </text>
+    </region>
+    <region region-id="111" left="20" top="305" width="650" height="20" show-border="false" show-highlight="false" is-protected="false" align-x="20" align-y="305" z-order="0" background-color="inherit" tag="">
+        <text use-page-width="false" push-down="false" lock-width="true">
+            <p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">Condiciones: Presion constante P = 1 atm = 1.01325 bar, Temperatura T = 450 K.</p>
+        </text>
+    </region>
+
+    <region region-id="112" left="50" top="330" width="90" height="12" show-border="false" show-highlight="false" is-protected="false" align-x="50" align-y="330" z-order="0" background-color="inherit" tag="">
+        <math><ml:define><ml:id xml:space="preserve" subscript="A">T</ml:id><ml:real>450</ml:real></ml:define></math>
+    </region>
+    <region region-id="113" left="170" top="330" width="90" height="12" show-border="false" show-highlight="false" is-protected="false" align-x="170" align-y="330" z-order="0" background-color="inherit" tag="">
+        <math><ml:define><ml:id xml:space="preserve" subscript="A">P</ml:id><ml:real>1.01325</ml:real></ml:define></math>
+    </region>
+
+    <region region-id="114" left="50" top="355" width="250" height="15" show-border="false" show-highlight="false" is-protected="false" align-x="50" align-y="355" z-order="0" background-color="inherit" tag="">
+        <text use-page-width="false" push-down="false" lock-width="true">
+            <p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">Coeficientes de fugacidad puros ϕ_L.puro:</p>
+        </text>
+    </region>
+    <region region-id="115" left="320" top="355" width="250" height="15" show-border="false" show-highlight="false" is-protected="false" align-x="320" align-y="355" z-order="0" background-color="inherit" tag="">
+        <text use-page-width="false" push-down="false" lock-width="true">
+            <p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">Coeficientes de fugacidad en mezcla ϕ_L.mezcla:</p>
+        </text>
+    </region>
+
+    <region region-id="116" left="50" top="375" width="220" height="50" show-border="false" show-highlight="false" is-protected="false" align-x="50" align-y="375" z-order="0" background-color="inherit" tag="">
+        <math><ml:eval><ml:apply><ml:id xml:space="preserve" subscript="L.SRK.puro">ϕ</ml:id><ml:sequence><ml:id xml:space="preserve" subscript="A">T</ml:id><ml:id xml:space="preserve" subscript="A">P</ml:id><ml:id xml:space="preserve" subscript="c">T</ml:id><ml:id xml:space="preserve" subscript="c">P</ml:id><ml:id xml:space="preserve">w</ml:id></ml:sequence></ml:apply></ml:eval></math>
+    </region>
+    <region region-id="117" left="320" top="375" width="220" height="50" show-border="false" show-highlight="false" is-protected="false" align-x="320" align-y="375" z-order="0" background-color="inherit" tag="">
+        <math><ml:eval><ml:apply><ml:id xml:space="preserve" subscript="L.SRK">ϕ</ml:id><ml:sequence><ml:id xml:space="preserve">x</ml:id><ml:id xml:space="preserve" subscript="A">T</ml:id><ml:id xml:space="preserve" subscript="A">P</ml:id><ml:id xml:space="preserve" subscript="c">T</ml:id><ml:id xml:space="preserve" subscript="c">P</ml:id><ml:id xml:space="preserve">w</ml:id></ml:sequence></ml:apply></ml:eval></math>
+    </region>
+
+    <region region-id="118" left="50" top="450" width="250" height="15" show-border="false" show-highlight="false" is-protected="false" align-x="50" align-y="450" z-order="0" background-color="inherit" tag="">
+        <text use-page-width="false" push-down="false" lock-width="true">
+            <p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">Fugacidad de puros f_puro = ϕ_puro * P (bar):</p>
+        </text>
+    </region>
+    <region region-id="119" left="320" top="450" width="250" height="15" show-border="false" show-highlight="false" is-protected="false" align-x="320" align-y="450" z-order="0" background-color="inherit" tag="">
+        <text use-page-width="false" push-down="false" lock-width="true">
+            <p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">Fugacidad Benceno(1) en mezcla f1_hat (bar):</p>
+        </text>
+    </region>
+
+    <region region-id="120" left="50" top="470" width="220" height="50" show-border="false" show-highlight="false" is-protected="false" align-x="50" align-y="470" z-order="0" background-color="inherit" tag="">
+        <math><ml:eval>
+            <ml:apply>
+                <ml:mult />
+                <ml:apply>
+                    <ml:id xml:space="preserve" subscript="L.SRK.puro">ϕ</ml:id>
+                    <ml:sequence>
+                        <ml:id xml:space="preserve" subscript="A">T</ml:id>
+                        <ml:id xml:space="preserve" subscript="A">P</ml:id>
+                        <ml:id xml:space="preserve" subscript="c">T</ml:id>
+                        <ml:id xml:space="preserve" subscript="c">P</ml:id>
+                        <ml:id xml:space="preserve">w</ml:id>
+                    </ml:sequence>
+                </ml:apply>
+                <ml:id xml:space="preserve" subscript="A">P</ml:id>
+            </ml:apply>
+        </ml:eval></math>
+    </region>
+    <region region-id="121" left="320" top="470" width="220" height="20" show-border="false" show-highlight="false" is-protected="false" align-x="320" align-y="470" z-order="0" background-color="inherit" tag="">
+        <math><ml:eval>
+            <ml:apply>
+                <ml:mult />
+                <ml:apply>
+                    <ml:mult />
+                    <ml:real>0.60</ml:real>
+                    <ml:apply>
+                        <ml:indexer />
+                        <ml:apply>
+                            <ml:id xml:space="preserve" subscript="L.SRK">ϕ</ml:id>
+                            <ml:sequence>
+                                <ml:id xml:space="preserve">x</ml:id>
+                                <ml:id xml:space="preserve" subscript="A">T</ml:id>
+                                <ml:id xml:space="preserve" subscript="A">P</ml:id>
+                                <ml:id xml:space="preserve" subscript="c">T</ml:id>
+                                <ml:id xml:space="preserve" subscript="c">P</ml:id>
+                                <ml:id xml:space="preserve">w</ml:id>
+                            </ml:sequence>
+                        </ml:apply>
+                        <ml:real>1</ml:real>
+                    </ml:apply>
+                </ml:apply>
+                <ml:id xml:space="preserve" subscript="A">P</ml:id>
+            </ml:apply>
+        </ml:eval></math>
+    </region>
+
+    
+    <region region-id="122" left="20" top="545" width="650" height="20" show-border="false" show-highlight="false" is-protected="false" align-x="20" align-y="545" z-order="0" background-color="inherit" tag="">
+        <text use-page-width="false" push-down="false" lock-width="true">
+            <p style="Heading 2" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">PARTE B) Fugacidad de Benceno(1) Puro vs Mezcla en funcion de P (T = 300 K). Evaluacion a P = 10 atm</p>
+        </text>
+    </region>
+    <region region-id="123" left="20" top="570" width="650" height="20" show-border="false" show-highlight="false" is-protected="false" align-x="20" align-y="570" z-order="0" background-color="inherit" tag="">
+        <text use-page-width="false" push-down="false" lock-width="true">
+            <p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">Condiciones: Temperatura constante T = 300 K, Presion P = 10 atm = 10.1325 bar.</p>
+        </text>
+    </region>
+
+    <region region-id="124" left="50" top="595" width="90" height="12" show-border="false" show-highlight="false" is-protected="false" align-x="50" align-y="595" z-order="0" background-color="inherit" tag="">
+        <math><ml:define><ml:id xml:space="preserve" subscript="B">T</ml:id><ml:real>300</ml:real></ml:define></math>
+    </region>
+    <region region-id="125" left="170" top="595" width="90" height="12" show-border="false" show-highlight="false" is-protected="false" align-x="170" align-y="595" z-order="0" background-color="inherit" tag="">
+        <math><ml:define><ml:id xml:space="preserve" subscript="B">P</ml:id><ml:real>10.1325</ml:real></ml:define></math>
+    </region>
+
+    <region region-id="126" left="50" top="620" width="250" height="15" show-border="false" show-highlight="false" is-protected="false" align-x="50" align-y="620" z-order="0" background-color="inherit" tag="">
+        <text use-page-width="false" push-down="false" lock-width="true">
+            <p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">Coeficientes de fugacidad puros a 10 atm:</p>
+        </text>
+    </region>
+    <region region-id="127" left="320" top="620" width="250" height="15" show-border="false" show-highlight="false" is-protected="false" align-x="320" align-y="620" z-order="0" background-color="inherit" tag="">
+        <text use-page-width="false" push-down="false" lock-width="true">
+            <p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">Coeficientes de fugacidad en mezcla a 10 atm:</p>
+        </text>
+    </region>
+
+    <region region-id="128" left="50" top="640" width="220" height="50" show-border="false" show-highlight="false" is-protected="false" align-x="50" align-y="640" z-order="0" background-color="inherit" tag="">
+        <math><ml:eval><ml:apply><ml:id xml:space="preserve" subscript="L.SRK.puro">ϕ</ml:id><ml:sequence><ml:id xml:space="preserve" subscript="B">T</ml:id><ml:id xml:space="preserve" subscript="B">P</ml:id><ml:id xml:space="preserve" subscript="c">T</ml:id><ml:id xml:space="preserve" subscript="c">P</ml:id><ml:id xml:space="preserve">w</ml:id></ml:sequence></ml:apply></ml:eval></math>
+    </region>
+    <region region-id="129" left="320" top="640" width="220" height="50" show-border="false" show-highlight="false" is-protected="false" align-x="320" align-y="640" z-order="0" background-color="inherit" tag="">
+        <math><ml:eval><ml:apply><ml:id xml:space="preserve" subscript="L.SRK">ϕ</ml:id><ml:sequence><ml:id xml:space="preserve">x</ml:id><ml:id xml:space="preserve" subscript="B">T</ml:id><ml:id xml:space="preserve" subscript="B">P</ml:id><ml:id xml:space="preserve" subscript="c">T</ml:id><ml:id xml:space="preserve" subscript="c">P</ml:id><ml:id xml:space="preserve">w</ml:id></ml:sequence></ml:apply></ml:eval></math>
+    </region>
+
+    <region region-id="130" left="50" top="715" width="250" height="15" show-border="false" show-highlight="false" is-protected="false" align-x="50" align-y="715" z-order="0" background-color="inherit" tag="">
+        <text use-page-width="false" push-down="false" lock-width="true">
+            <p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">Fugacidad de puros f_puro (bar):</p>
+        </text>
+    </region>
+    <region region-id="131" left="320" top="715" width="250" height="15" show-border="false" show-highlight="false" is-protected="false" align-x="320" align-y="715" z-order="0" background-color="inherit" tag="">
+        <text use-page-width="false" push-down="false" lock-width="true">
+            <p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">Fugacidad Benceno(1) en mezcla f1_hat (bar):</p>
+        </text>
+    </region>
+
+    <region region-id="132" left="50" top="735" width="220" height="50" show-border="false" show-highlight="false" is-protected="false" align-x="50" align-y="735" z-order="0" background-color="inherit" tag="">
+        <math><ml:eval>
+            <ml:apply>
+                <ml:mult />
+                <ml:apply>
+                    <ml:id xml:space="preserve" subscript="L.SRK.puro">ϕ</ml:id>
+                    <ml:sequence>
+                        <ml:id xml:space="preserve" subscript="B">T</ml:id>
+                        <ml:id xml:space="preserve" subscript="B">P</ml:id>
+                        <ml:id xml:space="preserve" subscript="c">T</ml:id>
+                        <ml:id xml:space="preserve" subscript="c">P</ml:id>
+                        <ml:id xml:space="preserve">w</ml:id>
+                    </ml:sequence>
+                </ml:apply>
+                <ml:id xml:space="preserve" subscript="B">P</ml:id>
+            </ml:apply>
+        </ml:eval></math>
+    </region>
+    <region region-id="133" left="320" top="735" width="220" height="20" show-border="false" show-highlight="false" is-protected="false" align-x="320" align-y="735" z-order="0" background-color="inherit" tag="">
+        <math><ml:eval>
+            <ml:apply>
+                <ml:mult />
+                <ml:apply>
+                    <ml:mult />
+                    <ml:real>0.60</ml:real>
+                    <ml:apply>
+                        <ml:indexer />
+                        <ml:apply>
+                            <ml:id xml:space="preserve" subscript="L.SRK">ϕ</ml:id>
+                            <ml:sequence>
+                                <ml:id xml:space="preserve">x</ml:id>
+                                <ml:id xml:space="preserve" subscript="B">T</ml:id>
+                                <ml:id xml:space="preserve" subscript="B">P</ml:id>
+                                <ml:id xml:space="preserve" subscript="c">T</ml:id>
+                                <ml:id xml:space="preserve" subscript="c">P</ml:id>
+                                <ml:id xml:space="preserve">w</ml:id>
+                            </ml:sequence>
+                        </ml:apply>
+                        <ml:real>1</ml:real>
+                    </ml:apply>
+                </ml:apply>
+                <ml:id xml:space="preserve" subscript="B">P</ml:id>
+            </ml:apply>
+        </ml:eval></math>
+    </region>
+
+    
+    <region region-id="134" left="20" top="810" width="650" height="20" show-border="false" show-highlight="false" is-protected="false" align-x="20" align-y="810" z-order="0" background-color="inherit" tag="">
+        <text use-page-width="false" push-down="false" lock-width="true">
+            <p style="Heading 2" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">PARTE C y D) Variacion de Volumen Molar y Calculo a P = 1 atm (1.01325 bar) y T = 400 K</p>
+        </text>
+    </region>
+    <region region-id="135" left="20" top="835" width="650" height="30" show-border="false" show-highlight="false" is-protected="false" align-x="20" align-y="835" z-order="0" background-color="inherit" tag="">
+        <text use-page-width="false" push-down="false" lock-width="true">
+            <p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">Al aumentar la temperatura a presion constante, el volumen de liquido se expande termicamente.</p>
+            <p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">Orden de volumenes: V_Benceno &lt; V_mezcla &lt; V_Ciclohexano &lt; V_Naftaleno.</p>
+        </text>
+    </region>
+
+    <region region-id="136" left="50" top="875" width="90" height="12" show-border="false" show-highlight="false" is-protected="false" align-x="50" align-y="875" z-order="0" background-color="inherit" tag="">
+        <math><ml:define><ml:id xml:space="preserve" subscript="D">T</ml:id><ml:real>400</ml:real></ml:define></math>
+    </region>
+    <region region-id="137" left="170" top="875" width="90" height="12" show-border="false" show-highlight="false" is-protected="false" align-x="170" align-y="875" z-order="0" background-color="inherit" tag="">
+        <math><ml:define><ml:id xml:space="preserve" subscript="D">P</ml:id><ml:real>1.01325</ml:real></ml:define></math>
+    </region>
+
+    <region region-id="138" left="50" top="900" width="250" height="15" show-border="false" show-highlight="false" is-protected="false" align-x="50" align-y="900" z-order="0" background-color="inherit" tag="">
+        <text use-page-width="false" push-down="false" lock-width="true">
+            <p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">Volumen molar de la mezcla liquida V_L (L/mol):</p>
+        </text>
+    </region>
+    <region region-id="139" left="320" top="900" width="250" height="15" show-border="false" show-highlight="false" is-protected="false" align-x="320" align-y="900" z-order="0" background-color="inherit" tag="">
+        <text use-page-width="false" push-down="false" lock-width="true">
+            <p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">Volumen molar de componentes puros V_puro (L/mol):</p>
+        </text>
+    </region>
+
+    <region region-id="140" left="50" top="920" width="220" height="20" show-border="false" show-highlight="false" is-protected="false" align-x="50" align-y="920" z-order="0" background-color="inherit" tag="">
+        <math><ml:eval><ml:apply><ml:id xml:space="preserve" subscript="L.SRK">V</ml:id><ml:sequence><ml:id xml:space="preserve">x</ml:id><ml:id xml:space="preserve" subscript="D">T</ml:id><ml:id xml:space="preserve" subscript="D">P</ml:id><ml:id xml:space="preserve" subscript="c">T</ml:id><ml:id xml:space="preserve" subscript="c">P</ml:id><ml:id xml:space="preserve">w</ml:id></ml:sequence></ml:apply></ml:eval></math>
+    </region>
+    <region region-id="141" left="320" top="920" width="220" height="50" show-border="false" show-highlight="false" is-protected="false" align-x="320" align-y="920" z-order="0" background-color="inherit" tag="">
+        <math><ml:eval><ml:apply><ml:id xml:space="preserve" subscript="L.SRK.puro">V</ml:id><ml:sequence><ml:id xml:space="preserve" subscript="D">T</ml:id><ml:id xml:space="preserve" subscript="D">P</ml:id><ml:id xml:space="preserve" subscript="c">T</ml:id><ml:id xml:space="preserve" subscript="c">P</ml:id><ml:id xml:space="preserve">w</ml:id></ml:sequence></ml:apply></ml:eval></math>
+    </region>
+
+    
+    <region region-id="142" left="50" top="990" width="250" height="15" show-border="false" show-highlight="false" is-protected="false" align-x="50" align-y="990" z-order="0" background-color="inherit" tag="">
+        <text use-page-width="false" push-down="false" lock-width="true">
+            <p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">Factor de compresibilidad Z de la mezcla liquida:</p>
+        </text>
+    </region>
+    <region region-id="143" left="50" top="1010" width="220" height="20" show-border="false" show-highlight="false" is-protected="false" align-x="50" align-y="1010" z-order="0" background-color="inherit" tag="">
+        <math><ml:eval><ml:apply><ml:id xml:space="preserve" subscript="L.SRK">z</ml:id><ml:sequence><ml:id xml:space="preserve">x</ml:id><ml:id xml:space="preserve" subscript="D">T</ml:id><ml:id xml:space="preserve" subscript="D">P</ml:id><ml:id xml:space="preserve" subscript="c">T</ml:id><ml:id xml:space="preserve" subscript="c">P</ml:id><ml:id xml:space="preserve">w</ml:id></ml:sequence></ml:apply></ml:eval></math>
+    </region>
+
+    
+    <region region-id="144" left="20" top="1050" width="650" height="55" show-border="false" show-highlight="false" is-protected="false" align-x="20" align-y="1050" z-order="0" background-color="inherit" tag="">
+        <text use-page-width="false" push-down="false" lock-width="true">
+            <p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">RESUMEN DE RESULTADOS NUMERICOS:</p>
+            <p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">- A) A 450 K y 1 atm: f_puro(Benceno) = 8.218 bar, f_mezcla(Benceno) = 4.988 bar.</p>
+            <p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">- B) A 300 K y 10 atm: f_puro(Benceno) = 0.1446 bar, f_mezcla(Benceno) = 0.0865 bar.</p>
+            <p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">- D) A 400 K y 1 atm: V_mezcla = 0.1267 L/mol, V_puros = [0.1130 (Benceno), 0.1354 (Ciclohexano), 0.1563 (Naftaleno)] L/mol.</p>
+        </text>
+    </region>
+<region region-id="145" left="30" top="1100" width="300" height="20" align-x="30" align-y="1110" show-border="false" show-highlight="false" is-protected="false" z-order="0" background-color="inherit" tag="">
+    <math optimize="false" disable-calc="false">
+        <ml:define>
+            <ml:function><ml:id xml:space="preserve">f1_puro</ml:id><ml:boundVars><ml:id xml:space="preserve">a</ml:id></ml:boundVars></ml:function>
+            <ml:apply><ml:mult />
+                <ml:id xml:space="preserve" subscript="A">P</ml:id>
+                <ml:apply><ml:indexer />
+                    <ml:apply>
+                        <ml:id xml:space="preserve" subscript="L.SRK.puro">ϕ</ml:id>
+                        <ml:sequence><ml:id xml:space="preserve">a</ml:id><ml:id xml:space="preserve" subscript="A">P</ml:id><ml:id xml:space="preserve" subscript="c">T</ml:id><ml:id xml:space="preserve" subscript="c">P</ml:id><ml:id xml:space="preserve">w</ml:id></ml:sequence>
+                    </ml:apply>
+                    <ml:real>0</ml:real>
+                </ml:apply>
+            </ml:apply>
+        </ml:define>
+    </math>
+</region>
+<region region-id="146" left="30" top="1140" width="400" height="20" align-x="30" align-y="1150" show-border="false" show-highlight="false" is-protected="false" z-order="0" background-color="inherit" tag="">
+    <math optimize="false" disable-calc="false">
+        <ml:define>
+            <ml:function><ml:id xml:space="preserve">f1_mezcla</ml:id><ml:boundVars><ml:id xml:space="preserve">a</ml:id></ml:boundVars></ml:function>
+            <ml:apply><ml:mult />
+                <ml:apply><ml:mult /><ml:id xml:space="preserve" subscript="1">x</ml:id><ml:id xml:space="preserve" subscript="A">P</ml:id></ml:apply>
+                <ml:apply><ml:indexer />
+                    <ml:apply>
+                        <ml:id xml:space="preserve" subscript="L.SRK">ϕ</ml:id>
+                        <ml:sequence><ml:id xml:space="preserve">x</ml:id><ml:id xml:space="preserve">a</ml:id><ml:id xml:space="preserve" subscript="A">P</ml:id><ml:id xml:space="preserve" subscript="c">T</ml:id><ml:id xml:space="preserve" subscript="c">P</ml:id><ml:id xml:space="preserve">w</ml:id></ml:sequence>
+                    </ml:apply>
+                    <ml:real>0</ml:real>
+                </ml:apply>
+            </ml:apply>
+        </ml:define>
+    </math>
+</region>
+<region region-id="147" left="30" top="1180" width="150" height="20" align-x="30" align-y="1190" show-border="false" show-highlight="false" is-protected="false" z-order="0" background-color="inherit" tag="">
+    <math optimize="false" disable-calc="false">
+        <ml:define>
+            <ml:function><ml:id xml:space="preserve">x</ml:id><ml:boundVars><ml:id xml:space="preserve">a</ml:id></ml:boundVars></ml:function>
+            <ml:apply><ml:plus />
+                <ml:real>375</ml:real>
+                <ml:apply><ml:mult />
+                    <ml:real>7.5</ml:real>
+                    <ml:id xml:space="preserve">a</ml:id>
+                </ml:apply>
+            </ml:apply>
+        </ml:define>
+    </math>
+</region>
+<region region-id="148" left="30" top="1210" width="200" height="40" align-x="30" align-y="1230" show-border="false" show-highlight="false" is-protected="false" z-order="0" background-color="inherit" tag="">
+    <math optimize="false" disable-calc="false">
+        <ml:define>
+            <ml:function><ml:id xml:space="preserve">y</ml:id><ml:boundVars><ml:id xml:space="preserve">a</ml:id></ml:boundVars></ml:function>
+            <ml:matrix rows="2" cols="1">
+                <ml:apply><ml:id xml:space="preserve">f1_puro</ml:id><ml:apply><ml:id xml:space="preserve">x</ml:id><ml:id xml:space="preserve">a</ml:id></ml:apply></ml:apply>
+                <ml:apply><ml:id xml:space="preserve">f1_mezcla</ml:id><ml:apply><ml:id xml:space="preserve">x</ml:id><ml:id xml:space="preserve">a</ml:id></ml:apply></ml:apply>
+            </ml:matrix>
+        </ml:define>
+    </math>
+</region>
+<region region-id="149" left="30" top="1260" width="300" height="200" align-x="30" align-y="1260" show-border="false" show-highlight="false" is-protected="false" z-order="0" background-color="inherit" tag="">
+    <plot disable-calc="false" item-idref="999" />
+</region>
+</regions>
+	<binaryContent>
+		<item item-id="1">iVBORw0KGgoAAAANSUhEUgAAAD0AAAARCAYAAABuDKSkAAAAAXNSR0IArs4c6QAAAARnQU1B
+AACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFSSURBVFhH7VWLEYMgDGUuBmKOjsA0
+LuMwNIkJPihi/fR61r47TkWSvJePunRD/EXfBfcWPUafnHPN5eOop87CmKI3/z6he+QRBt0k
+4H6Pj5xDQ8GQgto6F1B0yMGHAI7HmMLJoutYzkdKA4FiebwnghN9Jq3Jkf0yUYacmEo0xmM0
+27sQ/WmAOCaNcTOPpQQ08Frpucrm+4DoydlLJ20FVLcmPPPQceB3Q+hya7c3QRI3+Tuh0jif
+1XonIyiC7nnmzKrkoRVb8bkoWsA+YKYR20QfAZGwGVZw7DlxcxtPc6kJrmwQfdHs/xTR+yvN
+BBZPcNXNHkbA4i257otm2y9WmsllbiSq+ENUbS6iiw/ZTtE6SpXoqmqdNloL3kPZwry0jUVs
+O66I0fO5IPpxyhzMnpdtNvaalf51ZNHuUepfe74yRAkLQlHvPF8ZWfSe6zWR0hPUKp8Ci36s
+KAAAAABJRU5ErkJggg==</item>
+		<item item-id="2">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
+gg==</item>
+	<item item-id="999" content-encoding="gzip">H4sIAAAAAAAA/4xTzXLSUBQ+NwkkpEAKFSrUkog0WJ1xlH1GVOpGR5260I120hDbOCKYhk7d8QS6cuHKjY/guPcFfAUfBc8PQ6krL3Nyz/nu951z7plLEQAU2ms0m30dv1b8YT8+Ssbvc0DrLlphOI4EMxgbEG0UPT18G0cZI/CK9Rp+8yfHk/vjM4FfoJkI7C+JL0mL5mFlG21bO49pfUZbR18DTefuqsvi97IsTQ6nWSzUPTQHVpfR32tfAHKcwcjSON5iIEArTdjNB41fALOcGXzDvZ+3ZDcLslu27IW1QMMqGQ7IUPoduAU9gGLw5RFqbSjx4Y/i6iFAmaWzghNQg/0yXYndWZlLV4LqbwysKquHFbyt+giwEXzC1mYVuMT49w3CQ1bUJKNZl6Zqm7LXLzPzdJOY6jZAg+OfyxiaIqxvSStNhK5IK01OvC1BjYOWkPOuZG95srtXZQTe6i3bMgIPrskI2hdH0JFU7o7U7SDkS6kOl+rKCFrXZQRdahjfzK6MoAs3ZAS75yO4ya/LGfYOjtJwcnzwZpyOwszkM48eKcODMBM67CzeAKn4YdNTaKDV2afIDs+Sk4ecRx42tgGP1YIra44/UN3/R6HyDEJI0UYQQ4ZeAhF2+ACm6J8i5i3Km1kaRnFvoLPYX6Ry1TooX/3pfHWVUj62P3eVpnwdk7tKV74xJ8RADszRySFn1sejPHFIbzIHHYs4RC5QHpLbyGH5GnJYXkQOy0tcC50yc9BxiENkadd5Mh3FaRKF72RkFrf9HG2IV0x4xvR/tBfz/mcVV4O/AAAA//8DACVcDL97BAAA</item></binaryContent>
+</worksheet>

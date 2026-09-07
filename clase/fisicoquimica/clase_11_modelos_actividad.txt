@@ -1,0 +1,57 @@
+### Información del Video
+
+- **Título exacto del video:** 11- Fisicoquímica Teórico - Modelos de Coeficientes de Actividad 2022
+- **Duración total:** 1 hora, 13 minutos y 56 segundos (1:13:56)
+- **URL directa del video:** https://www.youtube.com/watch?v=sJvLR-5XmBGNFYCdZXQ6InS-RUUfwnGfwR9sjyO0aJR00_TbXjeyzGVz4ObH4mR
+
+---
+
+### Resumen Detallado en Orden Cronológico de los Temas Cubiertos
+
+1. **Introducción y Necesidad de Modelos Reales (00:00 - 10:00)**
+   - Revisión de las limitaciones de la Ley de Raoult ideal en sistemas líquidos reales.
+   - Definición del coeficiente de actividad ($\gamma_i$) como factor corrector de la desviación de la idealidad.
+   - Concepto de propiedades de exceso y su relación directa con la energía libre de Gibbs en exceso ($G^E$).
+
+2. **Termodinámica de la Energía Libre de Gibbs de Exceso (10:00 - 25:00)**
+   - Formulación matemática para vincular la energía libre de Gibbs en exceso con los coeficientes de actividad de componentes individuales.
+   - Derivación fundamental: $RT \ln \gamma_i = \left( \frac{\partial (n G^E)}{\partial n_i} \right)_{T,P,n_j}$.
+   - Aplicación de la relación de Gibbs-Duhem a las propiedades de exceso.
+
+3. **Modelos Empíricos: Margules y Van Laar (25:00 - 42:00)**
+   - **Modelo de Margules:** Ecuaciones de 1 y 2 parámetros. Simetría y asimetría de curvas de coeficientes de actividad.
+   - **Modelo de Van Laar:** Derivación basada en volúmenes molares y parámetros de interacción binaria.
+   - Evaluación de ventajas y restricciones de estos modelos clásicos en soluciones complejas.
+
+4. **Modelos de Composición Local (42:00 - 60:00)**
+   - Concepto de composición local frente a composición global en una solución no ideal.
+   - **Modelo de Wilson:** Formulación para mezclas paires/polares y su limitación principal (imposibilidad de predecir separación de fases líquido-líquido / ELL).
+   - **Modelo NRTL (*Non-Random Two-Liquid*):** Uso del parámetro de no aleatoriedad ($\alpha_{12}$) para modelar tanto equilibrios líquido-vapor (ELV) como líquido-líquido (ELL).
+   - **Modelo UNIQUAC:** Separación del modelo en contribución combinatoria (geometría, tamaño y forma molecular) y residual (interacciones energéticas).
+
+5. **Modelos Predictivos y Aplicaciones en Ingeniería (60:00 - 73:56)**
+   - **Modelo UNIFAC:** Método de contribución de grupos funcionales para predecir coeficientes de actividad cuando no existen datos experimentales del sistema completo.
+   - Aplicación en cálculos de equilibrio líquido-vapor (ELV), predicción de azeótropos y simulación termodinámica de procesos.
+
+---
+
+### Conceptos Clave y Fórmulas Mencionadas
+
+- **Actividad y Coeficiente de Actividad:**
+  $$a_i = \gamma_i \cdot x_i$$
+- **Ley de Raoult Modificada (Equilibrio Líquido-Vapor):**
+  $$y_i P = x_i \gamma_i P_i^{sat}$$
+- **Energía Libre de Gibbs de Exceso ($G^E$):**
+  $$G^E = G^{real} - G^{ideal}$$
+- **Relación entre $G^E$ y Coeficiente de Actividad ($\gamma_i$):**
+  $$\ln \gamma_i = \frac{1}{RT} \left( \frac{\partial (n G^E)}{\partial n_i} \right)_{T,P,n_j}$$
+- **Ecuación de Margules (2 Parámetros):**
+  $$\frac{G^E}{x_1 x_2 RT} = A_{21} x_1 + A_{12} x_2$$
+  $$\ln \gamma_1 = [A_{12} + 2(A_{21} - A_{12}) x_1] x_2^2$$
+  $$\ln \gamma_2 = [A_{21} + 2(A_{12} - A_{21}) x_2] x_1^2$$
+- **Ecuación de Van Laar:**
+  $$\ln \gamma_1 = A_{12} \left[ \frac{A_{21} x_2}{A_{12} x_1 + A_{21} x_2} \right]^2$$
+- **Modelos de Composición Local:**
+  - **Wilson:** $\frac{G^E}{RT} = -x_1 \ln(x_1 + \Lambda_{12}x_2) - x_2 \ln(x_2 + \Lambda_{21}x_1)$
+  - **NRTL:** Introducción de $\tau_{ij}$ y parámetro de no aleatoriedad $\alpha_{ij}$.
+  - **UNIQUAC / UNIFAC:** $\ln \gamma_i = \ln \gamma_i^{C} + \ln \gamma_i^{R}$ (Contribución Combinatoria y Residual).

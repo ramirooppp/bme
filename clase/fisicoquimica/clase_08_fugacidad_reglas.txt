@@ -1,0 +1,58 @@
+# Análisis del Video: Fisicoquímica Teórico
+
+### 1. Título exacto del video
+`08- Fisicoquímica Teórico - Fugacidad con Reglas de Mezcla 2022`
+
+### 2. Duración total
+`1:06:04` (1 hora, 6 minutos, 4 segundos)
+
+### 3. URL directa del video
+[https://www.youtube.com/watch?v=s5R-t6tZ1_I](https://www.youtube.com/watch?v=s5R-t6tZ1_I) 
+
+---
+
+### 4. Resumen detallado en orden cronológico de los temas cubiertos
+
+* **`00:00 - 08:30` | Introducción y Repaso de Fugacidad:**
+   Presentación del tema de la clase centrado en la fugacidad de componentes en mezclas reales. Se repasa la definición de fugacidad para componentes puros y la necesidad de extender el concepto a sistemas multicomponentes.
+
+* **`08:30 - 20:15` | Fugacidad en Mezclas y Coeficiente de Fugacidad ($\hat{f}_i$, $\hat{\phi}_i$):**
+   Definición rigurosa de la fugacidad del componente $i$ en una solución o mezcla ($\hat{f}_i$) a través del potencial químico ($\mu_i$). Presentación del coeficiente de fugacidad de mezcla ($\hat{\phi}_i$) como la razón entre la fugacidad real y la presión parcial ideal ($y_i P$).
+
+* **`20:15 - 33:45` | Ecuaciones de Estado (EoS) Cúbicas para Mezclas:**
+   Introducción al tratamiento de mezclas gaseosas y líquidas no ideales utilizando Ecuaciones de Estado analíticas (Van der Waals, Redlich-Kwong, Soave-Redlich-Kwong, Peng-Robinson). Explicación de por qué los parámetros cinéticos/atractivos de una EoS pura no se pueden aplicar directamente a una mezcla sin reglas de combinación.
+
+* **`33:45 - 48:10` | Reglas de Mezcla Clásicas (Van der Waals / Lorentz-Berthelot):**
+   Desarrollo de las reglas de mezcla cuadráticas y lineales. Deducción del término de atracción de la mezcla ($a_m$) y el término de volumen excluido ($b_m$). Introducción del parámetro empírico de interacción binaria ($k_{ij}$) para corregir las desviaciones atrayentes entre especies distintas ($i, j$).
+
+* **`48:10 - 59:30` | Formulación Matemática del Coeficiente de Fugacidad en Mezclas:**
+   Derivación del cálculo de $\ln \hat{\phi}_i$ integrando la ecuación diferencial termodinámica a partir de la P-V-T derivada de la EoS respecto al número de moles del componente $i$ ($n_i$) a $T$ y $V$ constantes.
+
+* **`59:30 - 1:06:04` | Aplicación al Equilibrio Líquido-Vapor (ELV) y Conclusión:**
+   Discusión sobre la aplicación del enfoque $\phi-\phi$ para el cálculo de equilibrio de fases a elevadas presiones y resumen de los aspectos metodológicos desarrollados en la clase.
+
+---
+
+### 5. Conceptos clave y fórmulas mencionadas
+
+#### **Conceptos Clave:**
+1. **Fugacidad del componente en mezcla ($\hat{f}_i$):** Propiedad termodinámica que sustituye a la presión parcial para describir el potencial químico.
+2. **Coeficiente de fugacidad ($\hat{\phi}_i$):** Factor adimensional de corrección de idealidad tal que $\hat{\phi}_i \to 1$ cuando la presión tiende a cero ($P \to 0$).
+3. **Reglas de Mezcla (Mixing Rules):** Algoritmos matemáticos que expresan los parámetros de una EoS de una mezcla ($a_m, b_m$) en función de la composición.
+4. **Parámetro de Interacción Binaria ($k_{ij}$):** Constante empírica que ajusta la energía de interacción cruzada entre dos moléculas de distinta especie.
+
+---
+
+#### **Fórmulas Principales:**
+
+* **Relación entre Potencial Químico y Fugacidad en Mezclas:**
+  $$\mu_i(T, P, y) = \mu_i^{\text{ig}}(T, P, y) + RT \ln \hat{\phi}_i$$
+
+* **Definición del Coeficiente de Fugacidad ($\hat{\phi}_i$):**
+  $$\hat{\phi}_i = \frac{\hat{f}_i}{y_i P}$$
+
+* **Reglas de Mezcla Clásicas de Van der Waals:**
+  * Parámetro de atracción de mezcla ($a_m$):
+    $$a_m = \sum_{i} \sum_{j} y_i y_j a_{ij} \quad \text{donde } a_{ij} = \sqrt{a_i a_j} \, (1 - k_{ij})$$
+  * Co-volumen ($b_m$):
+    $$b_m = \sum_{i} y_i b_i$$

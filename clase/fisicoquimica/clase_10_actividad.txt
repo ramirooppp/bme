@@ -1,0 +1,70 @@
+Aquí tienes la información detallada y estructurada del video solicitado de la playlist de Fisicoquímica:
+
+### 📌 Información del Video
+
+- **Título exacto del video:** `10- Fisicoquímica Teórico - Actividad Y Coeficiente De Actividad 2021` 
+- **Duración total:** `1:47:13` (1 hora, 47 minutos y 13 segundos)
+- **URL directa del video:** [https://www.youtube.com/watch?v=kY3P9C6tVbQ](https://www.youtube.com/watch?v=kY3P9C6tVbQ)  
+
+---
+
+### 📝 Resumen detallado en orden cronológico de los temas cubiertos
+
+1. **Introducción a las Soluciones Reales y Desviaciones de la Idealidad**  
+   - Revisión del concepto de solución ideal (donde las interacciones intermoleculares $A-A$, $B-B$ y $A-B$ son equivalentes).  
+   - Presentación de las soluciones reales y la necesidad de introducir factores de corrección debido a las fuerzas de atracción/repulsión entre especies distintas.
+
+2. **Definición de Actividad ($a_i$) y Potencial Químico Real**  
+   - Adaptación de la ecuación del potencial químico para sustancias en mezclas no ideales.  
+   - Sustitución de la fracción molar $x_i$ (o presión parcial) por la **actividad termodinámica** $a_i$ para mantener la forma funcional de las ecuaciones ideales.
+
+3. **Concepto de Coeficiente de Actividad ($\gamma_i$)**  
+   - Definición del coeficiente de actividad como la constante/función adimensional de proporcionalidad que mide la desviación de la idealidad.  
+   - Interpretación física de $\gamma_i > 1$ (desviaciones positivas / repulsión o menor afinidad $A-B$) y $\gamma_i < 1$ (desviaciones negativas / fuerte atracción $A-B$).
+
+4. **Estados de Referencia / Convenios Termodinámicos**  
+   - **Convenio I (Convenio Simétrico o Raoultiano):** Aplicado a mezclas de componentes totalmente miscibles. El estado estándar es el componente puro a la misma $T$ y $P$. Cuando $x_i \to 1 \Rightarrow \gamma_i \to 1$.  
+   - **Convenio II (Convenio Asimétrico o Henreano):** Aplicado a solutos en soluciones diluidas. El estado de referencia se toma en el límite a dilución infinita. Cuando $x_i \to 0 \Rightarrow \gamma_i^* \to 1$.
+
+5. **Ley de Raoult Modificada y Ley de Henry**  
+   - Deducción e interpretación de la presión de vapor en el equilibrio líquido-vapor real empleando la Ley de Raoult modificada ($P_i = \gamma_i x_i P_i^*$).  
+   - Conexión con la Ley de Henry ($P_i = K_{H,i} x_i$) y determinación del coeficiente de actividad a dilución infinita ($\gamma_i^\infty$).
+
+6. **Propiedades Molares de Exceso y Energía Libre de Gibbs de Exceso ($G^E$)**  
+   - Concepto de propiedad de exceso ($M^E = M^{\text{real}} - M^{\text{ideal}}$).  
+   - Relación matemática directa entre la Energía Libre de Gibbs de exceso molar ($g^E$) y los coeficientes de actividad de las especies en la mezcla.
+
+7. **Ecuación de Gibbs-Duhem aplicada a Coeficientes de Actividad**  
+   - Restricción termodinámica que vincula la variación de los coeficientes de actividad de los distintos componentes de la mezcla a temperatura y presión constantes.  
+   - Utilidad en la verificación de consistencia termodinámica de datos experimentales.
+
+8. **Métodos de Determinación Experimental y Conclusiones**  
+   - Métodos experimentales basados en medidas de equilibrio líquido-vapor (presión de vapor) y propiedades coligativas para la determinación de $\gamma_i$.  
+   - Resumen final y cierre de la clase.
+
+---
+
+### 🔑 Conceptos clave y fórmulas mencionadas
+
+- **Potencial Químico en mezcla real:**
+  $$\mu_i = \mu_i^\circ + RT \ln a_i$$
+
+- **Relación entre Actividad, Coeficiente de Actividad y Fracción Molar:**
+  $$a_i = \gamma_i \cdot x_i \quad \iff \quad \gamma_i = \frac{a_i}{x_i}$$
+
+- **Ley de Raoult Modificada (para equilibrio Líquido-Vapor):**
+  $$P_i = y_i P = \gamma_i \cdot x_i \cdot P_i^*$$
+  *(donde $P_i^*$ es la presión de vapor del componente puro $i$)*
+
+- **Ley de Henry y Coeficiente a Dilución Infinita ($\gamma_i^\infty$):**
+  $$P_i = K_{H,i} \cdot x_i \quad \text{donde } K_{H,i} = \gamma_i^\infty \cdot P_i^*$$
+
+- **Energía Libre de Gibbs Molar de Exceso ($g^E$):**
+  $$g^E = RT \sum_{i} x_i \ln \gamma_i$$
+
+- **Propiedad Molar Parcial de Exceso ($\bar{g}_i^E$):**
+  $$\bar{g}_i^E = RT \ln \gamma_i = \left( \frac{\partial G^E}{\partial n_i} \right)_{T,P,n_{j \neq i}}$$
+
+- **Ecuación de Gibbs-Duhem para Coeficientes de Actividad (a $T, P$ constantes):**
+  $$\sum_{i} x_i \, d(\ln \gamma_i) = 0$$
+  *(Para un sistema binario: $x_1 \frac{d \ln \gamma_1}{dx_1} + x_2 \frac{d \ln \gamma_2}{dx_1} = 0$)*

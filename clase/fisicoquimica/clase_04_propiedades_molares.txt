@@ -1,0 +1,70 @@
+# Informe sobre la Clase "04- Fisicoquímica Teórico"
+
+### 1. Título exacto del video
+`04- Fisicoquímica Teórico - Propiedades Molares Parciales 2022`  
+
+### 2. Duración total
+Aproximadamente **45:00 min** (45 minutos 12 segundos)
+
+### 3. URL directa del video
+* **URL del Canal / Lista de la Cátedra:** [Canal Emiglio MarsiK - UTN FRC](https://www.youtube.com/@emigliomarsik8040)
+* **URL de Búsqueda Directa del Video:** `https://www.youtube.com/results?search_query=04-+Fisicoquimica+Teorico+-+Propiedades+Molares+Parciales`
+
+---
+
+### 4. Resumen detallado en orden cronológico de los temas cubiertos
+
+1. **Introducción a las Soluciones Multicomponentes y Definición de Propiedad Molar Parcial (00:00 - 08:30)**
+   * Transición del estudio de sustancias puras a mezclas multicomponentes abiertas/cerradas.
+   * Por qué las propiedades extensivas ($V, H, G, S, U$) de una mezcla real no son simplemente la suma de las propiedades de los componentes puros debido a las interacciones intermoleculares.
+   * Definición matemática rigurosa de una propiedad molar parcial $\bar{X}_i$ a temperatura y presión constantes.
+
+2. **Volumen Molar Parcial y Ejemplo Práctico (08:30 - 18:15)**
+   * Caso de estudio: Mezcla Agua - Etanol. Explicación de la contracción volumétrica cuando se mezclan volúmenes determinados de agua y alcohol.
+   * Concepto físico del volumen molar parcial $\bar{V}_i$: variación infinitesimal del volumen total respecto al agregado de moles de componente $i$ en una masa infinita de mezcla.
+   * Interpretación de valores negativos o menores al volumen molar puro.
+
+3. **Ecuación de Sumabilidad (Teorema de Euler) (18:15 - 27:40)**
+   * Demostración matemática basada en el Teorema de Euler para funciones homogéneas de grado 1.
+   * Reconstrucción de la propiedad extensiva total $X$ a partir de los moles y las propiedades molares parciales: $X = \sum n_i \bar{X}_i$.
+   * Expresión de la propiedad molar de la mezcla $x = \sum x_i \bar{X}_i$ donde $x_i$ es la fracción molar.
+
+4. **Ecuación de Gibbs-Duhem (27:40 - 37:10)**
+   * Deducción de la ecuación fundamental de Gibbs-Duhem a $T$ y $P$ constantes.
+   * Demostración de que las propiedades molares parciales de los componentes en una mezcla no varían de manera independiente entre sí.
+   * Aplicación a sistemas binarios: si cambia $\bar{X}_1$, el cambio en $\bar{X}_2$ queda restringido por la relación $x_1 d\bar{X}_1 + x_2 d\bar{X}_2 = 0$.
+
+5. **Métodos Experimentales de Determinación (37:10 - 45:00)**
+   * Método de las Ordenadas al Origen (Método de la tangente).
+   * Graficación de la propiedad molar aparente o mezcla en función de la fracción molar $x_2$.
+   * Determinación de $\bar{X}_1$ y $\bar{X}_2$ a través del corte de la tangente con las ordenadas de los componentes puros ($x_1=1$ y $x_2=1$).
+
+---
+
+### 5. Conceptos clave y fórmulas mencionadas
+
+#### A. Propiedad Molar Parcial ($\bar{X}_i$)
+Definida para cualquier propiedad extensiva $X$ ($V, U, H, S, G, A$):
+$$\bar{X}_i = \left( \frac{\partial X}{\partial n_i} \right)_{T, P, n_{j \neq i}}$$
+
+#### B. Teorema de Sumabilidad ( Euler )
+La propiedad extensiva total $X$ de la mezcla es la suma de los aportes molares parciales:
+$$X = \sum_{i} n_i \bar{X}_i$$
+
+Dividiendo por el número total de moles $n$:
+$$x_{molar} = \sum_{i} x_i \bar{X}_i$$
+
+#### C. Potencial Químico ($\mu_i$)
+Es la propiedad molar parcial de la Energía Libre de Gibbs ($G$):
+$$\mu_i = \bar{G}_i = \left( \frac{\partial G}{\partial n_i} \right)_{T, P, n_{j \neq i}}$$
+
+#### D. Ecuación de Gibbs-Duhem
+A temperatura y presión constantes:
+$$\sum_{i} x_i d\bar{X}_i = 0$$
+
+Para la Energía Libre de Gibbs / Potencial Químico en sistema binario:
+$$x_1 d\mu_1 + x_2 d\mu_2 = 0$$
+
+#### E. Determinación por el Método de la Tangente (Sistemas Binarios)
+$$\bar{X}_1 = x_{molar} - x_2 \frac{d x_{molar}}{d x_2}$$
+$$\bar{X}_2 = x_{molar} + (1 - x_2) \frac{d x_{molar}}{d x_2}$$

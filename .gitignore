@@ -1,0 +1,25 @@
+﻿# Large media & binary files
+*.mp4
+*.zip
+*.exe
+*.dll
+*.iso
+*.rar
+*.7z
+*.tar.gz
+*.pptx
+
+# Antigravity & Agent environment / caches
+.antigravity/
+.agents/
+.gemini/
+__pycache__/
+*.pyc
+
+# Temporary scratch
+scratch/
+
+# OS specific
+Thumbs.db
+desktop.ini
+.DS_Store

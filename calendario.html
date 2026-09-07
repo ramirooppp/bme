@@ -1,0 +1,2330 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendario de Estudio UTN - Ingeniería Química</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            /* Base Colors */
+            --bg-main: #0a0e1a;
+            --bg-secondary: #111827;
+            --bg-tertiary: #1a2035;
+            --text-main: #e8eaf0;
+            --text-secondary: #8b92a8;
+            --text-muted: #5a6178;
+            --border-light: #2a3150;
+            --border-dark: #1e2640;
+            --accent: #3b82f6;
+            
+            /* Subject Colors */
+            --color-fenomenos: #8b5cf6;
+            --color-fisicoquimica: #f59e0b;
+            --color-balances: #3b82f6;
+            --color-quimica: #ec4899;
+            --color-legislacion: #10b981;
+            --color-practica: #06b6d4;
+            --color-rest: #64748b;
+            
+            /* Layout */
+            --sidebar-width: 380px;
+            --header-height: 80px;
+            --hour-height: 60px;
+            --cal-start-hour: 8;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-main);
+            color: var(--text-main);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--bg-main); 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--border-light); 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--text-muted); 
+        }
+
+        /* HEADER */
+        header {
+            height: var(--header-height);
+            background-color: var(--bg-secondary);
+            border-bottom: 1px solid var(--border-dark);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-title h1 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--text-main);
+        }
+        .header-title p {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        .week-nav {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .btn {
+            background-color: var(--bg-tertiary);
+            color: var(--text-main);
+            border: 1px solid var(--border-light);
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn:hover {
+            background-color: var(--border-light);
+        }
+
+        .btn-icon {
+            padding: 0.5rem;
+        }
+
+        .week-label {
+            font-weight: 600;
+            min-width: 150px;
+            text-align: center;
+        }
+
+        /* MAIN LAYOUT */
+        .main-content {
+            display: flex;
+            flex: 1;
+            padding: 1.5rem;
+            gap: 1.5rem;
+            max-width: 1600px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        /* CALENDAR */
+        .calendar-container {
+            flex: 1;
+            background-color: var(--bg-secondary);
+            border-radius: 12px;
+            border: 1px solid var(--border-dark);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .calendar-header {
+            display: grid;
+            grid-template-columns: 60px repeat(7, 1fr);
+            border-bottom: 1px solid var(--border-dark);
+            background-color: var(--bg-tertiary);
+        }
+
+        .day-col-header {
+            padding: 1rem 0.5rem;
+            text-align: center;
+            border-left: 1px solid var(--border-dark);
+        }
+
+        .day-col-header.today {
+            background-color: rgba(59, 130, 246, 0.1);
+            color: var(--accent);
+        }
+
+        .day-name {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-secondary);
+            margin-bottom: 0.25rem;
+        }
+        
+        .day-col-header.today .day-name {
+            color: var(--accent);
+        }
+
+        .day-date {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        .calendar-body {
+            position: relative;
+            height: calc(15.5 * var(--hour-height)); /* 8:00 to 23:30 = 15.5 hours */
+            overflow-y: auto;
+            display: grid;
+            grid-template-columns: 60px repeat(7, 1fr);
+        }
+
+        .time-labels {
+            width: 100%;
+            height: 100%;
+            border-right: 1px solid var(--border-dark);
+            background-color: var(--bg-secondary);
+            z-index: 10;
+        }
+
+        .time-label {
+            height: var(--hour-height);
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            padding-top: 0.5rem;
+            color: var(--text-muted);
+            font-size: 0.75rem;
+            border-bottom: 1px solid transparent; /* Visual spacer */
+        }
+
+        .grid-lines {
+            position: absolute;
+            left: 60px;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .grid-line {
+            height: var(--hour-height);
+            border-bottom: 1px solid var(--border-dark);
+        }
+
+        .day-col {
+            position: relative;
+            border-left: 1px solid var(--border-dark);
+            height: 100%;
+            z-index: 2;
+        }
+
+        .day-col.today-col {
+            background-color: rgba(255, 255, 255, 0.02);
+        }
+
+        .day-col:first-child {
+            border-left: none;
+        }
+
+        /* Events */
+        .event {
+            position: absolute;
+            left: 4px;
+            right: 4px;
+            border-radius: 6px;
+            padding: 0.5rem;
+            font-size: 0.8rem;
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            border-left: 4px solid rgba(255,255,255,0.3);
+            display: flex;
+            flex-direction: column;
+            z-index: 3;
+        }
+
+        .event:hover {
+            transform: translateY(-2px) scale(1.02);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            z-index: 5;
+        }
+
+        .event.draggable {
+            cursor: grab;
+        }
+        
+        .event.draggable:active {
+            cursor: grabbing;
+        }
+
+        .event-title {
+            font-weight: 600;
+            margin-bottom: 0.2rem;
+            line-height: 1.2;
+            color: #fff;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+        }
+
+        .event-time {
+            font-size: 0.7rem;
+            opacity: 0.9;
+            color: #fff;
+        }
+
+        .event-location {
+            font-size: 0.7rem;
+            margin-top: auto;
+            opacity: 0.9;
+            display: flex;
+            align-items: center;
+            gap: 0.2rem;
+            color: #fff;
+        }
+
+        .event-badge {
+            position: absolute;
+            top: 4px;
+            right: 4px;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: #ef4444;
+            display: none;
+        }
+
+        .has-pending-tasks .event-badge {
+            display: block;
+        }
+
+        /* Current Time Line */
+        .current-time-line {
+            position: absolute;
+            left: 60px;
+            right: 0;
+            height: 2px;
+            background-color: #ef4444;
+            z-index: 15;
+            pointer-events: none;
+        }
+        
+        .current-time-dot {
+            position: absolute;
+            left: 55px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #ef4444;
+            transform: translateY(-4px);
+        }
+
+        /* Drag & Drop */
+        .ghost-event {
+            opacity: 0.5;
+            border: 2px dashed #fff !important;
+        }
+
+        /* SIDEBAR (Slide-in) */
+        .sidebar {
+            position: fixed;
+            top: 0;
+            right: -400px;
+            width: var(--sidebar-width);
+            height: 100vh;
+            background-color: rgba(17, 24, 39, 0.95);
+            backdrop-filter: blur(10px);
+            border-left: 1px solid var(--border-dark);
+            z-index: 200;
+            transition: right 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            flex-direction: column;
+            box-shadow: -5px 0 25px rgba(0,0,0,0.5);
+        }
+
+        .sidebar.open {
+            right: 0;
+        }
+
+        .sidebar-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0,0,0,0.5);
+            z-index: 199;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .sidebar-overlay.active {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        .sidebar-header {
+            padding: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            border-bottom: 1px solid var(--border-dark);
+        }
+
+        .sidebar-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .sidebar-subtitle {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            display: flex;
+            flex-direction: column;
+            gap: 0.2rem;
+        }
+
+        .close-btn {
+            background: none;
+            border: none;
+            color: var(--text-muted);
+            cursor: pointer;
+            font-size: 1.5rem;
+            transition: color 0.2s;
+        }
+
+        .close-btn:hover {
+            color: var(--text-main);
+        }
+
+        .sidebar-content {
+            padding: 1.5rem;
+            flex: 1;
+            overflow-y: auto;
+        }
+
+        .section-title {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+            margin-top: 1.5rem;
+        }
+        .section-title:first-child { margin-top: 0; }
+
+        /* Checklist */
+        .checklist {
+            list-style: none;
+            margin-bottom: 1rem;
+        }
+
+        .checklist-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid var(--border-dark);
+        }
+
+        .checklist-item input[type="checkbox"] {
+            width: 16px;
+            height: 16px;
+            cursor: pointer;
+            accent-color: var(--accent);
+        }
+
+        .checklist-item span {
+            flex: 1;
+            font-size: 0.9rem;
+        }
+
+        .checklist-item.completed span {
+            text-decoration: line-through;
+            color: var(--text-muted);
+        }
+
+        .delete-btn {
+            background: none;
+            border: none;
+            color: var(--text-muted);
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        .delete-btn:hover { color: #ef4444; }
+
+        .add-task {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .add-task input {
+            flex: 1;
+            background-color: var(--bg-tertiary);
+            border: 1px solid var(--border-light);
+            color: var(--text-main);
+            padding: 0.5rem;
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
+
+        .add-task input:focus {
+            outline: none;
+            border-color: var(--accent);
+        }
+
+        /* Notes */
+        .notes-area {
+            width: 100%;
+            height: 150px;
+            background-color: var(--bg-tertiary);
+            border: 1px solid var(--border-light);
+            color: var(--text-main);
+            padding: 0.75rem;
+            border-radius: 6px;
+            resize: vertical;
+            font-size: 0.9rem;
+        }
+        .notes-area:focus {
+            outline: none;
+            border-color: var(--accent);
+        }
+
+        /* LOWER SECTION (Progress & Stats) */
+        .bottom-section {
+            padding: 1.5rem 2rem;
+            display: flex;
+            gap: 2rem;
+            background-color: var(--bg-secondary);
+            border-top: 1px solid var(--border-dark);
+        }
+
+        .progress-container {
+            flex: 2;
+            background-color: var(--bg-main);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border: 1px solid var(--border-dark);
+        }
+
+        .stats-container {
+            flex: 1;
+            background-color: var(--bg-main);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border: 1px solid var(--border-dark);
+        }
+
+        .section-header {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Subject Progress */
+        .subject-progress {
+            margin-bottom: 1.5rem;
+        }
+        .subject-progress:last-child { margin-bottom: 0; }
+
+        .subject-header {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+            cursor: pointer;
+        }
+        
+        .subject-name {
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .color-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+        }
+
+        .progress-bar-bg {
+            height: 8px;
+            background-color: var(--bg-tertiary);
+            border-radius: 4px;
+            overflow: hidden;
+            margin-bottom: 0.5rem;
+        }
+
+        .progress-bar-fill {
+            height: 100%;
+            border-radius: 4px;
+            transition: width 0.3s ease;
+        }
+
+        .units-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 0.5rem;
+            display: none; /* hidden by default */
+        }
+        .subject-progress.expanded .units-container {
+            display: flex;
+        }
+
+        .unit-marker {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+            cursor: pointer;
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+            background-color: var(--bg-tertiary);
+            transition: all 0.2s;
+            border: 1px solid transparent;
+        }
+
+        .unit-marker:hover {
+            border-color: var(--border-light);
+            background-color: var(--border-dark);
+        }
+
+        .unit-icon {
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            border: 2px solid;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 9px;
+            font-weight: bold;
+        }
+
+        /* States: 0=pending (empty), 1=in-progress (half), 2=completed (check) */
+        .state-0 .unit-icon { background: transparent; }
+        .state-1 .unit-icon { background: linear-gradient(90deg, currentColor 50%, transparent 50%); }
+        .state-2 .unit-icon { background: currentColor; color: #000; }
+        .state-2 .unit-icon::after { content: '✓'; }
+
+        /* Stats grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .stat-card {
+            background-color: var(--bg-tertiary);
+            padding: 1rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-light);
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 0.2rem;
+        }
+
+        .stat-label {
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+        }
+
+        /* POMODORO TIMER */
+        .pomodoro-widget {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background-color: rgba(30, 38, 64, 0.85);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--border-light);
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+            z-index: 150;
+            transition: all 0.3s ease;
+            overflow: hidden;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .pomodoro-widget.expanded {
+            width: 250px;
+            height: auto;
+        }
+
+        .pomo-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0;
+            height: 60px;
+            cursor: pointer;
+        }
+        .pomodoro-widget.expanded .pomo-header {
+            padding: 0.75rem 1rem;
+            height: auto;
+            border-bottom: 1px solid var(--border-dark);
+        }
+
+        .pomo-icon {
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+        .pomodoro-widget.expanded .pomo-icon { display: none; }
+
+        .pomo-title {
+            display: none;
+            font-weight: 600;
+        }
+        .pomodoro-widget.expanded .pomo-title { display: block; }
+
+        .pomo-body {
+            display: none;
+            padding: 1.5rem;
+            text-align: center;
+        }
+        .pomodoro-widget.expanded .pomo-body { display: block; }
+
+        .time-display {
+            font-size: 3rem;
+            font-weight: 700;
+            font-variant-numeric: tabular-nums;
+            margin-bottom: 0.5rem;
+            color: var(--text-main);
+        }
+
+        .pomo-status {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .pomo-controls {
+            display: flex;
+            gap: 0.5rem;
+            justify-content: center;
+        }
+
+        .pomo-btn {
+            background-color: var(--bg-secondary);
+            border: 1px solid var(--border-light);
+            color: var(--text-main);
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .pomo-btn:hover { background-color: var(--border-light); }
+        .pomo-btn.primary { background-color: var(--accent); border-color: var(--accent); color: white;}
+        .pomo-btn.primary:hover { background-color: #2563eb; }
+
+        /* EXAMS BANNER */
+        .exams-banner-container {
+            max-width: 1600px;
+            margin: 1.5rem auto 0 auto;
+            padding: 0 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            width: 100%;
+        }
+
+        .exam-alert {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: var(--bg-tertiary);
+            border: 1px solid var(--border-light);
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .exam-alert.warning {
+            border-color: #f59e0b;
+            background-color: rgba(245, 158, 11, 0.1);
+        }
+
+        .exam-alert.critical {
+            border-color: #ef4444;
+            background-color: rgba(239, 68, 68, 0.1);
+        }
+
+        .exam-info {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .exam-title {
+            font-weight: 600;
+            font-size: 1.05rem;
+            color: var(--text-main);
+        }
+
+        .exam-date {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .exam-countdown {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--text-main);
+        }
+        
+        .exam-alert.warning .exam-countdown { color: #f59e0b; }
+        .exam-alert.critical .exam-countdown { color: #ef4444; }
+
+            /* --- NEW FEATURES CSS --- */
+        .tracker-btn { background: var(--bg-tertiary); border: 1px solid var(--border-light); color: white; border-radius: 4px; padding: 4px 8px; font-size: 0.75rem; cursor: pointer; z-index: 10; margin-top: 5px; display: flex; align-items: center; justify-content: center; width: fit-content; transition: 0.2s; }
+        .tracker-btn:hover { background: var(--accent); }
+        .tracker-btn.stop { background: #ef4444; border-color: #dc2626; }
+        .tracker-btn.stop:hover { background: #b91c1c; }
+
+        .xp-bar-container { display: flex; align-items: center; gap: 10px; margin-left: 2rem; background: var(--bg-tertiary); padding: 5px 15px; border-radius: 20px; border: 1px solid var(--border-light); }
+        .xp-bar { width: 120px; height: 8px; background: var(--bg-main); border-radius: 4px; overflow: hidden; border: 1px solid var(--border-dark); }
+        .xp-fill { height: 100%; background: var(--accent); transition: width 0.5s ease; }
+        .streak-badge { font-weight: 700; color: #f59e0b; font-size: 1rem; display: flex; align-items: center; gap: 5px; background: var(--bg-tertiary); padding: 5px 15px; border-radius: 20px; border: 1px solid var(--border-light); }
+        .level-text { font-weight: 700; color: var(--accent); font-size: 0.9rem; }
+        
+        .modal-overlay { position: fixed; top:0; left:0; right:0; bottom:0; background: rgba(0,0,0,0.7); z-index: 2000; display: none; justify-content: center; align-items: center; backdrop-filter: blur(4px); }
+        .modal { background: var(--bg-secondary); padding: 2rem; border-radius: 12px; border: 1px solid var(--border-light); width: 400px; max-width: 90%; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        .modal h3 { margin-bottom: 1rem; color: var(--text-main); }
+        .modal input, .modal textarea { width: 100%; padding: 0.75rem; margin-bottom: 1rem; background: var(--bg-tertiary); border: 1px solid var(--border-dark); color: white; border-radius: 6px; font-family: inherit; }
+        .modal input:focus, .modal textarea:focus { outline: none; border-color: var(--accent); }
+        .star-rating { display: flex; gap: 8px; margin-bottom: 1.5rem; font-size: 1.8rem; cursor: pointer; }
+        .star-rating span { color: var(--border-light); transition: 0.2s; }
+        .star-rating span.active { color: #f59e0b; }
+        .star-rating span:hover { transform: scale(1.1); }
+
+        .toast-container { position: fixed; top: 20px; right: 20px; z-index: 3000; display: flex; flex-direction: column; gap: 10px; }
+        .toast { background: var(--bg-tertiary); border-left: 4px solid var(--accent); padding: 1rem 1.5rem; border-radius: 6px; box-shadow: 0 5px 15px rgba(0,0,0,0.3); animation: slideIn 0.3s ease, fadeOut 0.3s ease 3.7s forwards; display: flex; align-items: center; gap: 10px; color: var(--text-main); font-weight: 500; }
+        @keyframes slideIn { from { transform: translateX(120%); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
+        @keyframes fadeOut { from { opacity: 1; } to { opacity: 0; } }
+
+        .dashboard-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: 1.5rem; width: 100%; }
+        .dashboard-card { background-color: var(--bg-main); border: 1px solid var(--border-dark); border-radius: 12px; padding: 1.5rem; display: flex; flex-direction: column; gap: 1rem; }
+
+        .heat-container { display: flex; flex-direction: column; gap: 10px; }
+        .heat-days { display: flex; gap: 5px; justify-content: space-between; }
+        .heat-box { flex: 1; aspect-ratio: 1; border-radius: 4px; background: var(--bg-tertiary); border: 1px solid var(--border-dark); display: flex; align-items: center; justify-content: center; font-size: 0.7rem; color: rgba(255,255,255,0.3); transition: 0.3s; position: relative; }
+        .heat-box.lvl-1 { background: #064e3b; border-color: #065f46; color: rgba(255,255,255,0.7); }
+        .heat-box.lvl-2 { background: #059669; border-color: #10b981; color: #fff; }
+        .heat-box.lvl-3 { background: #10b981; border-color: #34d399; color: #fff; box-shadow: 0 0 10px rgba(16, 185, 129, 0.4); }
+        .heat-box.lvl-4 { background: #34d399; border-color: #6ee7b7; color: #000; font-weight: bold; box-shadow: 0 0 15px rgba(52, 211, 153, 0.6); }
+
+        .mini-cal { display: grid; grid-template-columns: repeat(7, 1fr); gap: 4px; text-align: center; font-size: 0.8rem; }
+        .mini-cal-header { display: grid; grid-template-columns: repeat(7, 1fr); gap: 4px; text-align: center; font-size: 0.7rem; color: var(--text-muted); margin-bottom: 5px; font-weight: bold; }
+        .mini-day { padding: 6px 0; border-radius: 4px; cursor: pointer; transition: 0.2s; background: var(--bg-tertiary); border: 1px solid transparent; }
+        .mini-day:hover { background: var(--border-dark); }
+        .mini-day.empty { background: transparent; cursor: default; }
+        .mini-day.today { border-color: var(--accent); color: var(--accent); font-weight: bold; }
+        .mini-day.has-exam { border-bottom: 3px solid #ef4444; }
+        .mini-day.has-study { position: relative; overflow: hidden; }
+        .mini-day.has-study::before { content:''; position:absolute; top:0;left:0;right:0;bottom:0; background: rgba(16, 185, 129, 0.15); pointer-events: none; }
+
+        .donut-container { position: relative; width: 140px; height: 140px; border-radius: 50%; background: conic-gradient(var(--bg-tertiary) 100%); display: flex; justify-content: center; align-items: center; margin: 0 auto; box-shadow: inset 0 0 20px rgba(0,0,0,0.5); }
+        .donut-inner { width: 90px; height: 90px; background: var(--bg-main); border-radius: 50%; display: flex; flex-direction: column; justify-content: center; align-items: center; font-weight: bold; color: var(--text-main); font-size: 1.1rem; box-shadow: 0 0 15px rgba(0,0,0,0.5); }
+        .donut-inner span { font-size: 0.7rem; color: var(--text-muted); font-weight: normal; }
+        .donut-legend { margin-top: 1.5rem; font-size: 0.8rem; display: flex; flex-direction: column; gap: 8px; }
+        .legend-item { display: flex; align-items: center; justify-content: space-between; }
+        .legend-left { display: flex; align-items: center; gap: 8px; }
+
+        .badges-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(80px, 1fr)); gap: 15px; }
+        .badge { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; font-size: 0.75rem; padding: 10px; border-radius: 8px; background: var(--bg-tertiary); border: 1px solid var(--border-dark); opacity: 0.5; filter: grayscale(100%); transition: 0.3s; position: relative; cursor: help; }
+        .badge.unlocked { opacity: 1; filter: grayscale(0%); border-color: var(--border-light); background: linear-gradient(145deg, var(--bg-tertiary), rgba(255,255,255,0.05)); box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
+        .badge.unlocked:hover { transform: translateY(-3px); box-shadow: 0 6px 15px rgba(0,0,0,0.3); }
+        .badge-icon { font-size: 2rem; margin-bottom: 5px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5)); }
+        .badge-title { font-weight: 600; color: var(--text-main); line-height: 1.2; margin-bottom: 3px; }
+        .badge-date { font-size: 0.6rem; color: var(--accent); }
+        .badge-tooltip { position: absolute; bottom: 100%; left: 50%; transform: translateX(-50%); background: #000; color: #fff; padding: 5px 10px; border-radius: 4px; font-size: 0.75rem; white-space: nowrap; pointer-events: none; opacity: 0; transition: 0.2s; margin-bottom: 5px; z-index: 10; width: 120px; }
+        .badge:hover .badge-tooltip { opacity: 1; }
+
+        .xp-flash { animation: flashXP 0.5s ease; }
+        @keyframes flashXP { 0% { box-shadow: 0 0 0 rgba(59, 130, 246, 0); } 50% { box-shadow: 0 0 20px rgba(59, 130, 246, 0.8); } 100% { box-shadow: 0 0 0 rgba(59, 130, 246, 0); } }
+
+        .session-indicator { position: absolute; bottom: 4px; right: 4px; font-size: 0.7rem; color: #10b981; font-weight: bold; }
+</style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="header-title">
+            <h1>UTN Ing. Química - 2do Cuatrimestre</h1>
+            <p>Calendario de Estudio y Clases</p>
+        </div>
+        <div style="display:flex; align-items:center; gap:1rem;">
+            <div class="streak-badge" id="streakBadge">🔥 0</div>
+            <div class="xp-bar-container" id="xpContainer">
+                <span class="level-text" id="levelBadge">Nvl 1</span>
+                <div class="xp-bar"><div class="xp-fill" id="xpFill" style="width:0%"></div></div>
+                <span style="font-size:0.8rem; color:var(--text-secondary);" id="xpText">0 XP</span>
+            </div>
+        </div>
+        <div class="week-nav">
+            <button class="btn btn-icon" id="prevWeek" title="Semana anterior">◄</button>
+            <span class="week-label" id="weekLabel">...</span>
+            <button class="btn btn-icon" id="nextWeek" title="Semana siguiente">►</button>
+            <button class="btn" id="btnToday">Hoy</button>
+            <button class="btn" id="btnReset" title="Restaurar horario de estudio por defecto">↻ Reset Estudio</button>
+        </div>
+    </header>
+
+    <!-- Phase 3: Exams Banner -->
+    <div id="examsBannerContainer" class="exams-banner-container" style="display: none;"></div>
+
+        <!-- Toasts & Modals -->
+    <div class="toast-container" id="toastContainer"></div>
+    <div class="modal-overlay" id="logModalOverlay">
+        <div class="modal">
+            <h3>📝 Registro de Sesión</h3>
+            <p style="margin-bottom:1rem; font-size:0.9rem; color:var(--text-secondary);">Tiempo real: <span id="logTimeTxt" style="color:var(--text-main); font-weight:bold;">0</span> min</p>
+            <select id="logSubject" style="width: 100%; padding: 0.75rem; margin-bottom: 1rem; background: var(--bg-tertiary); border: 1px solid var(--border-dark); color: white; border-radius: 6px; font-family: inherit;">
+                <option value="fenomenos">Fenómenos de Transporte</option>
+                <option value="fisicoquimica">Fisicoquímica</option>
+                <option value="balances">Balances de Masa y Energía</option>
+                <option value="quimica">Química Aplicada</option>
+                <option value="legislacion">Legislación</option>
+                <option value="practica">Práctica Integrada</option>
+                <option value="descanso">Descanso / Repaso Ligero</option>
+            </select>
+            <input type="text" id="logTema" placeholder="¿Qué tema o ejercicios viste? (Ej: Unidad 3, Guía 2)">
+            <div style="margin-bottom: 0.5rem; font-size:0.9rem; color:var(--text-secondary);">Nivel de dificultad percibida:</div>
+            <div class="star-rating" id="logStars">
+                <span data-val="1">★</span><span data-val="2">★</span><span data-val="3">★</span><span data-val="4">★</span><span data-val="5">★</span>
+            </div>
+            <textarea id="logDudas" rows="2" placeholder="¿Dudas pendientes o algo para repasar?"></textarea>
+            <div style="display:flex; gap:1rem; justify-content:flex-end;">
+                <button class="btn" id="btnLogCancel">Descartar</button>
+                <button class="btn" style="background:var(--accent); color:white; border-color:var(--accent);" id="btnLogSave">Guardar y Sumar XP</button>
+            </div>
+        </div>
+    </div>
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="calendar-container">
+            <div class="calendar-header" id="calendarHeader">
+                <div class="day-col-header" style="border:none;"></div>
+                <!-- Days injected by JS -->
+            </div>
+            <div class="calendar-body" id="calendarBody">
+                <div class="time-labels" id="timeLabels"></div>
+                <div class="grid-lines" id="gridLines"></div>
+                <div class="current-time-line" id="currentTimeLine" style="display: none;"></div>
+                <div class="current-time-dot" id="currentTimeDot" style="display: none;"></div>
+                
+                <!-- Day Columns -->
+                <div class="day-col" data-day="1"></div>
+                <div class="day-col" data-day="2"></div>
+                <div class="day-col" data-day="3"></div>
+                <div class="day-col" data-day="4"></div>
+                <div class="day-col" data-day="5"></div>
+                <div class="day-col" data-day="6"></div>
+                <div class="day-col" data-day="0"></div> <!-- Sunday is 0 -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom Section: Progress & Stats -->
+    <div class="bottom-section" style="flex-direction:column;">
+        <!-- Row 1: Progress + Stats -->
+        <div style="display:flex; gap:2rem; width:100%;">
+            <div class="progress-container">
+                <div class="section-header">
+                    <span>Progreso por Materia</span>
+                    <span style="font-size: 0.8rem; font-weight: normal; color: var(--text-muted);">Clic en la materia para expandir. Clic en unidad para cambiar estado.</span>
+                </div>
+                <div id="subjectsProgress"></div>
+            </div>
+
+            <div class="stats-container">
+                <div class="section-header">Estadísticas Semanales</div>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-value" id="statClassHrs">0</div>
+                        <div class="stat-label">Horas de Clase</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value" id="statPlanHrs">0</div>
+                        <div class="stat-label">Horas Planeadas</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value" id="statRealHrs" style="color:#10b981;">0</div>
+                        <div class="stat-label">Horas Reales</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value" id="statPomodoros">0</div>
+                        <div class="stat-label">Pomodoros Hoy</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Row 2: Dashboard -->
+        <div class="dashboard-grid">
+            <!-- Col 1: Heatmap + Mini Calendar -->
+            <div style="display:flex; flex-direction:column; gap:1.5rem;">
+                <div class="dashboard-card">
+                    <div class="section-header">🔥 Heatmap Semanal</div>
+                    <div class="heat-container">
+                        <div class="heat-days" id="weeklyHeatmap"></div>
+                    </div>
+                </div>
+                <div class="dashboard-card">
+                    <div class="section-header">📅 <span id="miniCalMonth"></span></div>
+                    <div class="mini-cal-header">
+                        <div>L</div><div>M</div><div>M</div><div>J</div><div>V</div><div>S</div><div>D</div>
+                    </div>
+                    <div class="mini-cal" id="miniCalendar"></div>
+                </div>
+                <div class="dashboard-card">
+                    <div class="section-header">📚 Temario Semanal (S<span id="topicWeekNum"></span>)</div>
+                    <div id="weeklyTopicsContent" style="font-size: 0.85rem; display: flex; flex-direction: column; gap: 0.8rem;">
+                        <!-- Injected via JS -->
+                    </div>
+                </div>
+            </div>
+            <!-- Col 2: Donut + Badges -->
+            <div style="display:flex; flex-direction:column; gap:1.5rem;">
+                <div class="dashboard-card">
+                    <div class="section-header">📊 Distribución por Materia</div>
+                    <div style="display:flex; align-items:center; gap:2rem;">
+                        <div class="donut-container" id="donutChart">
+                            <div class="donut-inner">
+                                <div id="donutTotal">0h</div>
+                                <span>esta semana</span>
+                            </div>
+                        </div>
+                        <div class="donut-legend" id="donutLegend" style="flex:1;"></div>
+                    </div>
+                </div>
+                <div class="dashboard-card">
+                    <div class="section-header">🏆 Logros</div>
+                    <div class="badges-grid" id="badgesGrid"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sidebar Overlay & Panel -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header" id="sidebarHeader">
+            <div>
+                <div class="sidebar-title" id="sideTitle">Materia</div>
+                <div class="sidebar-subtitle">
+                    <span id="sideTime">Día, 00:00 - 00:00</span>
+                    <span id="sideLocation">Aula / Tipo</span>
+                </div>
+            </div>
+            <button class="close-btn" id="closeSidebar">×</button>
+        </div>
+        <div class="sidebar-content">
+            <div class="section-title">Tareas / Checklists</div>
+            <ul class="checklist" id="sideChecklist">
+                <!-- Injected via JS -->
+            </ul>
+            <div class="add-task">
+                <input type="text" id="newTaskInput" placeholder="Nueva tarea...">
+                <button class="btn" id="btnAddTask">+</button>
+            </div>
+
+            <div class="section-title">Notas de la sesión</div>
+            <textarea class="notes-area" id="sideNotes" placeholder="Escribe notas aquí... se guardarán automáticamente."></textarea>
+        </div>
+    </div>
+
+    <!-- Pomodoro Widget -->
+    <div class="pomodoro-widget" id="pomoWidget">
+        <div class="pomo-header" id="pomoHeader">
+            <div class="pomo-icon" id="pomoIcon">⏱️</div>
+            <div class="pomo-title">Pomodoro</div>
+            <div style="font-size: 0.8rem; color: var(--text-muted); margin-right:1rem;" class="pomo-title">50/10</div>
+        </div>
+        <div class="pomo-body">
+            <div class="time-display" id="pomoTime">50:00</div>
+            <div class="pomo-status" id="pomoStatus">Trabajo - Sesión 1</div>
+            <div class="pomo-controls">
+                <button class="pomo-btn primary" id="btnPomoStart">Iniciar</button>
+                <button class="pomo-btn" id="btnPomoReset">Reset</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN JAVASCRIPT -->
+    <script>
+        // --- 1. CONFIGURATION & DATA MODELS ---
+        const CAL_START_HOUR = 8;
+        const CAL_END_HOUR = 23.5; 
+        const HOUR_HEIGHT = 60;
+
+        const SUBJECTS = {
+            fenomenos: { id: 'fenomenos', name: 'Fenómenos de Transporte', color: 'var(--color-fenomenos)', rawColor: '#8b5cf6', 
+                         units: Array.from({length: 16}, (_, i) => `U${i+1}`).concat(Array.from({length: 7}, (_, i) => `TP${i+1}`)) },
+            fisicoquimica: { id: 'fisicoquimica', name: 'Fisicoquímica', color: 'var(--color-fisicoquimica)', rawColor: '#f59e0b',
+                             units: Array.from({length: 10}, (_, i) => `U${i+1}`) },
+            balances: { id: 'balances', name: 'Balances de Masa y Energía', color: 'var(--color-balances)', rawColor: '#3b82f6',
+                        units: Array.from({length: 6}, (_, i) => `RA${i+1}`) },
+            quimica: { id: 'quimica', name: 'Química Aplicada', color: 'var(--color-quimica)', rawColor: '#ec4899',
+                       units: Array.from({length: 7}, (_, i) => `U${i+1}`) },
+            legislacion: { id: 'legislacion', name: 'Legislación', color: 'var(--color-legislacion)', rawColor: '#10b981',
+                           units: Array.from({length: 16}, (_, i) => `B${i+1}`) },
+            practica: { id: 'practica', name: 'Práctica Integrada', color: 'var(--color-practica)', rawColor: '#06b6d4', units: [] },
+            descanso: { id: 'descanso', name: 'Descanso / Repaso Ligero', color: 'var(--color-rest)', rawColor: '#64748b', units: [] }
+        };
+
+        const FIXED_CLASSES = [
+            { id: 'c1', day: 1, start: '18:15', end: '23:05', subject: 'balances', location: 'Aula 930' },
+            { id: 'c2', day: 2, start: '18:15', end: '19:45', subject: 'legislacion', location: 'Aula 702' },
+            { id: 'c3', day: 2, start: '19:55', end: '22:10', subject: 'fisicoquimica', location: 'Aula 206' },
+            { id: 'c4', day: 3, start: '16:35', end: '18:05', subject: 'legislacion', location: 'Aula 208' },
+            { id: 'c5', day: 3, start: '18:15', end: '22:10', subject: 'fisicoquimica', location: 'Aula 930' },
+            { id: 'c6', day: 4, start: '16:35', end: '19:45', subject: 'fenomenos', location: 'Aula 225' },
+            { id: 'c7', day: 4, start: '19:55', end: '23:05', subject: 'quimica', location: 'Aula 230' },
+            { id: 'c8', day: 5, start: '18:15', end: '23:05', subject: 'fenomenos', location: 'Aula 230' }
+        ];
+
+        const DEFAULT_STUDY_BLOCKS = [
+            { id: 's1', day: 1, start: '09:00', end: '13:00', subject: 'fenomenos', type: 'study', label: 'Rev Fenómenos + Prep Balances' },
+            { id: 's2', day: 2, start: '09:00', end: '13:00', subject: 'balances', type: 'study', label: 'Rev Balances + Prep Leg/Fis' },
+            { id: 's3', day: 3, start: '09:00', end: '13:00', subject: 'legislacion', type: 'study', label: 'Rev Leg/Fis + Prep Hoy' },
+            { id: 's4', day: 4, start: '09:00', end: '13:00', subject: 'fisicoquimica', type: 'study', label: 'Rev Fisico + Prep Fen/Quim' },
+            { id: 's5', day: 5, start: '09:00', end: '13:00', subject: 'quimica', type: 'study', label: 'Rev Fen/Quim + Prep Fen' },
+            { id: 's6', day: 6, start: '10:00', end: '13:30', subject: 'practica', type: 'study', label: 'Práctica Integrada' },
+            { id: 's7', day: 0, start: '10:00', end: '12:00', subject: 'descanso', type: 'study', label: 'Descanso / Repaso' }
+        ];
+
+        const EXAMS = [
+            // Fisicoquímica
+            { id: 'ex1', date: '2026-09-16', title: 'TP Lab 1 (FQ)', subject: 'fisicoquimica' },
+            { id: 'ex2', date: '2026-09-23', title: '1er Parcial (FQ) - Unidades 1, 2, 3', subject: 'fisicoquimica' },
+            { id: 'ex3', date: '2026-11-04', title: 'TP Lab 2 (FQ)', subject: 'fisicoquimica' },
+            { id: 'ex4', date: '2026-11-18', title: '2do Parcial (FQ) - Unidades 4, 5, 7', subject: 'fisicoquimica' },
+            { id: 'ex5', date: '2026-11-24', title: 'Coloquio (FQ)', subject: 'fisicoquimica' },
+            // Balances de Masa y Energía
+            { id: 'ex6', date: '2026-09-07', title: 'Problemas Evaluados (+1 pto) (BME)', subject: 'balances' },
+            { id: 'ex7', date: '2026-09-14', title: '1er Parcial (BME) - Balances de Masa', subject: 'balances' },
+            { id: 'ex8', date: '2026-10-19', title: 'Problemas Evaluados (+1 pto) (BME)', subject: 'balances' },
+            { id: 'ex9', date: '2026-10-26', title: '2do Parcial (BME) - Balances de Energía', subject: 'balances' },
+            { id: 'ex10', date: '2026-11-02', title: 'Problemas Evaluados (+1 pto) (BME)', subject: 'balances' },
+            { id: 'ex11', date: '2026-11-09', title: '3er Parcial (BME) - Redes e Intercambiadores', subject: 'balances' },
+            { id: 'ex12', date: '2026-11-30', title: 'Recuperatorio Integral (BME)', subject: 'balances' },
+            // Fenómenos de Transporte
+            { id: 'ex13', date: '2026-08-27', title: 'Laboratorios 1, 2 y 3 (FdT)', subject: 'fenomenos' },
+            { id: 'ex14', date: '2026-09-03', title: 'Evaluación Teórico-Práctica 1 (FdT)', subject: 'fenomenos' },
+            { id: 'ex15', date: '2026-09-17', title: 'Laboratorios 4 y 5 (FdT)', subject: 'fenomenos' },
+            { id: 'ex16', date: '2026-10-08', title: '1er Parcial (FdT)', subject: 'fenomenos' },
+            { id: 'ex17', date: '2026-10-29', title: 'Laboratorio 6 (FdT)', subject: 'fenomenos' },
+            { id: 'ex18', date: '2026-11-12', title: 'Laboratorio 7 (FdT)', subject: 'fenomenos' },
+            { id: 'ex19', date: '2026-11-13', title: '2do Parcial (FdT)', subject: 'fenomenos' },
+            { id: 'ex20', date: '2026-11-19', title: 'Recuperatorio de Laboratorios (FdT)', subject: 'fenomenos' },
+            { id: 'ex21', date: '2026-11-26', title: 'Recuperatorio (FdT)', subject: 'fenomenos' }
+        ];
+
+        const WEEKLY_SCHEDULE = [
+            { fq: "Unidad 1: Termodinámica de soluciones", bme: "Unidad 1: Modelado flujos, mezcladores, splitter", fdt: "Presentación, Sist. Unidades, Balance Placa" },
+            { fq: "Unidad 1: Resolución problemas / Feriado", bme: "Feriado", fdt: "Balance tubo circular, Factor de fricción" },
+            { fq: "Unidad 1: Resolución problemas", bme: "Unidad 1: Simulación sin sólidos", fdt: "Guías 4 y 5, Labs 1-2-3" },
+            { fq: "Unidad 2: Equilibrio fases multicomponentes", bme: "Unidad 1: Simulación sin sólidos", fdt: "Evaluación TP 1 / Sólidos sumergidos" },
+            { fq: "Unidad 3: Eq. binarios / U2 multicomponentes", bme: "Unidad 1: Simulación con sólidos (1 pto)", fdt: "Lecho de partículas / Ec. Bernoulli" },
+            { fq: "Repaso U1, 2, 3 / TP Laboratorio 1", bme: "1er PARCIAL Teórico-Práctico", fdt: "Análisis dimensional / TP 3" },
+            { fq: "Unidad 4: Ternarios / 1er Cuest. Teórico", bme: "Feriado", fdt: "¿Por qué ing. química? / Transferencia calor" },
+            { fq: "Unidad 5: Equilibrio químico", bme: "Unidad 2: Balances de flujos entalpía y calor", fdt: "Práctica Guía 8" },
+            { fq: "Unidad 5: Equilibrio químico", bme: "Unidad 2: Simulación de energía", fdt: "1er PARCIAL / Calor Paredes Cilíndricas" },
+            { fq: "Unidad 7: Soluciones iónicas", bme: "Feriado", fdt: "Intercambiadores de calor" },
+            { fq: "Unidad 7: Conducción - Electroquímica", bme: "Unidad 2: Simulación de energía (1 pto)", fdt: "Práctica / Radiación" },
+            { fq: "Unidad 7: Cinética de electrodos", bme: "2do PARCIAL Teórico-Práctico", fdt: "Laboratorio 6 / Difusión" },
+            { fq: "Unidad 6: Cinética química / TP Lab", bme: "Unidad 2: Red de intercambiadores (1 pto)", fdt: "Práctica Guía 12" },
+            { fq: "Unidad 6: Cinética / Consulta U4,5,7", bme: "3er PARCIAL Teórico-Práctico", fdt: "Laboratorio 7 / 2do PARCIAL" },
+            { fq: "Unidad 8: Fenóm. superficiales / 2do Cuest. Teórico", bme: "Consultas", fdt: "Recuperatorio Labs / Feriado" },
+            { fq: "Coloquio / Recuperatorio", bme: "Recuperatorio Integral", fdt: "Recuperatorio / Fin de ciclo" }
+        ];
+
+        let currentWeekStart = getMonday(new Date());
+        let currentEvents = []; // Holds both classes and study blocks for current week
+        const BADGES_DEFS = [
+            { id: 'first_pomo', title: 'Primer Pomodoro', icon: '🅿️', desc: 'Completaste tu primer pomodoro.' },
+            { id: 'marathon', title: 'Maratonista', icon: '🏃', desc: 'Estudiaste más de 10 horas reales en una semana.' },
+            { id: 'streak_7', title: 'Racha de 7', icon: '🔥', desc: '7 días seguidos de estudio.' },
+            { id: 'streak_30', title: 'Racha de 30', icon: '🌟', desc: '30 días seguidos de estudio. ¡Imparable!' },
+            { id: 'fq_master', title: 'Fisicoquímico', icon: '⚗️', desc: 'Completaste todas las unidades de Fisicoquímica.' },
+            { id: 'leg_master', title: 'Legislador', icon: '⚖️', desc: 'Completaste todas las unidades de Legislación.' },
+            { id: 'all_subjects', title: 'Cinco materias', icon: '📚', desc: 'Estudiaste las 5 materias principales en una misma semana.' },
+            { id: 'night_owl', title: 'Noche de estudio', icon: '🦉', desc: 'Registraste una sesión de estudio después de las 22:00.' },
+            { id: 'early_bird', title: 'Madrugador', icon: '🌅', desc: 'Registraste una sesión de estudio antes de las 09:00.' },
+            { id: 'pomo_100', title: '100 Pomodoros', icon: '💯', desc: 'Completaste 100 pomodoros en total.' },
+            { id: 'first_week', title: 'Primera semana', icon: '📅', desc: 'Estudiaste 5 días en la primera semana.' },
+            { id: 'balance', title: 'Balance perfecto', icon: '⚖️', desc: 'Estudiaste todas las materias de manera balanceada.' }
+        ];
+
+        let draggedEvent = null;
+        let activeTracker = null; // { id, startTime, element }
+        let currentRating = 0;
+        let sessionToLog = null;
+
+        // --- 2. UTILITY FUNCTIONS ---
+        function getMonday(d) {
+            d = new Date(d);
+            let day = d.getDay(), diff = d.getDate() - day + (day == 0 ? -6:1); // adjust when day is sunday
+            let mon = new Date(d.setDate(diff));
+            mon.setHours(0,0,0,0);
+            return mon;
+        }
+
+        function formatDate(date) {
+            return date.toISOString().split('T')[0];
+        }
+
+        function formatDisplayDate(date) {
+            const days = ['Dom', 'Lun', 'Mar', 'Mié', 'Jue', 'Vie', 'Sáb'];
+            const months = ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'];
+            return `${days[date.getDay()]} ${date.getDate()} ${months[date.getMonth()]}`;
+        }
+
+        function timeToDecimal(timeStr) {
+            let parts = timeStr.split(':');
+            return parseInt(parts[0]) + parseInt(parts[1]) / 60;
+        }
+
+        function getEventKey(event, dateStr) {
+            return `cal-${dateStr}-${event.id}`;
+        }
+
+        // --- 3. STATE MANAGEMENT (LocalStorage) ---
+        function loadStudyBlocks(weekStart) {
+            const weekKey = `study-blocks-${formatDate(weekStart)}`;
+            const saved = localStorage.getItem(weekKey);
+            if (saved) return JSON.parse(saved);
+            return JSON.parse(JSON.stringify(DEFAULT_STUDY_BLOCKS)); // Deep copy
+        }
+
+        function saveStudyBlocks(weekStart, blocks) {
+            const weekKey = `study-blocks-${formatDate(weekStart)}`;
+            localStorage.setItem(weekKey, JSON.stringify(blocks));
+        }
+
+        function getChecklist(key) {
+            return JSON.parse(localStorage.getItem(`${key}-check`) || '[]');
+        }
+        function saveChecklist(key, data) {
+            localStorage.setItem(`${key}-check`, JSON.stringify(data));
+        }
+        function getNotes(key) {
+            return localStorage.getItem(`${key}-notes`) || '';
+        }
+        function saveNotes(key, data) {
+            localStorage.setItem(`${key}-notes`, data);
+        }
+
+        function getProgress() {
+            let defProg = {};
+            for (let sub in SUBJECTS) {
+                if (SUBJECTS[sub].units.length > 0) {
+                    defProg[sub] = Array(SUBJECTS[sub].units.length).fill(0);
+                }
+            }
+            return JSON.parse(localStorage.getItem('cal-progress')) || defProg;
+        }
+        function saveProgress(data) {
+            localStorage.setItem('cal-progress', JSON.stringify(data));
+        }
+
+        // Feature: Streaks & XP Storage
+        function getStreakData() { return JSON.parse(localStorage.getItem('streak-data')) || { currentStreak: 0, longestStreak: 0, lastStudyDate: null }; }
+        function saveStreakData(d) { localStorage.setItem('streak-data', JSON.stringify(d)); }
+        function getXpData() { return JSON.parse(localStorage.getItem('xp-data')) || { totalXP: 0 }; }
+        function saveXpData(d) { localStorage.setItem('xp-data', JSON.stringify(d)); }
+        function getBadgesData() { return JSON.parse(localStorage.getItem('badges-data')) || {}; }
+        function saveBadgesData(d) { localStorage.setItem('badges-data', JSON.stringify(d)); }
+        function getTrackerData(dateStr) { return JSON.parse(localStorage.getItem('tracker-' + dateStr)) || {}; }
+        function saveTrackerData(dateStr, d) { localStorage.setItem('tracker-' + dateStr, JSON.stringify(d)); }
+        function getAllTrackerData() {
+            let all = [];
+            for (let i = 0; i < localStorage.length; i++) {
+                let key = localStorage.key(i);
+                if (key.startsWith('tracker-')) {
+                    let dateStr = key.replace('tracker-', '');
+                    let data = JSON.parse(localStorage.getItem(key));
+                    all.push({ date: dateStr, data: data });
+                }
+            }
+            return all;
+        }
+
+        function showToast(msg, icon="🔔") {
+            const container = document.getElementById('toastContainer');
+            const toast = document.createElement('div');
+            toast.className = 'toast';
+            toast.innerHTML = `<span style="font-size:1.5rem;">${icon}</span> <span>${msg}</span>`;
+            container.appendChild(toast);
+            setTimeout(() => toast.remove(), 4000);
+        }
+
+        function addXP(amount, reason) {
+            let xp = getXpData();
+            let oldLevel = Math.floor(Math.sqrt(xp.totalXP / 100)) + 1;
+            xp.totalXP += amount;
+            saveXpData(xp);
+            let newLevel = Math.floor(Math.sqrt(xp.totalXP / 100)) + 1;
+            
+            showToast(`+${amount} XP (${reason})`, "✨");
+            
+            if (newLevel > oldLevel) {
+                setTimeout(() => showToast(`¡Subiste al Nivel ${newLevel}!`, "🎉"), 1000);
+            }
+            updateXPUI();
+        }
+
+        function unlockBadge(badgeId) {
+            let bData = getBadgesData();
+            if (!bData[badgeId]) {
+                bData[badgeId] = { unlockedAt: new Date().toISOString() };
+                saveBadgesData(bData);
+                let bDef = BADGES_DEFS.find(b => b.id === badgeId);
+                if (bDef) {
+                    showToast(`¡Logro Desbloqueado: ${bDef.title}!`, bDef.icon);
+                    addXP(200, "Logro desbloqueado");
+                    renderBadges();
+                }
+            }
+        }
+
+        function updateXPUI() {
+            let xp = getXpData();
+            let level = Math.floor(Math.sqrt(xp.totalXP / 100)) + 1;
+            
+            let currentLevelBaseXP = 100 * Math.pow(level - 1, 2);
+            let nextLevelXP = 100 * Math.pow(level, 2);
+            let xpInCurrentLevel = xp.totalXP - currentLevelBaseXP;
+            let xpNeededForNext = nextLevelXP - currentLevelBaseXP;
+            let pct = Math.min(100, Math.max(0, (xpInCurrentLevel / xpNeededForNext) * 100));
+            
+            let badgeEl = document.getElementById('levelBadge');
+            let textEl = document.getElementById('xpText');
+            let fillEl = document.getElementById('xpFill');
+            
+            if(badgeEl) badgeEl.textContent = `Nvl ${level}`;
+            if(textEl) textEl.textContent = `${Math.floor(xp.totalXP)} XP`;
+            if(fillEl) fillEl.style.width = `${pct}%`;
+            
+            let cont = document.getElementById('xpContainer');
+            if(cont) {
+                cont.classList.add('xp-flash');
+                setTimeout(() => cont.classList.remove('xp-flash'), 500);
+            }
+        }
+
+        function checkStreak() {
+            let data = getStreakData();
+            let allT = getAllTrackerData();
+            let studiedDates = allT.filter(d => Object.keys(d.data).length > 0).map(d => d.date).sort();
+            
+            if (studiedDates.length === 0) {
+                data.currentStreak = 0;
+            } else {
+                let current = 0;
+                let testDate = new Date();
+                testDate.setHours(0,0,0,0);
+                
+                let studiedToday = studiedDates.includes(formatDate(testDate));
+                if (studiedToday) current++;
+                else {
+                    let yesterday = new Date(testDate);
+                    yesterday.setDate(yesterday.getDate() - 1);
+                    if (!studiedDates.includes(formatDate(yesterday))) current = 0;
+                }
+                
+                let checkDate = new Date(testDate);
+                checkDate.setDate(checkDate.getDate() - (studiedToday ? 1 : 1));
+                while(true) {
+                    if (studiedDates.includes(formatDate(checkDate))) {
+                        current++;
+                        checkDate.setDate(checkDate.getDate() - 1);
+                    } else {
+                        break;
+                    }
+                }
+                
+                data.currentStreak = current;
+                if (current > data.longestStreak) data.longestStreak = current;
+            }
+            saveStreakData(data);
+            let sbEl = document.getElementById('streakBadge');
+            if(sbEl) sbEl.innerHTML = `🔥 ${data.currentStreak}`;
+            if (data.currentStreak >= 7) unlockBadge('streak_7');
+            if (data.currentStreak >= 30) unlockBadge('streak_30');
+        }
+
+        // --- 4. RENDER CALENDAR ---
+        function renderCalendar() {
+            // Update Header
+            let weekEnd = new Date(currentWeekStart);
+            weekEnd.setDate(weekEnd.getDate() + 6);
+            document.getElementById('weekLabel').textContent = 
+                `${formatDisplayDate(currentWeekStart).split(' ')[1]} ${formatDisplayDate(currentWeekStart).split(' ')[2]} - ${formatDisplayDate(weekEnd)}`;
+
+            // Render Grid Background
+            const gridLines = document.getElementById('gridLines');
+            const timeLabels = document.getElementById('timeLabels');
+            gridLines.innerHTML = '';
+            timeLabels.innerHTML = '';
+            for (let h = CAL_START_HOUR; h <= 23; h++) {
+                let y = (h - CAL_START_HOUR) * HOUR_HEIGHT;
+                
+                // Full hour
+                let label = document.createElement('div');
+                label.className = 'time-label';
+                label.textContent = `${h}:00`;
+                timeLabels.appendChild(label);
+                
+                let line = document.createElement('div');
+                line.className = 'grid-line';
+                gridLines.appendChild(line);
+
+                // Half hour line (subtle)
+                let halfLine = document.createElement('div');
+                halfLine.className = 'grid-line';
+                halfLine.style.top = `${y + HOUR_HEIGHT/2}px`;
+                halfLine.style.position = 'absolute';
+                halfLine.style.width = '100%';
+                halfLine.style.borderBottomStyle = 'dashed';
+                halfLine.style.borderColor = 'rgba(255,255,255,0.05)';
+                gridLines.appendChild(halfLine);
+            }
+
+            // Setup Columns and Headers
+            const calHeader = document.getElementById('calendarHeader');
+            // Keep first empty col
+            while(calHeader.children.length > 1) calHeader.removeChild(calHeader.lastChild);
+            
+            let today = new Date();
+            today.setHours(0,0,0,0);
+            
+            const daysOrder = [1, 2, 3, 4, 5, 6, 0]; // Mon to Sun
+            
+            document.querySelectorAll('.day-col').forEach(col => {
+                col.innerHTML = '';
+                col.classList.remove('today-col');
+            });
+
+            daysOrder.forEach((dayNum, index) => {
+                let dDate = new Date(currentWeekStart);
+                dDate.setDate(dDate.getDate() + index);
+                
+                let isToday = dDate.getTime() === today.getTime();
+                let dateStr = formatDate(dDate);
+                
+                let dayExams = EXAMS.filter(ex => ex.date === dateStr);
+                let examBadgesHTML = dayExams.map(ex => `<div style="background-color: var(--color-${ex.subject}); margin-top: 0.4rem; font-size: 0.7rem; color: #fff; padding: 0.2rem 0.4rem; border-radius: 4px; font-weight: 600; line-height: 1.2;">🎯 ${ex.title}</div>`).join('');
+
+                // Header cell
+                let hCell = document.createElement('div');
+                hCell.className = `day-col-header ${isToday ? 'today' : ''}`;
+                hCell.innerHTML = `
+                    <div class="day-name">${['Dom','Lun','Mar','Mié','Jue','Vie','Sáb'][dayNum]}</div>
+                    <div class="day-date">${dDate.getDate()}</div>
+                    ${examBadgesHTML}
+                `;
+                calHeader.appendChild(hCell);
+
+                // Highlight today's column
+                if (isToday) {
+                    let col = document.querySelector(`.day-col[data-day="${dayNum}"]`);
+                    if(col) col.classList.add('today-col');
+                }
+            });
+
+            // Load Events
+            let studyBlocks = loadStudyBlocks(currentWeekStart);
+            currentEvents = [...FIXED_CLASSES.map(c => ({...c, type: 'class'})), ...studyBlocks];
+            
+            currentEvents.forEach(ev => renderEvent(ev));
+
+            updateCurrentTimeLine();
+            updateStats();
+        }
+
+        function renderEvent(ev) {
+            let col = document.querySelector(`.day-col[data-day="${ev.day}"]`);
+            if (!col) return;
+
+            let evDate = new Date(currentWeekStart);
+            // offset from monday
+            let dayOffset = ev.day === 0 ? 6 : ev.day - 1; 
+            evDate.setDate(evDate.getDate() + dayOffset);
+            let dateStr = formatDate(evDate);
+            let eventKey = getEventKey(ev, dateStr);
+
+            let sDec = timeToDecimal(ev.start);
+            let eDec = timeToDecimal(ev.end);
+            
+            let top = (sDec - CAL_START_HOUR) * HOUR_HEIGHT;
+            let height = (eDec - sDec) * HOUR_HEIGHT;
+
+                        let sub = SUBJECTS[ev.subject];
+            let tData = getTrackerData(dateStr);
+            let hasSession = tData[ev.id] && tData[ev.id].sessions && tData[ev.id].sessions.length > 0;
+
+            let el = document.createElement('div');
+            el.className = `event ${ev.type === 'study' ? 'draggable' : ''}`;
+            el.style.top = `${top}px`;
+            el.style.height = `${height}px`;
+            el.style.backgroundColor = sub.rawColor;
+            
+            // Add subtle gradient to classes
+            if(ev.type === 'class') {
+                el.style.background = `linear-gradient(135deg, ${sub.rawColor} 0%, rgba(0,0,0,0.2) 100%)`;
+                el.style.backgroundColor = sub.rawColor; // fallback
+            } else {
+                el.style.opacity = '0.9';
+                el.style.borderLeftColor = '#fff';
+            }
+
+            el.innerHTML = `
+                <div class="event-badge"></div>
+                <div class="event-title">${sub.name}</div>
+                <div class="event-time">${ev.start} - ${ev.end}</div>
+                <div class="event-location">${ev.type === 'class' ? '📍 '+ev.location : '📚 '+ev.label}</div>
+                ${ev.type === 'study' ? '<button class="tracker-btn">▶ Empezar</button>' : ''}
+                ${hasSession ? '<div class="session-indicator">✓ Registrado</div>' : ''}
+            `;
+
+            // Check if pending tasks exist
+            let chk = getChecklist(eventKey);
+            if (chk.some(i => !i.done)) {
+                el.classList.add('has-pending-tasks');
+            }
+
+            // Interactions
+            el.addEventListener('click', (e) => {
+                // Don't open if clicking during drag
+                if(!el.classList.contains('dragging')) {
+                    openSidebar(ev, dateStr);
+                }
+            });
+
+            // Drag & Drop for Study Blocks
+            if (ev.type === 'study') {
+                el.draggable = true;
+                el.addEventListener('dragstart', (e) => {
+                    draggedEvent = ev;
+                    setTimeout(() => el.classList.add('ghost-event'), 0);
+                    e.dataTransfer.effectAllowed = 'move';
+                });
+                el.addEventListener('dragend', () => {
+                    el.classList.remove('ghost-event');
+                    el.classList.remove('dragging');
+                    draggedEvent = null;
+                    document.querySelectorAll('.day-col').forEach(c => c.style.backgroundColor = '');
+                });
+                
+                // Add dragging flag to prevent click
+                el.addEventListener('mousedown', () => el.classList.add('dragging'));
+                el.addEventListener('mouseup', () => setTimeout(()=>el.classList.remove('dragging'), 100));
+            }
+
+                        col.appendChild(el);
+
+            if (ev.type === 'study') {
+                let tBtn = el.querySelector('.tracker-btn');
+                if (tBtn) {
+                    if (activeTracker && activeTracker.id === ev.id && activeTracker.dateStr === dateStr) {
+                        tBtn.innerHTML = '⏹ Terminar';
+                        tBtn.classList.add('stop');
+                    }
+                    
+                    tBtn.addEventListener('click', (e) => {
+                        e.stopPropagation();
+                        if (tBtn.classList.contains('stop')) {
+                            let endTime = new Date();
+                            let elapsedMins = Math.round((endTime - activeTracker.startTime) / 60000);
+                            
+                            if (elapsedMins < 0) elapsedMins = 0;
+                            tBtn.innerHTML = '▶ Empezar';
+                            tBtn.classList.remove('stop');
+                            
+                            sessionToLog = {
+                                id: ev.id,
+                                dateStr: dateStr,
+                                subject: ev.subject,
+                                start: activeTracker.startTime.toISOString(),
+                                end: endTime.toISOString(),
+                                minutes: elapsedMins
+                            };
+                            
+                            activeTracker = null;
+                            openLogModal(elapsedMins);
+
+                        } else {
+                            if (activeTracker) {
+                                showToast("Ya tienes una sesión activa en otro bloque.", "⚠️");
+                                return;
+                            }
+                            activeTracker = {
+                                id: ev.id,
+                                dateStr: dateStr,
+                                startTime: new Date()
+                            };
+                            tBtn.innerHTML = '⏹ Terminar';
+                            tBtn.classList.add('stop');
+                            showToast("Sesión iniciada. ¡A estudiar!", "▶️");
+                        }
+                    });
+                }
+            }
+        }
+
+        // Drop zones setup
+        document.querySelectorAll('.day-col').forEach(col => {
+            col.addEventListener('dragover', (e) => {
+                e.preventDefault();
+                if(draggedEvent) {
+                    col.style.backgroundColor = 'rgba(255,255,255,0.05)';
+                }
+            });
+            col.addEventListener('dragleave', () => {
+                col.style.backgroundColor = '';
+                if(col.classList.contains('today-col')) {
+                    col.style.backgroundColor = 'rgba(255, 255, 255, 0.02)';
+                }
+            });
+            col.addEventListener('drop', (e) => {
+                e.preventDefault();
+                col.style.backgroundColor = '';
+                if(col.classList.contains('today-col')) {
+                    col.style.backgroundColor = 'rgba(255, 255, 255, 0.02)';
+                }
+                
+                if (draggedEvent && draggedEvent.type === 'study') {
+                    let newDay = parseInt(col.getAttribute('data-day'));
+                    if (newDay !== draggedEvent.day) {
+                        let studyBlocks = loadStudyBlocks(currentWeekStart);
+                        
+                        // Swap Logic: Find if there's a study block on the target day
+                        let existingOnNewDay = studyBlocks.find(b => b.day === newDay);
+                        let idxDrag = studyBlocks.findIndex(b => b.id === draggedEvent.id);
+                        
+                        if (existingOnNewDay) {
+                            // Swap days
+                            let idxExist = studyBlocks.findIndex(b => b.id === existingOnNewDay.id);
+                            studyBlocks[idxDrag].day = newDay;
+                            studyBlocks[idxExist].day = draggedEvent.day;
+                        } else {
+                            // Just move
+                            studyBlocks[idxDrag].day = newDay;
+                        }
+                        
+                        saveStudyBlocks(currentWeekStart, studyBlocks);
+                        renderCalendar();
+                    }
+                }
+            });
+        });
+
+                // --- 4.5 QUICK LOG MODAL ---
+        const logModalOverlay = document.getElementById('logModalOverlay');
+        const starSpans = document.querySelectorAll('#logStars span');
+
+        function openLogModal(mins) {
+            document.getElementById('logTimeTxt').textContent = mins;
+            document.getElementById('logTema').value = '';
+            document.getElementById('logDudas').value = '';
+            if(sessionToLog && sessionToLog.subject) {
+                let subjSelect = document.getElementById('logSubject');
+                if(subjSelect) subjSelect.value = sessionToLog.subject;
+            }
+            currentRating = 0;
+            updateStars(0);
+            logModalOverlay.style.display = 'flex';
+        }
+
+        function updateStars(val) {
+            starSpans.forEach(s => {
+                if (parseInt(s.dataset.val) <= val) s.classList.add('active');
+                else s.classList.remove('active');
+            });
+        }
+
+        starSpans.forEach(s => {
+            s.addEventListener('click', () => {
+                currentRating = parseInt(s.dataset.val);
+                updateStars(currentRating);
+            });
+        });
+
+        document.getElementById('btnLogCancel').addEventListener('click', () => {
+            saveSessionToStorage(null, 0, "");
+            logModalOverlay.style.display = 'none';
+        });
+
+        document.getElementById('btnLogSave').addEventListener('click', () => {
+            let tema = document.getElementById('logTema').value.trim();
+            let dudas = document.getElementById('logDudas').value.trim();
+            let selectedSubj = document.getElementById('logSubject');
+            if(selectedSubj && sessionToLog) {
+                sessionToLog.subject = selectedSubj.value;
+            }
+            saveSessionToStorage(tema, currentRating, dudas);
+            logModalOverlay.style.display = 'none';
+        });
+
+        function saveSessionToStorage(tema, rating, dudas) {
+            if (!sessionToLog) return;
+            
+            let tData = getTrackerData(sessionToLog.dateStr);
+            if (!tData[sessionToLog.id]) tData[sessionToLog.id] = { sessions: [] };
+            
+            let s = {
+                start: sessionToLog.start,
+                end: sessionToLog.end,
+                minutes: sessionToLog.minutes,
+                tema: tema,
+                rating: rating,
+                dudas: dudas,
+                subject: sessionToLog.subject
+            };
+            tData[sessionToLog.id].sessions.push(s);
+            saveTrackerData(sessionToLog.dateStr, tData);
+            
+            if (sessionToLog.minutes > 0) {
+                addXP(sessionToLog.minutes, "Tiempo de estudio");
+            }
+            
+            let dObj = new Date(sessionToLog.start);
+            let h = dObj.getHours();
+            if (h >= 22 || h < 4) unlockBadge('night_owl');
+            if (h >= 4 && h <= 8) unlockBadge('early_bird');
+            
+            checkStreak();
+            updateStats();
+            renderDashboard();
+            renderCalendar();
+            
+            sessionToLog = null;
+        }
+
+        // --- 5. SIDEBAR LOGIC ---
+        const sidebar = document.getElementById('sidebar');
+        const overlay = document.getElementById('sidebarOverlay');
+        let currentActiveEventKey = null;
+
+        function openSidebar(ev, dateStr) {
+                        let sub = SUBJECTS[ev.subject];
+            let tData = getTrackerData(dateStr);
+            let hasSession = tData[ev.id] && tData[ev.id].sessions && tData[ev.id].sessions.length > 0;
+            currentActiveEventKey = getEventKey(ev, dateStr);
+
+            document.getElementById('sideTitle').textContent = sub.name;
+            document.getElementById('sidebarHeader').style.borderBottomColor = sub.rawColor;
+            
+            let dateObj = new Date(dateStr);
+            // adjust timezone offset issue slightly
+            dateObj.setMinutes(dateObj.getMinutes() + dateObj.getTimezoneOffset());
+            
+            document.getElementById('sideTime').textContent = 
+                `${formatDisplayDate(dateObj)}, ${ev.start} - ${ev.end}`;
+            document.getElementById('sideLocation').textContent = 
+                ev.type === 'class' ? `Clase - ${ev.location}` : `Estudio - ${ev.label}`;
+
+            // Load Notes & Checklist
+            document.getElementById('sideNotes').value = getNotes(currentActiveEventKey);
+            renderChecklist();
+
+            sidebar.classList.add('open');
+            overlay.classList.add('active');
+        }
+
+        function closeSidebar() {
+            sidebar.classList.remove('open');
+            overlay.classList.remove('active');
+            
+            // Save notes on close
+            if(currentActiveEventKey) {
+                saveNotes(currentActiveEventKey, document.getElementById('sideNotes').value);
+            }
+            renderCalendar(); // re-render to update badges
+        }
+
+        document.getElementById('closeSidebar').addEventListener('click', closeSidebar);
+        overlay.addEventListener('click', closeSidebar);
+
+        // Sidebar Notes Auto-save
+        document.getElementById('sideNotes').addEventListener('input', (e) => {
+            if(currentActiveEventKey) saveNotes(currentActiveEventKey, e.target.value);
+        });
+
+        // Sidebar Checklist
+        function renderChecklist() {
+            const list = document.getElementById('sideChecklist');
+            list.innerHTML = '';
+            if(!currentActiveEventKey) return;
+            
+            let data = getChecklist(currentActiveEventKey);
+            data.forEach((item, idx) => {
+                let li = document.createElement('li');
+                li.className = `checklist-item ${item.done ? 'completed' : ''}`;
+                li.innerHTML = `
+                    <input type="checkbox" ${item.done ? 'checked' : ''} onchange="toggleCheckItem(${idx})">
+                    <span>${item.text}</span>
+                    <button class="delete-btn" onclick="deleteCheckItem(${idx})">×</button>
+                `;
+                list.appendChild(li);
+            });
+        }
+
+        window.toggleCheckItem = function(idx) {
+            let data = getChecklist(currentActiveEventKey);
+            data[idx].done = !data[idx].done;
+            saveChecklist(currentActiveEventKey, data);
+            renderChecklist();
+        };
+
+        window.deleteCheckItem = function(idx) {
+            let data = getChecklist(currentActiveEventKey);
+            data.splice(idx, 1);
+            saveChecklist(currentActiveEventKey, data);
+            renderChecklist();
+        };
+
+        document.getElementById('btnAddTask').addEventListener('click', addTask);
+        document.getElementById('newTaskInput').addEventListener('keypress', (e) => {
+            if(e.key === 'Enter') addTask();
+        });
+
+        function addTask() {
+            let inp = document.getElementById('newTaskInput');
+            let text = inp.value.trim();
+            if(text && currentActiveEventKey) {
+                let data = getChecklist(currentActiveEventKey);
+                data.push({ text: text, done: false });
+                saveChecklist(currentActiveEventKey, data);
+                inp.value = '';
+                renderChecklist();
+            }
+        }
+
+        // --- 6. PROGRESS TRACKER ---
+        function renderProgress() {
+            const container = document.getElementById('subjectsProgress');
+            container.innerHTML = '';
+            let progressData = getProgress();
+
+            Object.values(SUBJECTS).forEach(sub => {
+                if (sub.units.length === 0) return; // Skip Rest/Practice
+                
+                let pData = progressData[sub.id] || Array(sub.units.length).fill(0);
+                
+                // Calculate percentage (state 2 = 1, state 1 = 0.5)
+                let score = pData.reduce((acc, val) => acc + (val===2 ? 1 : val===1 ? 0.5 : 0), 0);
+                let pct = Math.round((score / sub.units.length) * 100);
+
+                let el = document.createElement('div');
+                el.className = 'subject-progress';
+                el.innerHTML = `
+                    <div class="subject-header" onclick="this.parentElement.classList.toggle('expanded')">
+                        <div class="subject-name">
+                            <div class="color-dot" style="background-color: ${sub.rawColor}"></div>
+                            ${sub.name}
+                        </div>
+                        <div>${pct}%</div>
+                    </div>
+                    <div class="progress-bar-bg">
+                        <div class="progress-bar-fill" style="width: ${pct}%; background-color: ${sub.rawColor}"></div>
+                    </div>
+                    <div class="units-container" id="units-${sub.id}"></div>
+                `;
+
+                container.appendChild(el);
+                
+                let uCont = el.querySelector('.units-container');
+                sub.units.forEach((uName, idx) => {
+                    let state = pData[idx];
+                    let uEl = document.createElement('div');
+                    uEl.className = `unit-marker state-${state}`;
+                    uEl.style.color = sub.rawColor;
+                    uEl.innerHTML = `
+                        <div class="unit-icon" style="border-color: ${sub.rawColor}"></div>
+                        ${uName}
+                    `;
+                    uEl.addEventListener('click', (e) => {
+                        e.stopPropagation();
+                        // Cycle 0 -> 1 -> 2 -> 0
+                        pData[idx] = (pData[idx] + 1) % 3;
+                        progressData[sub.id] = pData;
+                                                saveProgress(progressData);
+                        
+                        if (pData[idx] === 2) {
+                            addXP(100, "Unidad completada");
+                        }
+                        
+                        if (sub.id === 'fisicoquimica' && pData.every(v => v === 2)) unlockBadge('fq_master');
+                        if (sub.id === 'legislacion' && pData.every(v => v === 2)) unlockBadge('leg_master');
+                        renderProgress(); // re-render entirely to update bar
+                    });
+                    uCont.appendChild(uEl);
+                });
+            });
+        }
+
+        // --- 7. POMODORO TIMER ---
+        const pomoWidget = document.getElementById('pomoWidget');
+        const pomoTimeDisp = document.getElementById('pomoTime');
+        const pomoStatusDisp = document.getElementById('pomoStatus');
+        
+        let pomoSettings = { work: 50, break: 10 };
+        let pomoTimeLeft = pomoSettings.work * 60;
+        let isWorking = true;
+        let pomoTimerId = null;
+        let pomodorosToday = parseInt(localStorage.getItem(`pomos-${formatDate(new Date())}`) || '0');
+
+        document.getElementById('pomoHeader').addEventListener('click', () => {
+            pomoWidget.classList.toggle('expanded');
+        });
+
+        function updatePomoDisplay() {
+            let m = Math.floor(pomoTimeLeft / 60).toString().padStart(2, '0');
+            let s = (pomoTimeLeft % 60).toString().padStart(2, '0');
+            pomoTimeDisp.textContent = `${m}:${s}`;
+            document.title = `(${m}:${s}) Calendario UTN`;
+            if(!pomoWidget.classList.contains('expanded')) {
+                document.getElementById('pomoIcon').textContent = `${m}`;
+            } else {
+                document.getElementById('pomoIcon').textContent = '⏱️';
+            }
+        }
+
+        function playBeep() {
+            try {
+                let ctx = new (window.AudioContext || window.webkitAudioContext)();
+                let osc = ctx.createOscillator();
+                let gain = ctx.createGain();
+                osc.connect(gain);
+                gain.connect(ctx.destination);
+                osc.type = 'sine';
+                osc.frequency.setValueAtTime(440, ctx.currentTime);
+                gain.gain.setValueAtTime(0.1, ctx.currentTime);
+                osc.start();
+                gain.gain.exponentialRampToValueAtTime(0.00001, ctx.currentTime + 1);
+                osc.stop(ctx.currentTime + 1);
+            } catch(e) { console.log('Audio not supported'); }
+        }
+
+        document.getElementById('btnPomoStart').addEventListener('click', () => {
+            const btn = document.getElementById('btnPomoStart');
+            if (pomoTimerId) {
+                clearInterval(pomoTimerId);
+                pomoTimerId = null;
+                btn.textContent = 'Reanudar';
+            } else {
+                btn.textContent = 'Pausar';
+                pomoTimerId = setInterval(() => {
+                    pomoTimeLeft--;
+                    if (pomoTimeLeft < 0) {
+                        playBeep();
+                        if (isWorking) {
+                                                        pomodorosToday++;
+                            addXP(50, "Pomodoro completado");
+                            
+                            let totalPomos = parseInt(localStorage.getItem('total-pomos') || '0') + 1;
+                            localStorage.setItem('total-pomos', totalPomos);
+                            if (totalPomos === 1) unlockBadge('first_pomo');
+                            if (totalPomos >= 100) unlockBadge('pomo_100');
+                            localStorage.setItem(`pomos-${formatDate(new Date())}`, pomodorosToday);
+                            updateStats();
+                            isWorking = false;
+                            pomoTimeLeft = pomoSettings.break * 60;
+                            pomoStatusDisp.textContent = 'Descanso';
+                        } else {
+                            isWorking = true;
+                            pomoTimeLeft = pomoSettings.work * 60;
+                            pomoStatusDisp.textContent = 'Trabajo';
+                        }
+                    }
+                    updatePomoDisplay();
+                }, 1000);
+            }
+        });
+
+        document.getElementById('btnPomoReset').addEventListener('click', () => {
+            clearInterval(pomoTimerId);
+            pomoTimerId = null;
+            isWorking = true;
+            pomoTimeLeft = pomoSettings.work * 60;
+            document.getElementById('btnPomoStart').textContent = 'Iniciar';
+            pomoStatusDisp.textContent = 'Trabajo';
+            updatePomoDisplay();
+            document.title = 'Calendario de Estudio UTN';
+        });
+
+        // --- 8. GLOBAL LOGIC & INTERVALS ---
+                function renderBadges() {
+            const grid = document.getElementById('badgesGrid');
+            if(!grid) return;
+            grid.innerHTML = '';
+            let bData = getBadgesData();
+            
+            BADGES_DEFS.forEach(b => {
+                let isUnlocked = bData[b.id] !== undefined;
+                let dateStr = isUnlocked ? new Date(bData[b.id].unlockedAt).toLocaleDateString() : 'Bloqueado';
+                
+                let el = document.createElement('div');
+                el.className = `badge ${isUnlocked ? 'unlocked' : ''}`;
+                el.innerHTML = `
+                    <div class="badge-icon">${b.icon}</div>
+                    <div class="badge-title">${b.title}</div>
+                    ${isUnlocked ? `<div class="badge-date">${dateStr}</div>` : ''}
+                    <div class="badge-tooltip">${b.desc}</div>
+                `;
+                grid.appendChild(el);
+            });
+        }
+
+        function renderDashboard() {
+            let hMap = document.getElementById('weeklyHeatmap');
+            if (hMap) {
+                hMap.innerHTML = '';
+                const days = ['L', 'M', 'M', 'J', 'V', 'S', 'D'];
+                for (let i=0; i<7; i++) {
+                    let d = new Date(currentWeekStart);
+                    d.setDate(d.getDate() + i);
+                    let dStr = formatDate(d);
+                    
+                    let tData = getTrackerData(dStr);
+                    let mins = 0;
+                    Object.values(tData).forEach(ev => {
+                        if(ev.sessions) ev.sessions.forEach(s => mins += s.minutes);
+                    });
+                    
+                    let hrs = mins / 60;
+                    let lvl = 0;
+                    if (hrs > 0) lvl = 1;
+                    if (hrs >= 2) lvl = 2;
+                    if (hrs >= 4) lvl = 3;
+                    if (hrs >= 6) lvl = 4;
+                    
+                    let box = document.createElement('div');
+                    box.className = `heat-box lvl-${lvl}`;
+                    box.textContent = days[i];
+                    box.title = `${hrs.toFixed(1)} hrs el ${d.getDate()}/${d.getMonth()+1}`;
+                    hMap.appendChild(box);
+                }
+            }
+            
+            let mCal = document.getElementById('miniCalendar');
+            let mMon = document.getElementById('miniCalMonth');
+            if (mCal && mMon) {
+                mCal.innerHTML = '';
+                let today = new Date();
+                const monthNames = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
+                mMon.textContent = monthNames[today.getMonth()] + ' ' + today.getFullYear();
+                
+                let firstDay = new Date(today.getFullYear(), today.getMonth(), 1);
+                let lastDay = new Date(today.getFullYear(), today.getMonth() + 1, 0);
+                let startOffset = firstDay.getDay() === 0 ? 6 : firstDay.getDay() - 1;
+                
+                for(let i=0; i<startOffset; i++) {
+                    let d = document.createElement('div'); d.className='mini-day empty'; mCal.appendChild(d);
+                }
+                
+                for(let i=1; i<=lastDay.getDate(); i++) {
+                    let d = new Date(today.getFullYear(), today.getMonth(), i);
+                    let dStr = formatDate(d);
+                    let el = document.createElement('div');
+                    el.className = 'mini-day';
+                    el.textContent = i;
+                    
+                    if (dStr === formatDate(today)) el.classList.add('today');
+                    if (EXAMS.some(ex => ex.date === dStr)) el.classList.add('has-exam');
+                    let tData = getTrackerData(dStr);
+                    if (Object.keys(tData).length > 0) el.classList.add('has-study');
+                    
+                    el.title = dStr;
+                    el.addEventListener('click', () => {
+                        currentWeekStart = getMonday(d);
+                        renderCalendar();
+                    });
+                    mCal.appendChild(el);
+                }
+            }
+            
+            let donut = document.getElementById('donutChart');
+            let legend = document.getElementById('donutLegend');
+            if (donut && legend) {
+                let sb = loadStudyBlocks(currentWeekStart);
+                let subjMins = {};
+                
+                for (let i=0; i<7; i++) {
+                    let d = new Date(currentWeekStart);
+                    d.setDate(d.getDate() + i);
+                    let dStr = formatDate(d);
+                    let tData = getTrackerData(dStr);
+                    
+                    Object.entries(tData).forEach(([evId, evData]) => {
+                        let block = sb.find(b => b.id === evId);
+                        if (block && evData.sessions) {
+                            evData.sessions.forEach(s => {
+                                let sub = s.subject || block.subject;
+                                if (!subjMins[sub]) subjMins[sub] = 0;
+                                subjMins[sub] += s.minutes;
+                            });
+                        }
+                    });
+                }
+                
+                let totalMins = Object.values(subjMins).reduce((a,b)=>a+b, 0);
+                legend.innerHTML = '';
+                
+                if (totalMins === 0) {
+                    donut.style.background = 'conic-gradient(var(--bg-tertiary) 100%)';
+                    document.getElementById('donutTotal').textContent = '0h';
+                    legend.innerHTML = '<div style="color:var(--text-muted); text-align:center;">Sin datos</div>';
+                } else {
+                    document.getElementById('donutTotal').textContent = (totalMins/60).toFixed(1) + 'h';
+                    let bgString = [];
+                    let accPct = 0;
+                    let sorted = Object.entries(subjMins).sort((a,b)=>b[1]-a[1]);
+                    
+                    let subsStudied = 0;
+                    sorted.forEach(([subKey, mins]) => {
+                        if (mins > 0) {
+                            subsStudied++;
+                            let pct = (mins / totalMins) * 100;
+                            let color = SUBJECTS[subKey].rawColor;
+                            bgString.push(`${color} ${accPct}% ${accPct + pct}%`);
+                            accPct += pct;
+                            
+                            let leg = document.createElement('div');
+                            leg.className = 'legend-item';
+                            leg.innerHTML = `
+                                <div class="legend-left">
+                                    <div class="color-dot" style="background-color:${color}; width:12px; height:12px;"></div>
+                                    <span>${SUBJECTS[subKey].name}</span>
+                                </div>
+                                <span style="font-weight:bold;">${pct.toFixed(0)}%</span>
+                            `;
+                            legend.appendChild(leg);
+                        }
+                    });
+                    donut.style.background = `conic-gradient(${bgString.join(', ')})`;
+                                        if (subsStudied >= 5) unlockBadge('all_subjects');
+                }
+            }
+            renderWeeklyTopics();
+        }
+
+        function renderWeeklyTopics() {
+            let container = document.getElementById('weeklyTopicsContent');
+            let weekSpan = document.getElementById('topicWeekNum');
+            if(!container) return;
+            
+            let startOfSemester = new Date('2026-08-10T00:00:00');
+            let diffTime = currentWeekStart.getTime() - startOfSemester.getTime();
+            let diffDays = Math.round(diffTime / 86400000);
+            let weekNum = Math.floor(diffDays / 7) + 1;
+            
+            if (weekNum >= 1 && weekNum <= 16) {
+                weekSpan.textContent = weekNum;
+                let data = WEEKLY_SCHEDULE[weekNum - 1];
+                container.innerHTML = `
+                    <div style="display:flex; flex-direction:column; gap:4px;">
+                        <div style="font-weight:600; color:var(--color-fisicoquimica);">⚗️ Fisicoquímica</div>
+                        <div style="color:var(--text-main); margin-left:1.5rem;">${data.fq}</div>
+                    </div>
+                    <div style="display:flex; flex-direction:column; gap:4px;">
+                        <div style="font-weight:600; color:var(--color-balances);">⚖️ Balances de Masa y Energía</div>
+                        <div style="color:var(--text-main); margin-left:1.5rem;">${data.bme}</div>
+                    </div>
+                    <div style="display:flex; flex-direction:column; gap:4px;">
+                        <div style="font-weight:600; color:var(--color-fenomenos);">🌊 Fenómenos de Transporte</div>
+                        <div style="color:var(--text-main); margin-left:1.5rem;">${data.fdt}</div>
+                    </div>
+                `;
+            } else {
+                weekSpan.textContent = "-";
+                container.innerHTML = `<div style="color:var(--text-muted); text-align:center; padding:1.5rem 0;">No hay clases programadas para esta semana.</div>`;
+            }
+        }
+
+        function updateStats() {
+            let classHrs = 0;
+            let planHrs = 0;
+            let realHrs = 0;
+            
+            let sb = loadStudyBlocks(currentWeekStart);
+            sb.forEach(b => { planHrs += (timeToDecimal(b.end) - timeToDecimal(b.start)); });
+            FIXED_CLASSES.forEach(c => { classHrs += (timeToDecimal(c.end) - timeToDecimal(c.start)); });
+
+            for (let i=0; i<7; i++) {
+                let d = new Date(currentWeekStart);
+                d.setDate(d.getDate() + i);
+                let tData = getTrackerData(formatDate(d));
+                Object.values(tData).forEach(ev => {
+                    if(ev.sessions) ev.sessions.forEach(s => realHrs += (s.minutes / 60));
+                });
+            }
+
+            if (realHrs >= 10) unlockBadge('marathon');
+
+            if(document.getElementById('statClassHrs')) document.getElementById('statClassHrs').textContent = classHrs.toFixed(1);
+            if(document.getElementById('statPlanHrs')) document.getElementById('statPlanHrs').textContent = planHrs.toFixed(1);
+            if(document.getElementById('statRealHrs')) document.getElementById('statRealHrs').textContent = realHrs.toFixed(1);
+            
+            let pToday = parseInt(localStorage.getItem('pomos-' + formatDate(new Date())) || '0');
+            if(document.getElementById('statPomodoros')) document.getElementById('statPomodoros').textContent = pToday;
+        }
+        function updateCurrentTimeLine() {
+            let now = new Date();
+            let calStart = getMonday(now);
+            
+            // Only show if we are in the current week view
+            if (calStart.getTime() === currentWeekStart.getTime()) {
+                let h = now.getHours();
+                let m = now.getMinutes();
+                let dec = h + m/60;
+                
+                let line = document.getElementById('currentTimeLine');
+                let dot = document.getElementById('currentTimeDot');
+                
+                if (dec >= CAL_START_HOUR && dec <= CAL_END_HOUR) {
+                    let top = (dec - CAL_START_HOUR) * HOUR_HEIGHT;
+                    line.style.display = 'block';
+                    line.style.top = `${top}px`;
+                    dot.style.display = 'block';
+                    dot.style.top = `${top}px`;
+                } else {
+                    line.style.display = 'none';
+                    dot.style.display = 'none';
+                }
+            } else {
+                document.getElementById('currentTimeLine').style.display = 'none';
+                document.getElementById('currentTimeDot').style.display = 'none';
+            }
+        }
+
+        // Navigation
+        document.getElementById('prevWeek').addEventListener('click', () => {
+            currentWeekStart.setDate(currentWeekStart.getDate() - 7);
+            renderCalendar();
+        });
+        document.getElementById('nextWeek').addEventListener('click', () => {
+            currentWeekStart.setDate(currentWeekStart.getDate() + 7);
+            renderCalendar();
+        });
+        document.getElementById('btnToday').addEventListener('click', () => {
+            currentWeekStart = getMonday(new Date());
+            renderCalendar();
+        });
+        document.getElementById('btnReset').addEventListener('click', () => {
+            if(confirm('¿Restaurar los bloques de estudio a la distribución por defecto para esta semana?')) {
+                saveStudyBlocks(currentWeekStart, DEFAULT_STUDY_BLOCKS);
+                renderCalendar();
+            }
+        });
+
+        function renderExamsBanner() {
+            const container = document.getElementById('examsBannerContainer');
+            if (!container) return;
+            container.innerHTML = '';
+            
+            let now = new Date(Date.now());
+            now.setHours(0,0,0,0);
+            
+            let upcomingExams = EXAMS.filter(ex => {
+                let exDate = new Date(ex.date + 'T00:00:00');
+                return exDate.getTime() >= now.getTime();
+            });
+
+            if (upcomingExams.length === 0) {
+                container.style.display = 'none';
+                return;
+            }
+
+            container.style.display = 'flex';
+            
+            let headerHTML = `<div style="font-size: 1.1rem; font-weight: 600; margin-bottom: 0.25rem;">Próximos Exámenes</div>`;
+            container.innerHTML = headerHTML;
+
+            upcomingExams.forEach(ex => {
+                let exDate = new Date(ex.date + 'T00:00:00');
+                let diffTime = exDate.getTime() - now.getTime();
+                let diffDays = Math.round(diffTime / 86400000);
+
+                let alertClass = '';
+                let daysText = diffDays === 1 ? '1 día' : `${diffDays} días`;
+                
+                if (diffDays === 0) {
+                    daysText = 'Hoy';
+                }
+
+                if (diffDays < 7) {
+                    alertClass = 'critical';
+                } else if (diffDays < 14) {
+                    alertClass = 'warning';
+                }
+
+                let el = document.createElement('div');
+                el.className = `exam-alert ${alertClass}`;
+                el.innerHTML = `
+                    <div class="exam-info">
+                        <div class="exam-title">🎯 ${ex.title}</div>
+                        <div class="exam-date">${formatDisplayDate(exDate)}</div>
+                    </div>
+                    <div class="exam-countdown">${diffDays === 0 ? '¡Es HOY!' : `Faltan ${daysText}`}</div>
+                `;
+                container.appendChild(el);
+            });
+        }
+
+        // Init
+        renderCalendar();
+        renderExamsBanner();
+        renderProgress();
+        updatePomoDisplay();
+        updateStats();
+        updateXPUI();
+        checkStreak();
+        renderBadges();
+        renderDashboard();
+
+        // Intervals
+        setInterval(updateCurrentTimeLine, 60000); // every minute
+
+    </script>
+</body>
+</html>
