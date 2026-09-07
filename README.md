@@ -94,6 +94,40 @@ $$\Delta M = \sum \text{Entradas} - \sum \text{Salidas} = \mathbf{0.0000\text{ k
 
 ---
 
+
+---
+
+## 📌 Problema 4: Síntesis de Etanol por Hidratación de Etileno
+
+### 1. Reacciones Químicas y Componentes (6 sustancias ordenadas por volatilidad decreciente)
+1. **Reacción Principal:** $\text{C}_2\text{H}_4 + \text{H}_2\text{O} \longrightarrow \text{C}_2\text{H}_5\text{OH}$ (Etanol) — Conversión: $\chi_1 = 5\%$
+2. **Reacción Secundaria:** $\text{C}_2\text{H}_2 + \text{H}_2\text{O} \longrightarrow \text{CH}_3\text{CHO}$ (Acetaldehído) — Conversión: $\chi_2 = 50\%$
+
+* **Componentes:**
+  1. Inerte ($\text{N}_2$):  = 28.013\text{ g/mol}$
+  2. Etileno ($\text{C}_2\text{H}_4$):  = 28.054\text{ g/mol}$
+  3. Acetileno ($\text{C}_2\text{H}_2$):  = 26.038\text{ g/mol}$
+  4. Acetaldehído ($\text{CH}_3\text{CHO}$):  = 44.053\text{ g/mol}$
+  5. Etanol ($\text{C}_2\text{H}_5\text{OH}$):  = 46.069\text{ g/mol}$
+  6. Agua ($\text{H}_2\text{O}$):  = 18.015\text{ g/mol}$
+
+### 2. Estructura del Proceso (16 Corrientes, 4 Torres de Destilación y Flash)
+* **Mezclador M1:** Alimento fresco $ (100 mol/h) + {14}$ (agua pura) + Reciclos $ (gas) y {16}$ (agua).
+* **Reactor R1:** Conversiones $\chi_1 = 0.05$, $\chi_2 = 0.50$. Relación molar entrada $\text{Agua}/\text{Etileno} = 0.6$.
+* **Separador T1 (Flash / Condensador):** Separa gases ligeros ($) de líquidos condensados ($).
+* **Divisor S1:** Purga gaseosa $ ($\beta_1 = 0.20$) y reciclo de gas $ ( - \beta_1$).
+* **Torre T2:** Separa orgánicos crudos por cabeza ($) y agua de residuo por fondo ($).
+* **Divisor S2:** Purga de agua {15}$ y reciclo {16}$.
+* **Torre T3:** Separa acetaldehído subproducto por cabeza ({11}$) y etanol crudo por fondo ({10}$).
+* **Torre T4:** Purificación final de Etanol producto comercial por cabeza ({13}$, pureza $>99.7\%$) y fondos residuales ({12}$).
+
+### 3. Resultados Clave (Caso Base $\beta_1 = 0.20$):
+* **Producto Comercial ({13}$):** .65\text{ mol/h}$ total (.61\text{ mol/h}$ de Etanol puro $\rightarrow$ **.77\%\text{ pureza molar}$**).
+* **Cierre Global de Masa:** {\text{in}} = W_{\text{out}} = 7168.187\text{ g/h} \implies \Delta W = \mathbf{0.000000\text{ g/h}}$ (exactitud absoluta).
+* **Inertes:** El .1\%$ de inerte que entra por $ sale \%$ por la purga de gas $, demostrando el estado estacionario.
+
+---
+
 ## ⚡ Machete Rápido de Atajos de Mathcad 15
 * **Sumatoria de vector ($\sum v$):** `Ctrl + 4`
 * **Subíndice de matriz ($f_{i,j}$):** tecla `[` (corchete abierto)
